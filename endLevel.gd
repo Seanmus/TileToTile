@@ -10,5 +10,8 @@ func _on_gem_body_entered(body):
 	if body.is_in_group("player"):
 		Manager.sceneName = nextLevel
 		WinSound.play()
-		get_tree().change_scene_to_file("res://Worlds/" + nextLevel + ".tscn")	
+		call_deferred("_nextScene")
 		Ui.time = 0
+		
+func _nextScene():
+	get_tree().change_scene_to_file("res://Worlds/" + nextLevel + ".tscn")	

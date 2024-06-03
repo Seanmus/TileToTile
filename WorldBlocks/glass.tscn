@@ -1,9 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dj3o42c3ybu2e"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7lhkf"]
-transparency = 1
-blend_mode = 1
-albedo_color = Color(0.294118, 0.752941, 1, 0.156863)
+[ext_resource type="Material" uid="uid://b30f5hmlspw3j" path="res://WorldBlocks/MiniMapGlass.tres" id="1_qyfa2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n657f"]
 size = Vector3(1, 0.0278262, 1)
@@ -13,7 +10,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="CsgBox3d" type="CSGBox3D" parent="."]
 size = Vector3(1, 0.0322342, 1)
-material = SubResource("StandardMaterial3D_7lhkf")
+material = ExtResource("1_qyfa2")
 
 [node name="CollisionShape3d" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_n657f")

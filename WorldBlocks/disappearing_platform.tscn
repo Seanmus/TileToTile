@@ -120,10 +120,10 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 script = ExtResource("1_px0gx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "FadeInAndOut"
 libraries = {
 "": SubResource("AnimationLibrary_ikc3n")
 }
+autoplay = "FadeInAndOut"
 
 [node name="Label3d" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425274, 0)

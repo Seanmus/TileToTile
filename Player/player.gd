@@ -68,6 +68,10 @@ func _physics_process(delta):
 
 func _respawn():
 	Ui.time = 0
+	call_deferred("_resetScene")
+
+
+func _resetScene():
 	get_tree().change_scene_to_file("res://Worlds/" + Manager.sceneName + ".tscn")	
 
 

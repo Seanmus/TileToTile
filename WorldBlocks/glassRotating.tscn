@@ -60,10 +60,10 @@ material = SubResource("StandardMaterial3D_7lhkf")
 shape = SubResource("BoxShape3D_n657f")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "rotate"
 libraries = {
 "": SubResource("AnimationLibrary_1swu2")
 }
+autoplay = "rotate"
 
 [node name="Label3d" type="Label3D" parent="."]
 billboard = 1
