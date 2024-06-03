@@ -27,6 +27,9 @@ func _unhandled_input(event):
 		rotate_y(-event.relative.x * mouse_sensitivty)
 		
 func _physics_process(delta):
+	if Input.is_action_just_pressed("click"):
+		Manager._ResetPlatforms()
+	
 	var cameraInput = Input.get_vector("look_left", "look_right", "look_up", "look_down")
 	if cameraInput:
 		rotate_y(-cameraInput.x * controller_sensitivity)

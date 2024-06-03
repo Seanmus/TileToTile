@@ -30,3 +30,6 @@ func _hide():
 	miniMap.visible = false	
 	levelTime.visible = false
 	gameTime.visible = false
+
+func _AddTime(addedTime):
+	pass
