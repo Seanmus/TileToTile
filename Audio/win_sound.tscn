@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bufx6rdpfm0yl"]
+
+[ext_resource type="AudioStream" uid="uid://bqh074h3amm8c" path="res://Audio/Effects/win.wav" id="1_f1vks"]
+
+[node name="winSound" type="AudioStreamPlayer"]
+stream = ExtResource("1_f1vks")
+volume_db = 1.638

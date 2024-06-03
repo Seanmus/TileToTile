@@ -1,0 +1,142 @@
+[gd_scene load_steps=12 format=3 uid="uid://dpaqrwtjbvv7l"]
+
+[ext_resource type="Script" path="res://Player/player.gd" id="1_gb3mg"]
+[ext_resource type="AudioStream" uid="uid://cnihqjwc754lm" path="res://Audio/Effects/landed.wav" id="2_bupsb"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_of8i7"]
+
+[sub_resource type="Animation" id="Animation_0nn5c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3d:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.30256, -0.154819)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3d:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.192719, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0l7st"]
+resource_name = "landing"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3d:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.303, 0.2), Vector3(0, 1.051, 0.2), Vector3(0, 1.303, 0.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3d:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.192719, 0, 0), Vector3(-0.191986, 0, 0.0261799), Vector3(-0.191986, 0, -0.0349066), Vector3(-0.191986, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_t1g4y"]
+resource_name = "move"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3d:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.191986, 0, 0), Vector3(-0.191986, 0, -0.010472), Vector3(-0.191986, 0, 0.010472), Vector3(-0.191986, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cj48i"]
+_data = {
+"RESET": SubResource("Animation_0nn5c"),
+"landing": SubResource("Animation_0l7st"),
+"move": SubResource("Animation_t1g4y")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5fxf"]
+transparency = 1
+albedo_color = Color(0.647059, 1, 0.956863, 0.117647)
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_whdux"]
+material = SubResource("StandardMaterial3D_l5fxf")
+shape = 0
+sections = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_eksmw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpswo"]
+albedo_color = Color(0.309804, 1, 0.0117647, 1)
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+transform = Transform3D(0.373579, 0, 0, 0, 0.373579, 0, 0, 0, 0.373579, 0, 0, 0)
+platform_on_leave = 1
+script = ExtResource("1_gb3mg")
+
+[node name="CollisionShape3d" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_of8i7")
+
+[node name="Camera3d" type="Camera3D" parent="."]
+transform = Transform3D(2.67681, 0, 0, 0, 2.62725, 0.512684, 0, -0.512684, 2.62725, 0, 1.30256, -0.154819)
+cull_mask = 524287
+current = true
+fov = 99.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cj48i")
+}
+
+[node name="landed" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_bupsb")
+volume_db = 15.148
+pitch_scale = 0.6
+
+[node name="coyoteTimer" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="CpuParticles3d" type="CPUParticles3D" parent="."]
+transform = Transform3D(0.0385447, 0, 0.999256, 0, 0.999999, 0, -0.999256, 0, 0.0385447, 5.26929, -0.0635993, -5.96179)
+visible = false
+mesh = SubResource("RibbonTrailMesh_whdux")
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, 0, -1)
+gravity = Vector3(0, 0, 9.8)
+
+[node name="miniMapVisible" type="CSGMesh3D" parent="."]
+transform = Transform3D(2.0123, 0, 0, 0, 2.0123, 0, 0, 0, 2.0123, 0, -0.329564, 0)
+layers = 524288
+mesh = SubResource("BoxMesh_eksmw")
+material = SubResource("StandardMaterial3D_wpswo")
+
+[connection signal="timeout" from="coyoteTimer" to="." method="_on_coyote_timer_timeout"]

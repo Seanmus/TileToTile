@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgxwmwtpno0c0"]
+
+[ext_resource type="Script" path="res://WorldBlocks/disappearing_platform.gd" id="1_px0gx"]
+
+[sub_resource type="Animation" id="Animation_7pn7q"]
+resource_name = "FadeInAndOut"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CsgBox3d:material:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.294118, 0.752941, 1, 0), Color(0.294118, 0.752941, 1, 0), Color(0.294118, 0.752941, 1, 0.156863), Color(0.294118, 0.752941, 1, 0.156863)]
+}
+
+[sub_resource type="Animation" id="Animation_shkbm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CsgBox3d:material:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.294118, 0.752941, 1, 0.105882)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ikc3n"]
+_data = {
+"FadeInAndOut": SubResource("Animation_7pn7q"),
+"RESET": SubResource("Animation_shkbm")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ngs0"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.294118, 0.752941, 1, 0.105882)
+
+[node name="DisappearingPlatform" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+script = ExtResource("1_px0gx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "FadeInAndOut"
+libraries = {
+"": SubResource("AnimationLibrary_ikc3n")
+}
+
+[node name="Label3d" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425274, 0)
+billboard = 1
+text = "Go Away"
+uppercase = true
+
+[node name="CsgBox3d" type="CSGBox3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+size = Vector3(1, 0.0322342, 1)
+material = SubResource("StandardMaterial3D_4ngs0")

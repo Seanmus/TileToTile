@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl8q08srqwu41"]
+
+[sub_resource type="Environment" id="Environment_nis8i"]
+background_mode = 1
+background_energy_multiplier = 5.16
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ssao_ao_channel_affect = 0.96
+sdfgi_use_occlusion = true
+glow_enabled = true
+fog_light_energy = 1.9
+fog_density = 0.6617
+fog_height = 287.64
+fog_height_density = 5.7528
+volumetric_fog_density = 0.9961
+volumetric_fog_emission_energy = 102.21
+volumetric_fog_anisotropy = 0.37
+volumetric_fog_ambient_inject = 0.15
+adjustment_enabled = true
+adjustment_saturation = 1.2
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_nis8i")

@@ -1,0 +1,163 @@
+[gd_scene load_steps=8 format=3 uid="uid://cr83i5w2ahekr"]
+
+[ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="1_3grja"]
+[ext_resource type="PackedScene" uid="uid://dpaqrwtjbvv7l" path="res://Player/player.tscn" id="2_uuqa3"]
+[ext_resource type="PackedScene" uid="uid://cgxwmwtpno0c0" path="res://WorldBlocks/disappearing_glassPlatform.tscn" id="4_73tut"]
+[ext_resource type="PackedScene" uid="uid://ddjglid8xjiwg" path="res://WorldBlocks/death.tscn" id="4_gj4ud"]
+[ext_resource type="PackedScene" uid="uid://dj3o42c3ybu2e" path="res://WorldBlocks/glass.tscn" id="5_jefni"]
+[ext_resource type="PackedScene" uid="uid://c776e2jroe45l" path="res://gem.tscn" id="6_c8urb"]
+[ext_resource type="PackedScene" uid="uid://bl8q08srqwu41" path="res://WorldEnvironmentDark.tscn" id="7_o2iag"]
+
+[node name="World" type="Node3D"]
+
+[node name="Platform" parent="." instance=ExtResource("1_3grja")]
+
+[node name="Platform3" parent="." instance=ExtResource("1_3grja")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 0)
+
+[node name="Platform4" parent="." instance=ExtResource("1_3grja")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35, 5, 0)
+
+[node name="Platform6" parent="." instance=ExtResource("1_3grja")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35, 5, 2)
+
+[node name="Platform7" parent="." instance=ExtResource("1_3grja")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35, 5, 4)
+
+[node name="Platform8" parent="." instance=ExtResource("1_3grja")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35, 5, 6)
+
+[node name="Platform5" parent="." instance=ExtResource("1_3grja")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -33, 5, 0)
+
+[node name="Platform2" parent="." instance=ExtResource("1_3grja")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -34.9953, 4.9869, 29.9984)
+
+[node name="Player" parent="." instance=ExtResource("2_uuqa3")]
+transform = Transform3D(-1.63296e-08, 0, 0.373579, 0, 0.373579, 0, -0.373579, 0, -1.63296e-08, 2.24117, 0.852064, 0)
+
+[node name="death" parent="." instance=ExtResource("4_gj4ud")]
+transform = Transform3D(210.972, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432, 0)
+
+[node name="DisappearingPlatform" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, -2, 0, 1.75359)
+
+[node name="DisappearingPlatform2" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, -4, 0, 1.75359)
+
+[node name="DisappearingPlatform7" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(0.968804, 0.203009, 0.142148, -0.247234, 0.831369, 0.497696, -0.0171409, -0.517314, 0.855624, -17.2508, 3.41036, 1.61945)
+
+[node name="DisappearingPlatform8" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(0.968804, 0.203009, 0.142148, -0.247234, 0.831369, 0.497696, -0.0171409, -0.517314, 0.855624, -19.1884, 3.90482, 1.65373)
+
+[node name="DisappearingPlatform11" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(0.968804, 0.203009, 0.142148, -0.247234, 0.831369, 0.497696, -0.0171409, -0.517314, 0.855624, -27.2508, 5.41036, 1.61945)
+
+[node name="DisappearingPlatform12" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(0.968804, 0.203009, 0.142148, -0.247234, 0.831369, 0.497696, -0.0171409, -0.517314, 0.855624, -29.1884, 5.90483, 1.65373)
+
+[node name="DisappearingPlatform3" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(0.964397, 0.183688, -0.190255, -0.264447, 0.663166, -0.700199, -0.00244748, 0.725582, 0.688131, -8.0356, 0.633574, -1.58653)
+
+[node name="DisappearingPlatform4" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(0.964397, 0.183688, -0.190255, -0.264447, 0.663166, -0.700199, -0.00244748, 0.725582, 0.688131, -9.9644, 1.16247, -1.58163)
+
+[node name="DisappearingPlatform5" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(0.964397, 0.183688, -0.190255, -0.264447, 0.663166, -0.700199, -0.00244748, 0.725582, 0.688131, -12.5986, 1.81221, -1.58653)
+
+[node name="DisappearingPlatform6" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(0.964397, 0.183688, -0.190255, -0.264447, 0.663166, -0.700199, -0.00244748, 0.725582, 0.688131, -14.5273, 2.3411, -1.58163)
+
+[node name="DisappearingPlatform9" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(0.964397, 0.183688, -0.190255, -0.259469, 0.796305, -0.54642, 0.0511303, 0.576331, 0.815615, -22.2135, 4.4257, -1.53295)
+
+[node name="DisappearingPlatform10" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(0.964397, 0.183688, -0.190255, -0.259469, 0.796305, -0.54642, 0.0511303, 0.576331, 0.815615, -24.1423, 4.94463, -1.63521)
+
+[node name="Glass" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(2, 0, 0, 0, 1.6383, -1.14715, 0, 1.14715, 1.6383, -2, 0.344098, -1.58408)
+
+[node name="Glass2" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(2, 0, 0, 0, 1.6383, -1.14715, 0, 1.14715, 1.6383, -4, 0.344098, -1.58408)
+
+[node name="Glass7" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(1.95231, 0.349558, -0.257483, -0.433296, 1.64331, -1.05441, 0.0272742, 1.08505, 1.67985, -17.158, 3.00934, -1.33349)
+
+[node name="Glass8" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(1.95231, 0.349558, -0.257483, -0.433296, 1.64331, -1.05441, 0.0272742, 1.08505, 1.67985, -19.1103, 3.44264, -1.36077)
+
+[node name="Glass11" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(1.95231, 0.349558, -0.257483, -0.433296, 1.64331, -1.05441, 0.0272742, 1.08505, 1.67985, -26.7536, 5.49127, -1.33349)
+
+[node name="Glass12" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(1.95231, 0.349558, -0.257483, -0.433296, 1.64331, -1.05441, 0.0272742, 1.08505, 1.67985, -28.7059, 5.92457, -1.36077)
+
+[node name="Glass3" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(-1.86805, 0.599688, -0.388294, 0.714423, 1.56894, -1.0139, 0.000593744, -1.08571, -1.67965, -8.92763, 1.2162, 1.37682)
+
+[node name="Glass4" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(-1.86805, 0.599688, -0.388294, 0.714423, 1.56894, -1.0139, 0.000593744, -1.08571, -1.67965, -7.05958, 0.501782, 1.37623)
+
+[node name="Glass5" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(-1.86805, 0.599688, -0.388294, 0.714423, 1.56894, -1.0139, 0.000593744, -1.08571, -1.67965, -14.2153, 2.7246, 1.37682)
+
+[node name="Glass6" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(-1.86805, 0.599688, -0.388294, 0.714423, 1.56894, -1.0139, 0.000593744, -1.08571, -1.67965, -12.3472, 2.01018, 1.37623)
+
+[node name="Glass9" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(-1.86805, 0.599688, -0.388294, 0.714423, 1.56894, -1.0139, 0.000593744, -1.08571, -1.67965, -24.1343, 4.97674, 1.37682)
+
+[node name="Glass10" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(-1.86805, 0.599688, -0.388294, 0.714423, 1.56894, -1.0139, 0.000593744, -1.08571, -1.67965, -22.2662, 4.26231, 1.37623)
+
+[node name="gem" parent="." instance=ExtResource("6_c8urb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.0751, 5.36457, 29.9442)
+nextLevel = "octopusGame4"
+
+[node name="Glass13" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35, 5, 9)
+
+[node name="Glass14" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35, 5, 13)
+
+[node name="Glass15" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35, 5, 19)
+
+[node name="Glass16" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35, 5, 17)
+
+[node name="Glass18" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -37, 5, 24)
+
+[node name="Glass19" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -33, 5, 26)
+
+[node name="Glass17" parent="." instance=ExtResource("5_jefni")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35, 5, 22)
+
+[node name="DisappearingPlatform13" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 5, 11)
+
+[node name="DisappearingPlatform14" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 5, 15)
+
+[node name="DisappearingPlatform16" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 5, 22)
+
+[node name="DisappearingPlatform17" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37, 5, 22)
+
+[node name="DisappearingPlatform21" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37, 5, 26)
+
+[node name="DisappearingPlatform18" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 5, 24)
+
+[node name="DisappearingPlatform20" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 5, 26)
+
+[node name="DisappearingPlatform19" parent="." instance=ExtResource("4_73tut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 5, 24)
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("7_o2iag")]

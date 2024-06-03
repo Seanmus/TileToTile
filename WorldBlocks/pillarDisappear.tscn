@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://d4bexy1mnjndi"]
+
+[ext_resource type="PackedScene" uid="uid://c3t78p5wtaosa" path="res://WorldBlocks/Imports/pillar.glb" id="1_hlgvw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6p308"]
+transparency = 1
+albedo_color = Color(0.737255, 0.498039, 0.231373, 0)
+
+[sub_resource type="Animation" id="Animation_ir6ma"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cylinder:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.737255, 0.498039, 0.231373, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_g1rwg"]
+resource_name = "hide"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cylinder:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.737255, 0.498039, 0.231373, 0), Color(0.737255, 0.498039, 0.231373, 0), Color(0.737255, 0.498039, 0.231373, 1), Color(0.737255, 0.498039, 0.231373, 1), Color(0.737255, 0.498039, 0.231373, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nqu0r"]
+_data = {
+"RESET": SubResource("Animation_ir6ma"),
+"hide": SubResource("Animation_g1rwg")
+}
+
+[node name="pillarDisappear" instance=ExtResource("1_hlgvw")]
+
+[node name="Cylinder" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_6p308")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+autoplay = "hide"
+libraries = {
+"": SubResource("AnimationLibrary_nqu0r")
+}

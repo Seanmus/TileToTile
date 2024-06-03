@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://mjlm6fowduf6"]
+
+[ext_resource type="FontFile" uid="uid://k32ihrnb84gk" path="res://Roboto-Bold.ttf" id="1_bk0yd"]
+
+[node name="Button" type="Button"]
+anchors_preset = -1
+anchor_left = 5.5
+anchor_top = 13.125
+anchor_right = 16.65
+anchor_bottom = 16.0
+mouse_force_pass_scroll_events = false
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_bk0yd")
+theme_override_font_sizes/font_size = 60
+text = "  Play"
+alignment = 0
+metadata/_edit_use_anchors_ = true
