@@ -80,6 +80,7 @@ outline_modulate = Color(0.470588, 0, 0, 1)
 text = "The platforms that appear 
 do not actually exist"
 font = ExtResource("8_374oe")
+font_size = 72
 outline_size = 16
 
 [node name="Label3d3" type="Label3D" parent="."]
@@ -99,4 +100,5 @@ text = "The fake platforms will
 reveal themselves 
 EVERY 10 SECONDS"
 font = ExtResource("8_374oe")
+font_size = 64
 outline_size = 16

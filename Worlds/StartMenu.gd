@@ -17,10 +17,10 @@ func _ready():
 	
 func _on_button_pressed():
 	Manager.totalTime = 0
+	Manager.roundTime = 0
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)	
 	get_tree().change_scene_to_file("res://Worlds/tutorial.tscn")
-
-
+	
 func _on_level_select_btn_pressed():
 	$LevelSelect.visible = true
 	$MenuButtons.visible = false

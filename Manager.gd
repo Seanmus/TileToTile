@@ -6,13 +6,25 @@ signal resetPlatforms
 
 var bestTime = 10000
 var totalTime = 0
+#Set on the end level node
+var roundTime = 0
+
+var showPlatformTime = 4
+
+var mapTimes = {}
 
 func _ready():
 	AudioServer.set_bus_volume_db(audioBus, -30)
 
 func _physics_process(delta):
 	totalTime += delta
+	roundTime += delta
+
+func _MapFinished():
+	mapTimes[sceneName] = roundTime
+	print(mapTimes)
 
 func _ResetPlatforms():
-	totalTime += 4
+	totalTime += showPlatformTime
+	roundTime += showPlatformTime
 	resetPlatforms.emit()

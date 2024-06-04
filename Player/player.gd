@@ -17,6 +17,7 @@ var startedMoving : bool
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
+	Manager.roundTime = 0
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	spawnPos = global_transform
 	Ui._show()
@@ -70,7 +71,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _respawn():
-	Ui.time = 0
+	Manager.roundTime = 0
 	call_deferred("_resetScene")
 
 

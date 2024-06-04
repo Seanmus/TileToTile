@@ -8,5 +8,5 @@ func _ready():
 func _on_death_body_entered(body):
 	print("Body entered")
 	if body.is_in_group("player"):
-		Ui.time = 0
+		Manager.roundTime = 0
 		body._respawn()
