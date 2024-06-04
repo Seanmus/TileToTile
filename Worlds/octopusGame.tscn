@@ -1,73 +1,73 @@
 [gd_scene load_steps=8 format=3 uid="uid://chpt2bd81vnxm"]
 
-[ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="1_3grja"]
-[ext_resource type="PackedScene" uid="uid://dpaqrwtjbvv7l" path="res://Player/player.tscn" id="2_uuqa3"]
-[ext_resource type="PackedScene" uid="uid://cgxwmwtpno0c0" path="res://WorldBlocks/disappearing_glassPlatform.tscn" id="4_73tut"]
-[ext_resource type="PackedScene" uid="uid://ddjglid8xjiwg" path="res://WorldBlocks/death.tscn" id="4_gj4ud"]
-[ext_resource type="PackedScene" uid="uid://dj3o42c3ybu2e" path="res://WorldBlocks/glass.tscn" id="5_jefni"]
-[ext_resource type="PackedScene" uid="uid://c776e2jroe45l" path="res://gem.tscn" id="6_c8urb"]
-[ext_resource type="PackedScene" uid="uid://bl8q08srqwu41" path="res://WorldEnvironmentDark.tscn" id="7_hoykp"]
+[ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="1_mfrx7"]
+[ext_resource type="PackedScene" uid="uid://dpaqrwtjbvv7l" path="res://Player/player.tscn" id="2_gtc1b"]
+[ext_resource type="PackedScene" uid="uid://ddjglid8xjiwg" path="res://WorldBlocks/death.tscn" id="3_47am0"]
+[ext_resource type="PackedScene" uid="uid://cgxwmwtpno0c0" path="res://WorldBlocks/disappearing_glassPlatform.tscn" id="4_6u8f5"]
+[ext_resource type="PackedScene" uid="uid://dj3o42c3ybu2e" path="res://WorldBlocks/glass.tscn" id="5_af7jy"]
+[ext_resource type="PackedScene" uid="uid://bl8q08srqwu41" path="res://WorldEnvironmentDark.tscn" id="7_bmxte"]
+[ext_resource type="PackedScene" uid="uid://c776e2jroe45l" path="res://gem.tscn" id="7_cdu1f"]
 
 [node name="World" type="Node3D"]
 
-[node name="Platform" parent="." instance=ExtResource("1_3grja")]
+[node name="Platform" parent="." instance=ExtResource("1_mfrx7")]
 
-[node name="Platform3" parent="." instance=ExtResource("1_3grja")]
+[node name="Platform3" parent="." instance=ExtResource("1_mfrx7")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 0)
 
-[node name="Platform2" parent="." instance=ExtResource("1_3grja")]
+[node name="Platform2" parent="." instance=ExtResource("1_mfrx7")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -26.3737, 0, 0)
 
-[node name="Player" parent="." instance=ExtResource("2_uuqa3")]
+[node name="Player" parent="." instance=ExtResource("2_gtc1b")]
 transform = Transform3D(-1.63296e-08, 0, 0.373579, 0, 0.373579, 0, -0.373579, 0, -1.63296e-08, 2.24117, 0.852064, 0)
 
-[node name="death" parent="." instance=ExtResource("4_gj4ud")]
+[node name="death" parent="." instance=ExtResource("3_47am0")]
 transform = Transform3D(210.972, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432, 0)
 
-[node name="DisappearingPlatform" parent="." instance=ExtResource("4_73tut")]
+[node name="DisappearingPlatform" parent="." instance=ExtResource("4_6u8f5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
 
-[node name="DisappearingPlatform2" parent="." instance=ExtResource("4_73tut")]
+[node name="DisappearingPlatform2" parent="." instance=ExtResource("4_6u8f5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4312, 0, 2)
 
-[node name="DisappearingPlatform3" parent="." instance=ExtResource("4_73tut")]
+[node name="DisappearingPlatform3" parent="." instance=ExtResource("4_6u8f5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.89606, 0, -2)
 
-[node name="DisappearingPlatform4" parent="." instance=ExtResource("4_73tut")]
+[node name="DisappearingPlatform4" parent="." instance=ExtResource("4_6u8f5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4729, 0, 2)
 
-[node name="DisappearingPlatform5" parent="." instance=ExtResource("4_73tut")]
+[node name="DisappearingPlatform5" parent="." instance=ExtResource("4_6u8f5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.022, 0, 2)
 
-[node name="DisappearingPlatform6" parent="." instance=ExtResource("4_73tut")]
+[node name="DisappearingPlatform6" parent="." instance=ExtResource("4_6u8f5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.3895, 0, 2)
 
-[node name="DisappearingPlatform7" parent="." instance=ExtResource("4_73tut")]
+[node name="DisappearingPlatform7" parent="." instance=ExtResource("4_6u8f5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.1298, 0, -2)
 
-[node name="Glass" parent="." instance=ExtResource("5_jefni")]
+[node name="Glass" parent="." instance=ExtResource("5_af7jy")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 0, -2)
 
-[node name="Glass2" parent="." instance=ExtResource("5_jefni")]
+[node name="Glass2" parent="." instance=ExtResource("5_af7jy")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.4312, 0, -2)
 
-[node name="Glass3" parent="." instance=ExtResource("5_jefni")]
+[node name="Glass3" parent="." instance=ExtResource("5_af7jy")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -8.89606, 0, 2)
 
-[node name="Glass4" parent="." instance=ExtResource("5_jefni")]
+[node name="Glass4" parent="." instance=ExtResource("5_af7jy")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -12.4729, 0, -2)
 
-[node name="Glass5" parent="." instance=ExtResource("5_jefni")]
+[node name="Glass5" parent="." instance=ExtResource("5_af7jy")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -16.022, 0, -2)
 
-[node name="Glass6" parent="." instance=ExtResource("5_jefni")]
+[node name="Glass6" parent="." instance=ExtResource("5_af7jy")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19.3895, 0, -2)
 
-[node name="Glass7" parent="." instance=ExtResource("5_jefni")]
+[node name="Glass7" parent="." instance=ExtResource("5_af7jy")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -23.1298, 0, 2)
 
-[node name="gem" parent="." instance=ExtResource("6_c8urb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.4535, 0.377667, -0.0542038)
-nextLevel = "octopusGame2"
+[node name="WorldEnvironment" parent="." instance=ExtResource("7_bmxte")]
 
-[node name="WorldEnvironment" parent="." instance=ExtResource("7_hoykp")]
+[node name="gem" parent="." instance=ExtResource("7_cdu1f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2699, 0.521057, 0.0268157)
+nextLevel = "WindingRoad"

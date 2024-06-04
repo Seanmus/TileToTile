@@ -19,7 +19,7 @@ func _on_button_pressed():
 	Manager.totalTime = 0
 	Manager.roundTime = 0
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)	
-	get_tree().change_scene_to_file("res://Worlds/tutorial.tscn")
+	get_tree().change_scene_to_file("res://Worlds/Tutorial.tscn")
 	
 func _on_level_select_btn_pressed():
 	$LevelSelect.visible = true
@@ -35,68 +35,68 @@ func _on_back_btn_pressed():
 
 func _on_level_1_pressed():
 	Manager.totalTime = 1000
-	Manager.sceneName = "tutorial"
-	get_tree().change_scene_to_file("res://Worlds/tutorial.tscn")
+	Manager.sceneName = "Tutorial"
+	get_tree().change_scene_to_file("res://Worlds/Tutorial.tscn")
 
 
 func _on_level_2_pressed():
 	Manager.totalTime = 1000
-	Manager.sceneName = "world"
-	get_tree().change_scene_to_file("res://Worlds/world.tscn")
+	Manager.sceneName = "MirrorMirage"
+	get_tree().change_scene_to_file("res://Worlds/MirrorMirage.tscn")
 
 
 func _on_level_3_pressed():
 	Manager.totalTime = 1000
-	Manager.sceneName = "ocotpusGame"
-	get_tree().change_scene_to_file("res://Worlds/octopusGame.tscn")
+	Manager.sceneName = "OcotpusGame"
+	get_tree().change_scene_to_file("res://Worlds/OctopusGame.tscn")
 
 
 func _on_level_4_pressed():
 	Manager.totalTime = 1000
-	Manager.sceneName = "octopusGame2"
-	get_tree().change_scene_to_file("res://Worlds/octopusGame2.tscn")
+	Manager.sceneName = "WindingRoad"
+	get_tree().change_scene_to_file("res://Worlds/WindingRoad.tscn")
 
 
 
 func _on_level_5_pressed():
 	Manager.totalTime = 1000
-	Manager.sceneName = "octopusGame3"
-	get_tree().change_scene_to_file("res://Worlds/octopusGame3.tscn")
+	Manager.sceneName = "ARisingTide"
+	get_tree().change_scene_to_file("res://Worlds/ARisingTide.tscn")
 
 
 
 func _on_level_6_pressed():
 	Manager.totalTime = 1000
-	Manager.sceneName = "octopusGame4"
-	get_tree().change_scene_to_file("res://Worlds/octopusGame4.tscn")
+	Manager.sceneName = "IsThatAWall"
+	get_tree().change_scene_to_file("res://Worlds/IsThatAWall.tscn")
 
 
 
 func _on_level_7_pressed():
 	Manager.totalTime = 1000
-	Manager.sceneName = "octopusGame5"
-	get_tree().change_scene_to_file("res://Worlds/octopusGame5.tscn")
+	Manager.sceneName = "RunThrough"
+	get_tree().change_scene_to_file("res://Worlds/RunThrough.tscn")
 
 
 
 func _on_level_8_pressed():
-	Manager.sceneName = "octopusGame6"
+	Manager.sceneName = "ThePass"
 	Manager.totalTime = 1000	
-	get_tree().change_scene_to_file("res://Worlds/octopusGame6.tscn")
+	get_tree().change_scene_to_file("res://Worlds/ThePass.tscn")
 
 
 
 func _on_level_9_pressed():	
-	Manager.sceneName = "octopusGame7"
+	Manager.sceneName = "WallClimber"
 	Manager.totalTime = 1000
-	get_tree().change_scene_to_file("res://Worlds/octopusGame7.tscn")
+	get_tree().change_scene_to_file("res://Worlds/WallClimber.tscn")
 
 
 
 func _on_level_10_pressed():
-	Manager.sceneName = "octopusGame8"
+	Manager.sceneName = "TheFinale"
 	Manager.totalTime = 1000
-	get_tree().change_scene_to_file("res://Worlds/octopusGame8.tscn")
+	get_tree().change_scene_to_file("res://Worlds/TheFinale.tscn")
 
 
 func _on_settings_btn_pressed():

@@ -3,6 +3,7 @@ extends Node
 var sceneName = "tutorial"
 
 signal resetPlatforms
+signal addTime
 
 var bestTime = 10000
 var totalTime = 0
@@ -27,4 +28,5 @@ func _MapFinished():
 func _ResetPlatforms():
 	totalTime += showPlatformTime
 	roundTime += showPlatformTime
+	addTime.emit()
 	resetPlatforms.emit()

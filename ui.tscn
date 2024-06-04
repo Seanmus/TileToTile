@@ -1,7 +1,92 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjlxlwr5oourt"]
+[gd_scene load_steps=6 format=3 uid="uid://cjlxlwr5oourt"]
 
 [ext_resource type="Script" path="res://ui.gd" id="1_wmrtp"]
 [ext_resource type="Theme" uid="uid://bd8i240k4dnxs" path="res://textTheme.tres" id="2_cea5x"]
+
+[sub_resource type="Animation" id="Animation_qa73y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(102, -3.00037)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.197222]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_pn6nl"]
+resource_name = "addTime"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(92.9999, 13.9996), Vector2(148, -33.0004), Vector2(266, 38.9996)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.197222, 0.34383, 0.736529]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_itd5i"]
+_data = {
+"RESET": SubResource("Animation_qa73y"),
+"addTime": SubResource("Animation_pn6nl")
+}
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -16,10 +101,10 @@ script = ExtResource("1_wmrtp")
 [node name="levelTime" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0244792
-anchor_top = 0.116667
-anchor_right = 0.115625
-anchor_bottom = 0.163889
+anchor_left = 0.0505208
+anchor_top = 0.776852
+anchor_right = 0.141667
+anchor_bottom = 0.824074
 theme = ExtResource("2_cea5x")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "hello"
@@ -41,13 +126,30 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "Level Time"
 metadata/_edit_use_anchors_ = true
 
+[node name="levelTimeAddTimeAnim" type="AnimationPlayer" parent="levelTime"]
+root_node = NodePath("../AddLevelTime")
+libraries = {
+"": SubResource("AnimationLibrary_itd5i")
+}
+
+[node name="AddLevelTime" type="Label" parent="levelTime"]
+visible = false
+layout_mode = 0
+offset_left = 102.0
+offset_top = -3.00037
+offset_right = 147.001
+offset_bottom = 44.9997
+rotation = -0.197222
+theme = ExtResource("2_cea5x")
+text = "+4"
+
 [node name="gameTime" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0244792
-anchor_top = 0.235186
-anchor_right = 0.115625
-anchor_bottom = 0.282408
+anchor_left = 0.0505208
+anchor_top = 0.895371
+anchor_right = 0.141667
+anchor_bottom = 0.942593
 theme = ExtResource("2_cea5x")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "hello"
@@ -93,3 +195,32 @@ projection = 1
 current = true
 fov = 99.0
 size = 75.0
+
+[node name="GoldTime" type="Label" parent="."]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 34.0
+offset_right = 483.0
+offset_bottom = 82.0
+theme = ExtResource("2_cea5x")
+text = "Gold Time: "
+
+[node name="SilverTime" type="Label" parent="."]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 82.0
+offset_right = 483.0
+offset_bottom = 130.0
+theme = ExtResource("2_cea5x")
+text = "Silver Time: "
+vertical_alignment = 3
+
+[node name="BronzeTime" type="Label" parent="."]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 130.0
+offset_right = 483.0
+offset_bottom = 178.0
+theme = ExtResource("2_cea5x")
+text = "Bronze Time: "
+vertical_alignment = 3
