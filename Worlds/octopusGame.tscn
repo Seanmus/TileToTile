@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://chpt2bd81vnxm"]
+[gd_scene load_steps=9 format=3 uid="uid://chpt2bd81vnxm"]
 
 [ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="1_mfrx7"]
+[ext_resource type="Script" path="res://Worlds/WorldProperties.gd" id="1_t5a4r"]
 [ext_resource type="PackedScene" uid="uid://dpaqrwtjbvv7l" path="res://Player/player.tscn" id="2_gtc1b"]
 [ext_resource type="PackedScene" uid="uid://ddjglid8xjiwg" path="res://WorldBlocks/death.tscn" id="3_47am0"]
 [ext_resource type="PackedScene" uid="uid://cgxwmwtpno0c0" path="res://WorldBlocks/disappearing_glassPlatform.tscn" id="4_6u8f5"]
@@ -9,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://c776e2jroe45l" path="res://gem.tscn" id="7_cdu1f"]
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_t5a4r")
+GoldTime = 7.3
+SilverTime = 8.5
 
 [node name="Platform" parent="." instance=ExtResource("1_mfrx7")]
 

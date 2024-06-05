@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cy5liprub3b7t"]
+[gd_scene load_steps=9 format=3 uid="uid://cy5liprub3b7t"]
 
+[ext_resource type="Script" path="res://Worlds/WorldProperties.gd" id="1_cio81"]
 [ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="1_jncfi"]
 [ext_resource type="PackedScene" uid="uid://dpaqrwtjbvv7l" path="res://Player/player.tscn" id="2_ecgd6"]
 [ext_resource type="PackedScene" uid="uid://bl8q08srqwu41" path="res://WorldEnvironmentDark.tscn" id="3_2ce57"]
@@ -9,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://c776e2jroe45l" path="res://gem.tscn" id="7_23nev"]
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_cio81")
+GoldTime = 10.75
+SilverTime = 11.5
+BronzeTime = 13.0
 
 [node name="Platform" parent="." instance=ExtResource("1_jncfi")]
 
