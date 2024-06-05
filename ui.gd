@@ -43,16 +43,53 @@ func _process(_delta):
 		
 
 func _HighlightTime():
-	GoldTrophy.visible = false
-	SilverTrophy.visible = false
-	BronzeTrophy.visible = false
-	if Manager.roundTime <= GoldTime:
-		$GoldTrophy.visible = true
-	elif Manager.roundTime <= SilverTime:
-		$SilverTrophy.visible = true
-	elif Manager.roundTime <= BronzeTime:
-		$BronzeTrophy.visible = true
 	
+	GoldTrophy.frame = 0
+	SilverTrophy.frame = 0
+	BronzeTrophy.frame = 0
+	if Manager.roundTime <= GoldTime:
+		GoldTrophy.visible = true
+		SilverTrophy.visible = false
+		BronzeTrophy.visible = false
+		
+		if (GoldTime - Manager.roundTime) / Manager.roundTime > 0.2:
+			GoldTrophy.frame = 0
+		elif (GoldTime - Manager.roundTime) / Manager.roundTime > 0.1: 
+			GoldTrophy.frame = 1
+		else:
+			GoldTrophy.frame = 2
+	elif Manager.roundTime <= SilverTime:
+		GoldTrophy.visible = true
+		SilverTrophy.visible = true
+		BronzeTrophy.visible = false
+		
+		GoldTrophy.frame = 3
+		if (SilverTime - Manager.roundTime) / Manager.roundTime > 0.2:
+			SilverTrophy.frame = 0
+		elif (SilverTime - Manager.roundTime) / Manager.roundTime > 0.1: 
+			SilverTrophy.frame = 1
+		else:
+			SilverTrophy.frame = 2		
+	elif Manager.roundTime <= BronzeTime:
+		GoldTrophy.visible = true
+		SilverTrophy.visible = true
+		BronzeTrophy.visible = true
+		
+		GoldTrophy.frame = 3
+		SilverTrophy.frame = 3
+		if (BronzeTime - Manager.roundTime) / Manager.roundTime > 0.2:
+			BronzeTrophy.frame = 0
+		elif (BronzeTime - Manager.roundTime) / Manager.roundTime > 0.1: 
+			BronzeTrophy.frame = 1
+		else:
+			BronzeTrophy.frame = 2
+	else:
+		GoldTrophy.frame = 3
+		SilverTrophy.frame = 3
+		BronzeTrophy.frame = 3	
+	if GoldTime == 0:
+		_hide()
+
 func _show():
 	levelTime.visible = true 
 	gameTime.visible = true

@@ -1,7 +1,8 @@
-[gd_scene load_steps=42 format=3 uid="uid://di3rgeves175v"]
+[gd_scene load_steps=43 format=3 uid="uid://di3rgeves175v"]
 
 [ext_resource type="FontFile" uid="uid://k32ihrnb84gk" path="res://Roboto-Bold.ttf" id="1_0rkor"]
 [ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="1_3grja"]
+[ext_resource type="Script" path="res://Worlds/WorldProperties.gd" id="1_ddhkp"]
 [ext_resource type="Script" path="res://Worlds/StartMenu.gd" id="1_v55x8"]
 [ext_resource type="Texture2D" uid="uid://cccobplt353hc" path="res://title.png" id="3_2liwn"]
 [ext_resource type="PackedScene" uid="uid://cgxwmwtpno0c0" path="res://WorldBlocks/disappearing_glassPlatform.tscn" id="4_73tut"]
@@ -43,6 +44,10 @@
 [ext_resource type="Texture2D" uid="uid://cco47ctvnty1f" path="res://UI/level10Hover.png" id="34_uuqsf"]
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_ddhkp")
+GoldTime = 0.0
+SilverTime = 0.0
+BronzeTime = 0.0
 
 [node name="StartMenu" type="Control" parent="."]
 layout_mode = 3

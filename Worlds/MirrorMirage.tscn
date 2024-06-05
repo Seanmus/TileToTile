@@ -12,8 +12,7 @@
 [node name="World" type="Node3D"]
 script = ExtResource("1_wl50j")
 GoldTime = 7.65
-SilverTime = 8.0
-BronzeTime = 9.0
+SilverTime = 8.6
 
 [node name="Platform" parent="." instance=ExtResource("1_1ya68")]
 

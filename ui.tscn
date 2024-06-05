@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://ui.gd" id="1_wmrtp"]
 [ext_resource type="Theme" uid="uid://bd8i240k4dnxs" path="res://textTheme.tres" id="2_cea5x"]
-[ext_resource type="Texture2D" uid="uid://b03laci1ey37w" path="res://UI/UIElements/BronzeTrophy.png" id="3_g5mdd"]
-[ext_resource type="Texture2D" uid="uid://dmsykql2gn8qd" path="res://UI/UIElements/SilverTrophy.png" id="4_ylv3i"]
-[ext_resource type="Texture2D" uid="uid://p62wa45djorn" path="res://UI/UIElements/GoldTrophy.png" id="5_w5nlj"]
+[ext_resource type="Texture2D" uid="uid://bldjfi6hphb5l" path="res://UI/UIElements/BronzeTrophy-Sheet.png" id="3_svsc4"]
+[ext_resource type="Texture2D" uid="uid://bp7shbkxd7i4y" path="res://UI/UIElements/SilverTrophy-Sheet.png" id="4_0iowq"]
+[ext_resource type="Texture2D" uid="uid://cx6u8hqeajb1w" path="res://UI/UIElements/GoldTrophy-Sheet.png" id="5_qgpys"]
 
 [sub_resource type="Animation" id="Animation_qa73y"]
 length = 0.001
@@ -104,30 +104,20 @@ script = ExtResource("1_wmrtp")
 [node name="levelTime" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0572917
-anchor_top = 0.231481
-anchor_right = 0.148438
-anchor_bottom = 0.278703
+anchor_left = 0.420833
+anchor_top = 0.955556
+anchor_right = 0.474479
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -928.0
+offset_right = -72.0
+offset_bottom = -928.0
+grow_horizontal = 2
+grow_vertical = 0
 theme = ExtResource("2_cea5x")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "hello"
-metadata/_edit_use_anchors_ = true
-
-[node name="label" type="Label" parent="levelTime"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.01875
-anchor_top = 0.69537
-anchor_right = 0.0395833
-anchor_bottom = 0.69537
-offset_left = -3.28126
-offset_top = -107.464
-offset_right = 347.719
-offset_bottom = -35.4642
-theme = ExtResource("2_cea5x")
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-text = "Level Time"
-metadata/_edit_use_anchors_ = true
+text = "10:00"
+horizontal_alignment = 1
 
 [node name="levelTimeAddTimeAnim" type="AnimationPlayer" parent="levelTime"]
 root_node = NodePath("../AddLevelTime")
@@ -146,17 +136,39 @@ rotation = -0.197222
 theme = ExtResource("2_cea5x")
 text = "+4"
 
+[node name="label" type="Label" parent="levelTime"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -176.0
+offset_top = -96.0
+offset_right = 175.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_cea5x")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Level Time"
+horizontal_alignment = 1
+
 [node name="gameTime" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0505208
-anchor_top = 0.895371
-anchor_right = 0.141667
-anchor_bottom = 0.942593
+anchor_left = 0.591667
+anchor_top = 0.955556
+anchor_right = 0.682813
+anchor_bottom = 1.00278
+offset_left = -96.0
+offset_top = -928.0
+offset_right = -96.0
+offset_bottom = -928.0
 theme = ExtResource("2_cea5x")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "hello"
-metadata/_edit_use_anchors_ = true
+horizontal_alignment = 1
 
 [node name="label" type="Label" parent="gameTime"]
 layout_mode = 1
@@ -165,14 +177,13 @@ anchor_left = 0.01875
 anchor_top = 0.813889
 anchor_right = 0.05
 anchor_bottom = 0.813889
-offset_left = -3.28126
-offset_top = -113.509
-offset_right = 347.719
-offset_bottom = -41.5087
+offset_left = -27.2813
+offset_top = -89.509
+offset_right = 323.719
+offset_bottom = -17.5086
 theme = ExtResource("2_cea5x")
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "Game Time"
-metadata/_edit_use_anchors_ = true
 
 [node name="miniMap" type="SubViewportContainer" parent="."]
 layout_mode = 1
@@ -201,42 +212,45 @@ size = 75.0
 
 [node name="BronzeTime" type="Label" parent="."]
 layout_mode = 0
-offset_left = 142.0
-offset_top = 125.0
-offset_right = 392.0
-offset_bottom = 173.0
+offset_left = 131.0
+offset_top = 168.0
+offset_right = 381.0
+offset_bottom = 216.0
 theme = ExtResource("2_cea5x")
 text = "10:00"
 vertical_alignment = 3
 
 [node name="SilverTime" type="Label" parent="."]
 layout_mode = 0
-offset_left = 142.0
-offset_top = 77.0
-offset_right = 392.0
-offset_bottom = 125.0
+offset_left = 131.0
+offset_top = 120.0
+offset_right = 381.0
+offset_bottom = 168.0
 theme = ExtResource("2_cea5x")
 text = "10:00"
 vertical_alignment = 3
 
 [node name="GoldTime" type="Label" parent="."]
 layout_mode = 0
-offset_left = 142.0
-offset_top = 29.0
-offset_right = 392.0
-offset_bottom = 77.0
+offset_left = 131.0
+offset_top = 72.0
+offset_right = 381.0
+offset_bottom = 120.0
 theme = ExtResource("2_cea5x")
 text = "10:00"
 vertical_alignment = 3
 
 [node name="BronzeTrophy" type="Sprite2D" parent="."]
-position = Vector2(126, 153)
-texture = ExtResource("3_g5mdd")
+position = Vector2(115, 196)
+texture = ExtResource("3_svsc4")
+hframes = 4
 
 [node name="SilverTrophy" type="Sprite2D" parent="."]
-position = Vector2(125, 102)
-texture = ExtResource("4_ylv3i")
+position = Vector2(114, 145)
+texture = ExtResource("4_0iowq")
+hframes = 4
 
 [node name="GoldTrophy" type="Sprite2D" parent="."]
-position = Vector2(124, 54)
-texture = ExtResource("5_w5nlj")
+position = Vector2(113, 97)
+texture = ExtResource("5_qgpys")
+hframes = 4
