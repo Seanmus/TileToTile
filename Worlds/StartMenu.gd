@@ -4,6 +4,9 @@ extends Control
 @onready var audioBus := AudioServer.get_bus_index("Master")
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Settings/Panel/MouseSensitivitySlider.value = Manager.mouseSensitivity * 1000
+	$Settings/Panel/LockVerticalCheckBox.button_pressed = Manager.verticalMouseLocked
+	
 	$MenuButtons/Button.grab_focus()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	if Manager.totalTime > 10:
@@ -12,7 +15,7 @@ func _ready():
 		$MenuButtons/bestTIme.text = "%02d.%02d" % [Manager.bestTime, fmod(Manager.bestTime,1) * 1000]	
 	Ui._hide()
 	$MenuButtons.visible = true
-	$LevelSelect.visible = false
+	$Section1.visible = false
 	$Settings.visible = false
 	
 func _on_button_pressed():
@@ -22,14 +25,15 @@ func _on_button_pressed():
 	get_tree().change_scene_to_file("res://Worlds/Tutorial.tscn")
 	
 func _on_level_select_btn_pressed():
-	$LevelSelect.visible = true
+	$CourseSelect.visible = true
 	$MenuButtons.visible = false
 	$Settings.visible = false
 
 
 func _on_back_btn_pressed():
-	$LevelSelect.visible = false
-	$MenuButtons.visible = true
+	$Section1.visible = false
+	$CourseSelect.visible = true
+	$MenuButtons.visible = false
 	$Settings.visible = false
 
 
@@ -101,7 +105,7 @@ func _on_level_10_pressed():
 
 func _on_settings_btn_pressed():
 	$MenuButtons.visible = false
-	$LevelSelect.visible = false
+	$Section1.visible = false
 	$Settings.visible = true
 
 
@@ -111,3 +115,25 @@ func _on_audio_slider_value_changed(value):
 
 func _on_quit_btn_pressed():
 	get_tree().quit()
+
+
+func _on_lock_vertical_check_box_toggled(toggled_on):
+	Manager.verticalMouseLocked = toggled_on
+
+
+func _on_mouse_sensitivity_slider_value_changed(value):
+	Manager.mouseSensitivity = value/1000
+
+
+func _on_course_1_pressed():
+	$Section1.visible = true
+	$CourseSelect.visible = false
+	$MenuButtons.visible = false
+	$Settings.visible = false
+
+
+func _on_course_select_back_btn_pressed():
+	$Section1.visible = false
+	$CourseSelect.visible = false
+	$MenuButtons.visible = true
+	$Settings.visible = false

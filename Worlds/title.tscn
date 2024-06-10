@@ -69,23 +69,62 @@ layout_mode = 0
 offset_right = 868.0
 offset_bottom = 525.0
 
-[node name="audioSlider" type="HSlider" parent="StartMenu/Settings/Panel"]
+[node name="MouseSensitivityLabel" type="Label" parent="StartMenu/Settings/Panel"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 141.0
+offset_right = 428.0
+offset_bottom = 192.0
+theme = ExtResource("5_2d3if")
+text = "Mouse Sensitivity"
+
+[node name="MouseSensitivitySlider" type="HSlider" parent="StartMenu/Settings/Panel"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 192.0
+offset_right = 688.0
+offset_bottom = 242.0
+min_value = 0.1
+max_value = 10.0
+step = 0.1
+value = 1.5
+
+[node name="Lock Vertical Mouse" type="Label" parent="StartMenu/Settings/Panel"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 238.0
+offset_right = 428.0
+offset_bottom = 289.0
+theme = ExtResource("5_2d3if")
+text = "Lock Vertical Mouse"
+
+[node name="LockVerticalCheckBox" type="CheckBox" parent="StartMenu/Settings/Panel"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 289.0
+offset_right = 73.0
+offset_bottom = 313.0
+scale = Vector2(2, 2)
+button_pressed = true
+
+[node name="AudioLabel" type="Label" parent="StartMenu/Settings/Panel"]
 layout_mode = 0
 offset_left = 57.0
 offset_top = 40.0
+offset_right = 263.0
+offset_bottom = 91.0
+theme = ExtResource("5_2d3if")
+text = "Audio"
+
+[node name="audioSlider" type="HSlider" parent="StartMenu/Settings/Panel"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 91.0
 offset_right = 688.0
-offset_bottom = 273.0
+offset_bottom = 141.0
 max_value = 1.0
 step = 0.1
 value = 0.5
-
-[node name="Label" type="Label" parent="StartMenu/Settings/Panel/audioSlider"]
-layout_mode = 0
-offset_top = 33.0
-offset_right = 206.0
-offset_bottom = 84.0
-theme = ExtResource("5_2d3if")
-text = "Audio"
 
 [node name="backBtn" type="Button" parent="StartMenu/Settings/Panel"]
 layout_mode = 0
@@ -195,14 +234,14 @@ offset_bottom = 959.0
 theme = ExtResource("5_2d3if")
 text = "0"
 
-[node name="LevelSelect" type="Panel" parent="StartMenu"]
+[node name="Section1" type="Panel" parent="StartMenu"]
 visible = false
 layout_mode = 0
 offset_right = 1216.0
 offset_bottom = 900.0
 pivot_offset = Vector2(450, 450)
 
-[node name="GridContainer" type="GridContainer" parent="StartMenu/LevelSelect"]
+[node name="GridContainer" type="GridContainer" parent="StartMenu/Section1"]
 clip_contents = true
 custom_minimum_size = Vector2(400, 400)
 layout_direction = 2
@@ -212,7 +251,7 @@ offset_bottom = 900.0
 pivot_offset = Vector2(450, 450)
 columns = 4
 
-[node name="level1" type="TextureButton" parent="StartMenu/LevelSelect/GridContainer"]
+[node name="level1" type="TextureButton" parent="StartMenu/Section1/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
@@ -223,7 +262,7 @@ texture_hover = ExtResource("7_lsarh")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/LevelSelect/GridContainer/level1"]
+[node name="Label" type="Label" parent="StartMenu/Section1/GridContainer/level1"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -239,7 +278,7 @@ theme = ExtResource("5_2d3if")
 text = "Tutorial
 "
 
-[node name="level2" type="TextureButton" parent="StartMenu/LevelSelect/GridContainer"]
+[node name="level2" type="TextureButton" parent="StartMenu/Section1/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
@@ -250,7 +289,7 @@ texture_hover = ExtResource("10_bqt7s")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/LevelSelect/GridContainer/level2"]
+[node name="Label" type="Label" parent="StartMenu/Section1/GridContainer/level2"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -266,7 +305,7 @@ theme = ExtResource("5_2d3if")
 text = "Mirror Mirage
 "
 
-[node name="level3" type="TextureButton" parent="StartMenu/LevelSelect/GridContainer"]
+[node name="level3" type="TextureButton" parent="StartMenu/Section1/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
@@ -277,7 +316,7 @@ texture_hover = ExtResource("13_mm1xl")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/LevelSelect/GridContainer/level3"]
+[node name="Label" type="Label" parent="StartMenu/Section1/GridContainer/level3"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -293,7 +332,7 @@ theme = ExtResource("5_2d3if")
 text = "Octopus Game
 "
 
-[node name="level4" type="TextureButton" parent="StartMenu/LevelSelect/GridContainer"]
+[node name="level4" type="TextureButton" parent="StartMenu/Section1/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
@@ -304,7 +343,7 @@ texture_hover = ExtResource("16_uc6ya")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/LevelSelect/GridContainer/level4"]
+[node name="Label" type="Label" parent="StartMenu/Section1/GridContainer/level4"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -319,7 +358,7 @@ grow_vertical = 0
 theme = ExtResource("5_2d3if")
 text = "Winding Road"
 
-[node name="level5" type="TextureButton" parent="StartMenu/LevelSelect/GridContainer"]
+[node name="level5" type="TextureButton" parent="StartMenu/Section1/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
@@ -330,7 +369,7 @@ texture_hover = ExtResource("19_jr68i")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/LevelSelect/GridContainer/level5"]
+[node name="Label" type="Label" parent="StartMenu/Section1/GridContainer/level5"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -345,7 +384,7 @@ grow_vertical = 0
 theme = ExtResource("5_2d3if")
 text = "A Rising Tide"
 
-[node name="level6" type="TextureButton" parent="StartMenu/LevelSelect/GridContainer"]
+[node name="level6" type="TextureButton" parent="StartMenu/Section1/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
@@ -356,7 +395,7 @@ texture_hover = ExtResource("22_o6cqk")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/LevelSelect/GridContainer/level6"]
+[node name="Label" type="Label" parent="StartMenu/Section1/GridContainer/level6"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -371,7 +410,7 @@ grow_vertical = 0
 theme = ExtResource("5_2d3if")
 text = "Is that a wall?"
 
-[node name="level7" type="TextureButton" parent="StartMenu/LevelSelect/GridContainer"]
+[node name="level7" type="TextureButton" parent="StartMenu/Section1/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
@@ -382,7 +421,7 @@ texture_hover = ExtResource("25_dn0ts")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/LevelSelect/GridContainer/level7"]
+[node name="Label" type="Label" parent="StartMenu/Section1/GridContainer/level7"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -397,7 +436,7 @@ grow_vertical = 0
 theme = ExtResource("5_2d3if")
 text = "Run Through"
 
-[node name="level8" type="TextureButton" parent="StartMenu/LevelSelect/GridContainer"]
+[node name="level8" type="TextureButton" parent="StartMenu/Section1/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
@@ -408,7 +447,7 @@ texture_hover = ExtResource("28_u7v0q")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/LevelSelect/GridContainer/level8"]
+[node name="Label" type="Label" parent="StartMenu/Section1/GridContainer/level8"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -424,7 +463,7 @@ theme = ExtResource("5_2d3if")
 text = "The Pass 
 "
 
-[node name="level9" type="TextureButton" parent="StartMenu/LevelSelect/GridContainer"]
+[node name="level9" type="TextureButton" parent="StartMenu/Section1/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
@@ -435,7 +474,7 @@ texture_hover = ExtResource("31_iovhn")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/LevelSelect/GridContainer/level9"]
+[node name="Label" type="Label" parent="StartMenu/Section1/GridContainer/level9"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -450,7 +489,7 @@ grow_vertical = 0
 theme = ExtResource("5_2d3if")
 text = "Wall Climber"
 
-[node name="level10" type="TextureButton" parent="StartMenu/LevelSelect/GridContainer"]
+[node name="level10" type="TextureButton" parent="StartMenu/Section1/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
@@ -461,7 +500,7 @@ texture_hover = ExtResource("34_uuqsf")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/LevelSelect/GridContainer/level10"]
+[node name="Label" type="Label" parent="StartMenu/Section1/GridContainer/level10"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -476,7 +515,305 @@ grow_vertical = 0
 theme = ExtResource("5_2d3if")
 text = "The Finale"
 
-[node name="backBtn" type="Button" parent="StartMenu/LevelSelect"]
+[node name="backBtn" type="Button" parent="StartMenu/Section1"]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 608.0
+offset_right = 1194.0
+offset_bottom = 893.0
+theme = ExtResource("5_2d3if")
+text = "Back"
+
+[node name="CourseSelect" type="Panel" parent="StartMenu"]
+visible = false
+layout_mode = 0
+offset_right = 1216.0
+offset_bottom = 900.0
+pivot_offset = Vector2(450, 450)
+
+[node name="GridContainer" type="GridContainer" parent="StartMenu/CourseSelect"]
+clip_contents = true
+custom_minimum_size = Vector2(400, 400)
+layout_direction = 2
+layout_mode = 0
+offset_right = 1212.01
+offset_bottom = 900.0
+pivot_offset = Vector2(450, 450)
+columns = 4
+
+[node name="Course1" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("4_hnicg")
+texture_pressed = ExtResource("6_a6mqp")
+texture_hover = ExtResource("7_lsarh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course1"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Course 1
+"
+
+[node name="Course2" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("6_5ieg8")
+texture_pressed = ExtResource("9_km44q")
+texture_hover = ExtResource("10_bqt7s")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Course 2
+"
+
+[node name="Course3" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("7_vr3gk")
+texture_pressed = ExtResource("12_13t58")
+texture_hover = ExtResource("13_mm1xl")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Course 3
+"
+
+[node name="Course4" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("8_4xp21")
+texture_pressed = ExtResource("15_bp4fk")
+texture_hover = ExtResource("16_uc6ya")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course4"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Course 4"
+
+[node name="Course5" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("9_0j47a")
+texture_pressed = ExtResource("18_ej7m4")
+texture_hover = ExtResource("19_jr68i")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course5"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Course 5"
+
+[node name="Course6" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("10_yl1ke")
+texture_pressed = ExtResource("21_wc6k8")
+texture_hover = ExtResource("22_o6cqk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course6"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Course 6"
+
+[node name="Course7" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("11_n4vs2")
+texture_pressed = ExtResource("24_ehwo2")
+texture_hover = ExtResource("25_dn0ts")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course7"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Course 7"
+
+[node name="Course8" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("12_ahhgl")
+texture_pressed = ExtResource("27_7v1x6")
+texture_hover = ExtResource("28_u7v0q")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course8"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Course 8"
+
+[node name="Course9" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("13_m6gwp")
+texture_pressed = ExtResource("30_mswyx")
+texture_hover = ExtResource("31_iovhn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course9"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Course 9"
+
+[node name="Course10" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("14_c5oy4")
+texture_pressed = ExtResource("33_vvts0")
+texture_hover = ExtResource("34_uuqsf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course10"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Course 10"
+
+[node name="backBtn" type="Button" parent="StartMenu/CourseSelect"]
 layout_mode = 0
 offset_left = 608.0
 offset_top = 608.0
@@ -661,20 +998,24 @@ nextLevel = "octopusGame8"
 [node name="Camera3d" type="Camera3D" parent="."]
 transform = Transform3D(0.89141, 0, 0.453197, 0, 1, 0, -0.453197, 0, 0.89141, -13.1682, 11.7379, 24.4054)
 
+[connection signal="value_changed" from="StartMenu/Settings/Panel/MouseSensitivitySlider" to="StartMenu" method="_on_mouse_sensitivity_slider_value_changed"]
+[connection signal="toggled" from="StartMenu/Settings/Panel/LockVerticalCheckBox" to="StartMenu" method="_on_lock_vertical_check_box_toggled"]
 [connection signal="value_changed" from="StartMenu/Settings/Panel/audioSlider" to="StartMenu" method="_on_audio_slider_value_changed"]
-[connection signal="pressed" from="StartMenu/Settings/Panel/backBtn" to="StartMenu" method="_on_back_btn_pressed"]
+[connection signal="pressed" from="StartMenu/Settings/Panel/backBtn" to="StartMenu" method="_on_course_select_back_btn_pressed"]
 [connection signal="pressed" from="StartMenu/MenuButtons/settingsBtn" to="StartMenu" method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="StartMenu/MenuButtons/quitBtn" to="StartMenu" method="_on_quit_btn_pressed"]
 [connection signal="pressed" from="StartMenu/MenuButtons/Button" to="StartMenu" method="_on_button_pressed"]
 [connection signal="pressed" from="StartMenu/MenuButtons/LevelSelectBtn" to="StartMenu" method="_on_level_select_btn_pressed"]
-[connection signal="pressed" from="StartMenu/LevelSelect/GridContainer/level1" to="StartMenu" method="_on_level_1_pressed"]
-[connection signal="pressed" from="StartMenu/LevelSelect/GridContainer/level2" to="StartMenu" method="_on_level_2_pressed"]
-[connection signal="pressed" from="StartMenu/LevelSelect/GridContainer/level3" to="StartMenu" method="_on_level_3_pressed"]
-[connection signal="pressed" from="StartMenu/LevelSelect/GridContainer/level4" to="StartMenu" method="_on_level_4_pressed"]
-[connection signal="pressed" from="StartMenu/LevelSelect/GridContainer/level5" to="StartMenu" method="_on_level_5_pressed"]
-[connection signal="pressed" from="StartMenu/LevelSelect/GridContainer/level6" to="StartMenu" method="_on_level_6_pressed"]
-[connection signal="pressed" from="StartMenu/LevelSelect/GridContainer/level7" to="StartMenu" method="_on_level_7_pressed"]
-[connection signal="pressed" from="StartMenu/LevelSelect/GridContainer/level8" to="StartMenu" method="_on_level_8_pressed"]
-[connection signal="pressed" from="StartMenu/LevelSelect/GridContainer/level9" to="StartMenu" method="_on_level_9_pressed"]
-[connection signal="pressed" from="StartMenu/LevelSelect/GridContainer/level10" to="StartMenu" method="_on_level_10_pressed"]
-[connection signal="pressed" from="StartMenu/LevelSelect/backBtn" to="StartMenu" method="_on_back_btn_pressed"]
+[connection signal="pressed" from="StartMenu/Section1/GridContainer/level1" to="StartMenu" method="_on_level_1_pressed"]
+[connection signal="pressed" from="StartMenu/Section1/GridContainer/level2" to="StartMenu" method="_on_level_2_pressed"]
+[connection signal="pressed" from="StartMenu/Section1/GridContainer/level3" to="StartMenu" method="_on_level_3_pressed"]
+[connection signal="pressed" from="StartMenu/Section1/GridContainer/level4" to="StartMenu" method="_on_level_4_pressed"]
+[connection signal="pressed" from="StartMenu/Section1/GridContainer/level5" to="StartMenu" method="_on_level_5_pressed"]
+[connection signal="pressed" from="StartMenu/Section1/GridContainer/level6" to="StartMenu" method="_on_level_6_pressed"]
+[connection signal="pressed" from="StartMenu/Section1/GridContainer/level7" to="StartMenu" method="_on_level_7_pressed"]
+[connection signal="pressed" from="StartMenu/Section1/GridContainer/level8" to="StartMenu" method="_on_level_8_pressed"]
+[connection signal="pressed" from="StartMenu/Section1/GridContainer/level9" to="StartMenu" method="_on_level_9_pressed"]
+[connection signal="pressed" from="StartMenu/Section1/GridContainer/level10" to="StartMenu" method="_on_level_10_pressed"]
+[connection signal="pressed" from="StartMenu/Section1/backBtn" to="StartMenu" method="_on_back_btn_pressed"]
+[connection signal="pressed" from="StartMenu/CourseSelect/GridContainer/Course1" to="StartMenu" method="_on_course_1_pressed"]
+[connection signal="pressed" from="StartMenu/CourseSelect/backBtn" to="StartMenu" method="_on_course_select_back_btn_pressed"]

@@ -12,9 +12,8 @@
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_c6mi5")
-GoldTime = 4.65
-SilverTime = 5.6
-BronzeTime = 7.0
+GoldTime = 6.2
+SilverTime = 8.0
 
 [node name="Platform" parent="." instance=ExtResource("1_2np87")]
 
@@ -33,6 +32,18 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6, 0, 0)
 [node name="Platform13" parent="." instance=ExtResource("1_2np87")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -14, 0, 0)
 
+[node name="Platform19" parent="." instance=ExtResource("1_2np87")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -16, 0, 0)
+
+[node name="Platform20" parent="." instance=ExtResource("1_2np87")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -18, 0, 0)
+
+[node name="Platform21" parent="." instance=ExtResource("1_2np87")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -20, 0, 0)
+
+[node name="Platform22" parent="." instance=ExtResource("1_2np87")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -22, 0, 0)
+
 [node name="Platform14" parent="." instance=ExtResource("1_2np87")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -14, 0, 2)
 
@@ -46,7 +57,7 @@ transform = Transform3D(-1.63296e-08, 0, 0.373579, 0, 0.373579, 0, -0.373579, 0,
 transform = Transform3D(210.972, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432, 0)
 
 [node name="gem" parent="." instance=ExtResource("4_t1a4e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0073, 0.734239, 0.0699699)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0073, 0.734239, 0.0699699)
 nextLevel = "MirrorMirage"
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("5_5upjp")]
@@ -82,8 +93,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -10, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23791, 0)
 billboard = 1
 outline_modulate = Color(0.470588, 0, 0, 1)
-text = "The platforms that appear 
-do not actually exist"
+text = "The platforms that fade in and out are fake, 
+you will fall through them"
 font = ExtResource("8_7a8qe")
 font_size = 72
 outline_size = 16
@@ -98,12 +109,23 @@ font = ExtResource("8_7a8qe")
 outline_size = 16
 
 [node name="Label3d2" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.23791, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3034, 1.23791, 0)
 billboard = 1
 outline_modulate = Color(0.470588, 0, 0, 1)
 text = "The fake platforms will 
 reveal themselves 
 EVERY 10 SECONDS"
+font = ExtResource("8_7a8qe")
+font_size = 64
+outline_size = 16
+
+[node name="Label3d4" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 1.23791, 0)
+billboard = 1
+outline_modulate = Color(0.470588, 0, 0, 1)
+text = "You can reveal the fake platforms
+by clicking the mouse 
+at the cost of 4 seconds to your time"
 font = ExtResource("8_7a8qe")
 font_size = 64
 outline_size = 16

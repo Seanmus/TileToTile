@@ -3,7 +3,7 @@ extends CharacterBody3D
 
 const SPEED = 4.5
 const JUMP_VELOCITY = 4.4
-var mouse_sensitivty = 0.0015
+var mouse_sensitivty = Manager.mouseSensitivity
 var controller_sensitivity = 0.05
 var spawnPos
 var landing : bool 
@@ -26,6 +26,8 @@ func _ready():
 func _unhandled_input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		rotate_y(-event.relative.x * mouse_sensitivty)
+		if !Manager.verticalMouseLocked:
+			$Pivot.rotate_x(-event.relative.y * mouse_sensitivty)
 		
 func _physics_process(delta):
 	if Input.is_action_just_pressed("click"):
@@ -34,7 +36,7 @@ func _physics_process(delta):
 	var cameraInput = Input.get_vector("look_left", "look_right", "look_up", "look_down")
 	if cameraInput:
 		rotate_y(-cameraInput.x * controller_sensitivity)
-		#rotation.x = clamp($Pivot.rotation.x, -0.9, -0.1)
+		#rotate_x(cameraInput.y * controller_sensitivity)
 	
 	if not is_on_floor():
 		if(landing):

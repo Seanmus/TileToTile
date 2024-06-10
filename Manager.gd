@@ -14,6 +14,10 @@ var showPlatformTime = 4
 
 var mapTimes = {}
 
+var verticalMouseLocked = true
+var mouseSensitivity = 0.0015
+
+
 func _ready():
 	AudioServer.set_bus_volume_db(audioBus, -30)
 

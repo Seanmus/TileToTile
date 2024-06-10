@@ -10,7 +10,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3d:position")
+tracks/0/path = NodePath("Pivot/Camera3d:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -22,7 +22,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3d:rotation")
+tracks/1/path = NodePath("Pivot/Camera3d:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -38,7 +38,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3d:position")
+tracks/0/path = NodePath("Pivot/Camera3d:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -50,7 +50,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3d:rotation")
+tracks/1/path = NodePath("Pivot/Camera3d:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -66,7 +66,7 @@ length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3d:rotation")
+tracks/0/path = NodePath("Pivot/Camera3d:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -105,12 +105,6 @@ script = ExtResource("1_gb3mg")
 [node name="CollisionShape3d" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_of8i7")
 
-[node name="Camera3d" type="Camera3D" parent="."]
-transform = Transform3D(2.67681, 0, 0, 0, 2.62725, 0.512684, 0, -0.512684, 2.62725, 0, 1.30256, -0.154819)
-cull_mask = 524287
-current = true
-fov = 99.0
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_cj48i")
@@ -138,5 +132,13 @@ transform = Transform3D(2.0123, 0, 0, 0, 2.0123, 0, 0, 0, 2.0123, 0, -0.329564, 
 layers = 524288
 mesh = SubResource("BoxMesh_eksmw")
 material = SubResource("StandardMaterial3D_wpswo")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Camera3d" type="Camera3D" parent="Pivot"]
+transform = Transform3D(2.67681, 0, 0, 0, 2.62725, 0.512684, 0, -0.512684, 2.62725, 0, 1.30256, -0.154819)
+cull_mask = 524287
+current = true
+fov = 99.0
 
 [connection signal="timeout" from="coyoteTimer" to="." method="_on_coyote_timer_timeout"]
