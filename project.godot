@@ -26,7 +26,6 @@ WinSound="*res://Audio/win_sound.tscn"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
 window/stretch/mode="viewport"
 
 [editor]
@@ -113,4 +112,6 @@ look_right={
 
 [rendering]
 
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 vulkan/rendering/back_end=1

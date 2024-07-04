@@ -13,6 +13,11 @@ func _on_gem_body_entered(body):
 		WinSound.play()
 		var map = get_parent()
 		print(map.name)
+		
+		if Ui.GoldTime > Manager.roundTime:
+			var ACH = "ACH_FirstGold"
+			Manager._SetAchievement(ACH)
+		
 		Manager._MapFinished()
 		call_deferred("_nextScene")
 		Manager.roundTime = 0
