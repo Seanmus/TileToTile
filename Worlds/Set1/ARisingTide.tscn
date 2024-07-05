@@ -118,7 +118,7 @@ transform = Transform3D(-1.86805, 0.599688, -0.388294, 0.714423, 1.56894, -1.013
 
 [node name="gem" parent="." instance=ExtResource("6_rqhuc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.0751, 5.36457, 29.9442)
-nextLevel = "IsThatAWall"
+nextLevel = "Set1/IsThatAWall"
 
 [node name="Glass13" parent="." instance=ExtResource("5_vo15g")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35, 5, 9)

@@ -76,6 +76,6 @@ transform = Transform3D(-8.74228e-08, 2, 0, -2, -8.74228e-08, 0, 0, 0, 2, -9, 3,
 
 [node name="gem" parent="." instance=ExtResource("6_fpk31")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1857, 1.94954, -0.0542038)
-nextLevel = "RunThrough"
+nextLevel = "Set1/RunThrough"
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("7_buwoo")]

@@ -3,6 +3,8 @@ extends Control
 
 @onready var audioBus := AudioServer.get_bus_index("Master")
 # Called when the node enters the scene tree for the first time.
+
+
 func _ready():
 	$Settings/Panel/MouseSensitivitySlider.value = Manager.mouseSensitivity * 1000
 	$Settings/Panel/LockVerticalCheckBox.button_pressed = Manager.verticalMouseLocked
@@ -22,7 +24,7 @@ func _on_button_pressed():
 	Manager.totalTime = 0
 	Manager.roundTime = 0
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)	
-	get_tree().change_scene_to_file("res://Worlds/Tutorial.tscn")
+	get_tree().change_scene_to_file("res://Worlds/Set1/Tutorial.tscn")
 	
 func _on_level_select_btn_pressed():
 	$CourseSelect.visible = true
@@ -40,67 +42,67 @@ func _on_back_btn_pressed():
 func _on_level_1_pressed():
 	Manager.totalTime = 1000
 	Manager.sceneName = "Tutorial"
-	get_tree().change_scene_to_file("res://Worlds/Tutorial.tscn")
+	get_tree().change_scene_to_file("res://Worlds/Set1/Tutorial.tscn")
 
 
 func _on_level_2_pressed():
 	Manager.totalTime = 1000
 	Manager.sceneName = "MirrorMirage"
-	get_tree().change_scene_to_file("res://Worlds/MirrorMirage.tscn")
+	get_tree().change_scene_to_file("res://Worlds/Set1/MirrorMirage.tscn")
 
 
 func _on_level_3_pressed():
 	Manager.totalTime = 1000
 	Manager.sceneName = "OcotpusGame"
-	get_tree().change_scene_to_file("res://Worlds/OctopusGame.tscn")
+	get_tree().change_scene_to_file("res://Worlds/Set1/OctopusGame.tscn")
 
 
 func _on_level_4_pressed():
 	Manager.totalTime = 1000
 	Manager.sceneName = "WindingRoad"
-	get_tree().change_scene_to_file("res://Worlds/WindingRoad.tscn")
+	get_tree().change_scene_to_file("res://Worlds/Set1/WindingRoad.tscn")
 
 
 
 func _on_level_5_pressed():
 	Manager.totalTime = 1000
 	Manager.sceneName = "ARisingTide"
-	get_tree().change_scene_to_file("res://Worlds/ARisingTide.tscn")
+	get_tree().change_scene_to_file("res://Worlds/Set1/ARisingTide.tscn")
 
 
 
 func _on_level_6_pressed():
 	Manager.totalTime = 1000
 	Manager.sceneName = "IsThatAWall"
-	get_tree().change_scene_to_file("res://Worlds/IsThatAWall.tscn")
+	get_tree().change_scene_to_file("res://Worlds/Set1/IsThatAWall.tscn")
 
 
 
 func _on_level_7_pressed():
 	Manager.totalTime = 1000
 	Manager.sceneName = "RunThrough"
-	get_tree().change_scene_to_file("res://Worlds/RunThrough.tscn")
+	get_tree().change_scene_to_file("res://Worlds/Set1/RunThrough.tscn")
 
 
 
 func _on_level_8_pressed():
 	Manager.sceneName = "ThePass"
 	Manager.totalTime = 1000	
-	get_tree().change_scene_to_file("res://Worlds/ThePass.tscn")
+	get_tree().change_scene_to_file("res://Worlds/Set1/ThePass.tscn")
 
 
 
 func _on_level_9_pressed():	
 	Manager.sceneName = "WallClimber"
 	Manager.totalTime = 1000
-	get_tree().change_scene_to_file("res://Worlds/WallClimber.tscn")
+	get_tree().change_scene_to_file("res://Worlds/Set1/WallClimber.tscn")
 
 
 
 func _on_level_10_pressed():
 	Manager.sceneName = "TheFinale"
 	Manager.totalTime = 1000
-	get_tree().change_scene_to_file("res://Worlds/TheFinale.tscn")
+	get_tree().change_scene_to_file("res://Worlds/Set1/TheFinale.tscn")
 
 
 func _on_settings_btn_pressed():

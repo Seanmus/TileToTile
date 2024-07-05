@@ -42,16 +42,20 @@ func _ready():
 	var id = Steam.getSteamID()
 	var name = Steam.getFriendPersonaName(id)
 	print(name)
-	Steam.findLeaderboard("HighScore")
-	Steam.uploadLeaderboardScore(1090)
 
-	
+func _process(delta):
+	Steam.run_callbacks()
+
+func _LoadLeaderboard():
+	Steam.findLeaderboard(sceneName)
+
 func _physics_process(delta):
-
 	totalTime += delta
 	roundTime += delta
 
 func _MapFinished():
+
+	Steam.uploadLeaderboardScore(roundTime)
 	mapTimes[sceneName] = roundTime
 	print(mapTimes)
 

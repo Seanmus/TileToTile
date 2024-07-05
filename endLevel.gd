@@ -23,5 +23,8 @@ func _on_gem_body_entered(body):
 		Manager.roundTime = 0
 		
 func _nextScene():
-	Manager.sceneName = nextLevel
+	var sceneNameStrings = nextLevel.split("/")
+	print(sceneNameStrings)	
+	Manager.sceneName = sceneNameStrings[sceneNameStrings.size()-1]
 	get_tree().change_scene_to_file("res://Worlds/" + nextLevel + ".tscn")	
+	Manager._LoadLeaderboard()
