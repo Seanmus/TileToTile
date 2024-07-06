@@ -42,6 +42,7 @@ func _on_back_btn_pressed():
 func _on_level_1_pressed():
 	Manager.totalTime = 1000
 	Manager.sceneName = "Tutorial"
+	Manager.scene_file_path = "Set1/Tutorial"
 	get_tree().change_scene_to_file("res://Worlds/Set1/Tutorial.tscn")
 
 

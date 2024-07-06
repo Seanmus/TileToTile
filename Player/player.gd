@@ -13,6 +13,9 @@ var startedMoving : bool
 @onready var coyoteTimer = $coyoteTimer
 @onready var anim = $AnimationPlayer
 @onready var landed = $landed
+
+@onready var speedEffect = $Pivot/SpeedEffect
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -60,12 +63,14 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
+		speedEffect.visible = true
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 		if not startedMoving:
 			anim.play("move")
 			startedMoving = true
 	else:
+		speedEffect.visible = false
 		velocity.x = move_toward(velocity.x, 0, SPEED/2)
 		velocity.z = move_toward(velocity.z, 0, SPEED/2)
 		startedMoving = false
@@ -78,7 +83,7 @@ func _respawn():
 
 
 func _resetScene():
-	get_tree().change_scene_to_file("res://Worlds/" + Manager.sceneName + ".tscn")	
+	get_tree().change_scene_to_file(get_tree().current_scene.scene_file_path)	
 
 
 func _on_coyote_timer_timeout():

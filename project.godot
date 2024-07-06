@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Every Ten Seconds"
+config/name="Tile To Tile"
 run/main_scene="res://Worlds/title.tscn"
 config/features=PackedStringArray("4.2")
 config/icon="res://icon.svg"
@@ -112,6 +112,4 @@ look_right={
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
 vulkan/rendering/back_end=1

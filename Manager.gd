@@ -1,6 +1,7 @@
 extends Node
 @onready var audioBus := AudioServer.get_bus_index("Master")
 var sceneName = "tutorial"
+var scenePath = "tutorial"
 
 signal resetPlatforms
 signal addTime
@@ -8,7 +9,7 @@ signal addTime
 var bestTime = 10000
 var totalTime = 0
 #Set on the end level node
-var roundTime = 0
+var roundTime = 0.0
 
 var showPlatformTime = 4
 
@@ -55,7 +56,7 @@ func _physics_process(delta):
 
 func _MapFinished():
 
-	Steam.uploadLeaderboardScore(roundTime)
+	Steam.uploadLeaderboardScore(roundTime * 1000)
 	mapTimes[sceneName] = roundTime
 	print(mapTimes)
 

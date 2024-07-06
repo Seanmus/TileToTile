@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dpaqrwtjbvv7l"]
+[gd_scene load_steps=13 format=3 uid="uid://dpaqrwtjbvv7l"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_gb3mg"]
 [ext_resource type="AudioStream" uid="uid://cnihqjwc754lm" path="res://Audio/Effects/landed.wav" id="2_bupsb"]
@@ -97,6 +97,11 @@ sections = 2
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpswo"]
 albedo_color = Color(0.309804, 1, 0.0117647, 1)
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_d2fx1"]
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.1
+
 [node name="Player" type="CharacterBody3D" groups=["player"]]
 transform = Transform3D(0.373579, 0, 0, 0, 0.373579, 0, 0, 0, 0.373579, 0, 0, 0)
 platform_on_leave = 1
@@ -140,5 +145,19 @@ transform = Transform3D(2.67681, 0, 0, 0, 2.62725, 0.512684, 0, -0.512684, 2.627
 cull_mask = 524287
 current = true
 fov = 99.0
+
+[node name="SpeedEffect" type="CPUParticles3D" parent="Pivot"]
+transform = Transform3D(-4.37113e-08, 0, -0.999999, 0, 0.999999, 0, 0.999999, 0, -4.37113e-08, 0, 0, -13.7631)
+amount = 100
+randomness = 1.0
+mesh = SubResource("CylinderMesh_d2fx1")
+emission_shape = 1
+emission_sphere_radius = 18.1
+particle_flag_align_y = true
+spread = 10.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 88.42
+initial_velocity_max = 88.42
+color = Color(1, 0.294118, 0.690196, 1)
 
 [connection signal="timeout" from="coyoteTimer" to="." method="_on_coyote_timer_timeout"]

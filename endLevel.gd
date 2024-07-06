@@ -23,6 +23,7 @@ func _on_gem_body_entered(body):
 		Manager.roundTime = 0
 		
 func _nextScene():
+	Manager.scene_file_path = nextLevel
 	var sceneNameStrings = nextLevel.split("/")
 	print(sceneNameStrings)	
 	Manager.sceneName = sceneNameStrings[sceneNameStrings.size()-1]
