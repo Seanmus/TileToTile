@@ -2,6 +2,8 @@ extends CharacterBody3D
 
 
 const SPEED = 4.5
+var currentSpeed = SPEED
+const MAXSPEED = 20
 const JUMP_VELOCITY = 4.4
 var mouse_sensitivty = Manager.mouseSensitivity
 var controller_sensitivity = 0.05
@@ -63,13 +65,19 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
+		currentSpeed += 0.5 * delta
+		currentSpeed = clamp(currentSpeed, SPEED, MAXSPEED)
 		speedEffect.visible = true
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * currentSpeed
+		velocity.z = direction.z * currentSpeed
+		print(currentSpeed)
+		Ui.playerSpeed = round(currentSpeed * 20) 
 		if not startedMoving:
 			anim.play("move")
 			startedMoving = true
 	else:
+		currentSpeed = SPEED
+		Ui.playerSpeed = 0
 		speedEffect.visible = false
 		velocity.x = move_toward(velocity.x, 0, SPEED/2)
 		velocity.z = move_toward(velocity.z, 0, SPEED/2)

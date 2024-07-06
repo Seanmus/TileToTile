@@ -19,6 +19,8 @@ var GoldTime : float
 var SilverTime : float
 var BronzeTime : float
 
+var playerSpeed
+
 # Called when the node enters the scene tree for the first time.
 func _ready():	
 	Manager.addTime.connect(_addTime)
@@ -34,6 +36,7 @@ func _SetRoundTimes(Gold, Silver, Bronze):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	$Speed.text = str(playerSpeed) + " MPH"
 	levelTime.text = "%02d.%02d" % [Manager.roundTime, fmod(Manager.roundTime,1) * 1000]
 	gameTime.text = "%02d.%02d" % [Manager.totalTime, fmod(Manager.totalTime,1) * 1000]
 	_HighlightTime()
@@ -98,6 +101,7 @@ func _show():
 	GoldTimeLabel.visible = true
 	SilverTimeLabel.visible = true
 	BronzeTimeLabel.visible = true
+	$Speed.visible = true
 	
 	
 func _hide():
@@ -112,6 +116,7 @@ func _hide():
 	miniMap.visible = false
 	levelTime.visible = false
 	gameTime.visible = false
+	$Speed.visible = false
 
 func _addTime():
 	$levelTime/levelTimeAddTimeAnim.play("addTime")

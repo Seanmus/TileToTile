@@ -230,6 +230,17 @@ theme = ExtResource("2_cea5x")
 text = "10:00"
 vertical_alignment = 3
 
+[node name="Speed" type="Label" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 904.0
+offset_right = 551.0
+offset_bottom = 1022.0
+theme = ExtResource("2_cea5x")
+theme_override_font_sizes/font_size = 100
+text = "100 KM/HR"
+vertical_alignment = 3
+
 [node name="GoldTime" type="Label" parent="."]
 layout_mode = 0
 offset_left = 131.0
