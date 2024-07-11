@@ -4,6 +4,9 @@ extends Node3D
 var rotationSpeed = 2
 
 
+func _ready():
+	Manager.paused = false
+	Ui.endLevel = self
 
 func _process(delta):
 	self.rotation.y += rotationSpeed * delta
@@ -19,8 +22,8 @@ func _on_gem_body_entered(body):
 			Manager._SetAchievement(ACH)
 		
 		Manager._MapFinished()
-		call_deferred("_nextScene")
-		Manager.roundTime = 0
+		Manager.paused = true
+		#call_deferred("_nextScene")
 		
 func _nextScene():
 	Manager.scene_file_path = nextLevel

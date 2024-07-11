@@ -15,6 +15,12 @@ extends Control
 @onready var SilverTrophy = $SilverTrophy
 @onready var BronzeTrophy = $BronzeTrophy
 
+@onready var playerLabels = [$LeaderboardPanel/Player1, $LeaderboardPanel/Player2, 
+$LeaderboardPanel/Player3, $LeaderboardPanel/Player4, $LeaderboardPanel/Player5, $LeaderboardPanel/Player6, 
+$LeaderboardPanel/Player7, $LeaderboardPanel/Player8, $LeaderboardPanel/Player9, $LeaderboardPanel/Player10] 
+
+var endLevel
+
 var GoldTime : float
 var SilverTime : float
 var BronzeTime : float
@@ -36,6 +42,8 @@ func _SetRoundTimes(Gold, Silver, Bronze):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	if Manager.paused:
+		return
 	$Speed.text = str(playerSpeed) + " MPH"
 	levelTime.text = "%02d.%02d" % [Manager.roundTime, fmod(Manager.roundTime,1) * 1000]
 	gameTime.text = "%02d.%02d" % [Manager.totalTime, fmod(Manager.totalTime,1) * 1000]
@@ -105,6 +113,7 @@ func _show():
 	
 	
 func _hide():
+	$LeaderboardPanel.visible = false
 	GoldTrophy.visible = false
 	SilverTrophy.visible = false
 	BronzeTrophy.visible = false
@@ -120,3 +129,31 @@ func _hide():
 
 func _addTime():
 	$levelTime/levelTimeAddTimeAnim.play("addTime")
+
+func _ShowHighscores(result):
+	$LeaderboardPanel/CurrentScore.text = "Your Time: " + str(Manager.roundTime)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
+	$LeaderboardPanel.visible = true
+	for label in playerLabels:
+		label.visible = false
+	var i = 0
+	for r in result:
+		var name = Steam.getFriendPersonaName(r["steam_id"])
+		var score : float = r["score"]
+		print(name + " Score : " + str(score))
+		playerLabels[i].text = name + " Time: " + str(score/1000)
+		playerLabels[i].visible = true
+		i+= 1
+
+		
+	
+
+
+func _on_next_level_btn_button_down():
+	$LeaderboardPanel.visible = false
+	endLevel._nextScene()
+
+
+func _on_retry_level_btn_button_down():
+	$LeaderboardPanel.visible = false
+	get_tree().change_scene_to_file(get_tree().current_scene.scene_file_path)	

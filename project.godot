@@ -13,6 +13,8 @@ config_version=5
 config/name="Tile To Tile"
 run/main_scene="res://Worlds/title.tscn"
 config/features=PackedStringArray("4.2")
+boot_splash/show_image=false
+boot_splash/image="res://title.png"
 config/icon="res://icon.svg"
 
 [autoload]

@@ -114,7 +114,7 @@ billboard = 1
 outline_modulate = Color(0.470588, 0, 0, 1)
 text = "The fake platforms will 
 reveal themselves 
-EVERY 10 SECONDS"
+EVERY 5 SECONDS"
 font = ExtResource("9_fw68r")
 font_size = 64
 outline_size = 16

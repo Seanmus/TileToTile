@@ -35,7 +35,9 @@ func _unhandled_input(event):
 			$Pivot.rotate_x(-event.relative.y * mouse_sensitivty)
 		
 func _physics_process(delta):
-	if Input.is_action_just_pressed("click"):
+	if Manager.paused:
+		return
+	if Input.is_action_just_pressed("click") && Manager.roundTime >= 1:
 		Manager._ResetPlatforms()
 	
 	var cameraInput = Input.get_vector("look_left", "look_right", "look_up", "look_down")
@@ -67,10 +69,14 @@ func _physics_process(delta):
 	if direction:
 		currentSpeed += 0.5 * delta
 		currentSpeed = clamp(currentSpeed, SPEED, MAXSPEED)
-		speedEffect.visible = true
+		if input_dir.y < 0:
+			speedEffect.visible = true
+			speedEffect.initial_velocity_max = 88 * (currentSpeed / 4.5)
+			speedEffect.initial_velocity_min = 88 * (currentSpeed / 4.5)
+		else:
+			speedEffect.visible = false
 		velocity.x = direction.x * currentSpeed
 		velocity.z = direction.z * currentSpeed
-		print(currentSpeed)
 		Ui.playerSpeed = round(currentSpeed * 20) 
 		if not startedMoving:
 			anim.play("move")

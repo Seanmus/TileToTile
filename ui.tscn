@@ -265,3 +265,231 @@ hframes = 4
 position = Vector2(113, 97)
 texture = ExtResource("5_qgpys")
 hframes = 4
+
+[node name="LeaderboardPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -348.0
+offset_top = -324.0
+offset_right = 348.0
+offset_bottom = 396.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CurrentScore" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -286.0
+offset_right = 195.0
+offset_bottom = -226.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+theme_override_colors/font_color = Color(1, 0.932404, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Your Time: 10.05"
+
+[node name="HighscoresLabel" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -336.0
+offset_right = 149.0
+offset_bottom = -288.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Highscores"
+horizontal_alignment = 1
+
+[node name="Player1" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -224.0
+offset_right = 149.0
+offset_bottom = -176.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player2" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -176.0
+offset_right = 149.0
+offset_bottom = -128.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player3" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -128.0
+offset_right = 149.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player4" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -80.0
+offset_right = 149.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player5" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -32.0
+offset_right = 149.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player6" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 16.0
+offset_right = 149.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player7" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 64.0
+offset_right = 149.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player8" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 112.0
+offset_right = 149.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player9" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 160.0
+offset_right = 149.0
+offset_bottom = 208.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player10" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 208.0
+offset_right = 149.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="NextLevelBtn" type="Button" parent="LeaderboardPanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 640.0
+offset_right = 324.0
+offset_bottom = 680.0
+text = "Next"
+
+[node name="RetryLevelBtn" type="Button" parent="LeaderboardPanel"]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 640.0
+offset_right = 500.0
+offset_bottom = 680.0
+text = "Try Again?"
+
+[connection signal="button_down" from="LeaderboardPanel/NextLevelBtn" to="." method="_on_next_level_btn_button_down"]
+[connection signal="button_down" from="LeaderboardPanel/RetryLevelBtn" to="." method="_on_retry_level_btn_button_down"]

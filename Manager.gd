@@ -3,6 +3,10 @@ extends Node
 var sceneName = "tutorial"
 var scenePath = "tutorial"
 
+enum GAME_MODES{LEVEL, SET, GAUNTLET}
+
+var gameMode = GAME_MODES.LEVEL
+
 signal resetPlatforms
 signal addTime
 
@@ -23,10 +27,13 @@ var AppID = "3045000"
 var boardHandle : int
 var leaderboard_handle
 
+var paused = false
+
 func _init():
 	OS.set_environment("SteamAppID", AppID)
 	OS.set_environment("SteamGameID", AppID)
 	Steam.leaderboard_find_result.connect(_on_leaderboard_find_result)
+	Steam.leaderboard_scores_downloaded.connect(_on_leaderboard_downloaded)
 
 
 
@@ -57,8 +64,8 @@ func _physics_process(delta):
 func _MapFinished():
 
 	Steam.uploadLeaderboardScore(roundTime * 1000)
+	_GetLeaderboardResults()
 	mapTimes[sceneName] = roundTime
-	print(mapTimes)
 
 func _ResetPlatforms():
 	totalTime += showPlatformTime
@@ -88,3 +95,13 @@ func _on_leaderboard_find_result(handle: int, found: int) -> void:
 		print("Leaderboard handle found: %s" % leaderboard_handle)
 	else:
 		print("No handle was found")
+		
+func _GetLeaderboardResults():
+	Steam.downloadLeaderboardEntries(1, 10)
+		
+func _on_leaderboard_downloaded(message, handle, result):
+	Ui._ShowHighscores(result)
+	#for r in result:
+	#	var name = Steam.getFriendPersonaName(r["steam_id"])
+	#	var score = r["score"]
+	#	print(name + " Score : " + str(score))

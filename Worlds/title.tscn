@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://di3rgeves175v"]
+[gd_scene load_steps=45 format=3 uid="uid://di3rgeves175v"]
 
 [ext_resource type="FontFile" uid="uid://k32ihrnb84gk" path="res://Roboto-Bold.ttf" id="1_0rkor"]
 [ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="1_3grja"]
@@ -42,6 +42,12 @@
 [ext_resource type="Texture2D" uid="uid://cg5k3xy4e8c4m" path="res://UI/level9Hover.png" id="31_iovhn"]
 [ext_resource type="Texture2D" uid="uid://b6505w01k2cgr" path="res://UI/level10Dark.png" id="33_vvts0"]
 [ext_resource type="Texture2D" uid="uid://cco47ctvnty1f" path="res://UI/level10Hover.png" id="34_uuqsf"]
+[ext_resource type="Texture2D" uid="uid://bavroe5t27vcm" path="res://UI/Gradient.tres" id="37_c75yc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pwirj"]
+texture = ExtResource("37_c75yc")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_ddhkp")
@@ -145,9 +151,9 @@ offset_bottom = 40.0
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 5.5
-anchor_top = 19.9
+anchor_top = 16.625
 anchor_right = 16.65
-anchor_bottom = 22.775
+anchor_bottom = 19.5
 theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
@@ -164,9 +170,9 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 5.5
-anchor_top = 23.45
+anchor_top = 20.175
 anchor_right = 16.65
-anchor_bottom = 26.325
+anchor_bottom = 23.05
 theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
@@ -185,6 +191,7 @@ focus_neighbor_bottom = NodePath("../LevelSelectBtn")
 focus_next = NodePath("../LevelSelectBtn")
 
 [node name="LevelSelectBtn" type="Button" parent="StartMenu/MenuButtons"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 5.5
@@ -822,6 +829,215 @@ offset_bottom = 893.0
 theme = ExtResource("5_2d3if")
 text = "Back"
 
+[node name="ModeSelectPanel" type="Panel" parent="StartMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.063
+anchor_bottom = 26.973
+offset_right = -1859.52
+offset_bottom = -1030.92
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(30.5165, 22.4778)
+theme_override_styles/panel = SubResource("StyleBoxTexture_pwirj")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="GridContainer" type="GridContainer" parent="StartMenu/ModeSelectPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.223
+anchor_top = 0.084
+anchor_right = 0.858
+anchor_bottom = 0.918
+offset_left = -0.393124
+offset_top = -1.2137
+offset_right = -0.398125
+offset_bottom = -1.24561
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+theme = ExtResource("5_2d3if")
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+columns = 3
+
+[node name="Level" type="TextureButton" parent="StartMenu/ModeSelectPanel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("4_hnicg")
+texture_pressed = ExtResource("6_a6mqp")
+texture_hover = ExtResource("7_lsarh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/ModeSelectPanel/GridContainer/Level"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.679249
+anchor_top = 0.564787
+anchor_right = 0.679249
+anchor_bottom = 0.564788
+offset_left = -6.5
+offset_top = -20.0
+offset_right = 404.5
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.02, 0.02)
+theme = ExtResource("5_2d3if")
+theme_override_font_sizes/font_size = 72
+text = "Level Select"
+horizontal_alignment = 1
+vertical_alignment = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="StartMenu/ModeSelectPanel/GridContainer/Level"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.49566
+anchor_top = 0.653511
+anchor_right = 7.58768
+anchor_bottom = 2.16633
+offset_left = 20.9339
+offset_top = -20.0
+offset_right = 431.934
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.02, 0.02)
+theme = ExtResource("5_2d3if")
+theme_override_font_sizes/font_size = 42
+text = "Choose a single level
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Set" type="TextureButton" parent="StartMenu/ModeSelectPanel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("10_yl1ke")
+texture_pressed = ExtResource("21_wc6k8")
+texture_hover = ExtResource("22_o6cqk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/ModeSelectPanel/GridContainer/Set"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.700936
+anchor_top = 0.568589
+anchor_right = 0.700935
+anchor_bottom = 0.56859
+offset_left = -6.5
+offset_top = -20.0
+offset_right = 404.5
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.02, 0.02)
+theme = ExtResource("5_2d3if")
+theme_override_font_sizes/font_size = 72
+text = "Set
+"
+horizontal_alignment = 1
+vertical_alignment = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="StartMenu/ModeSelectPanel/GridContainer/Set"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.433894
+anchor_top = 0.653511
+anchor_right = 8.64944
+anchor_bottom = 2.16633
+offset_left = 6.5
+offset_top = -20.0
+offset_right = 417.5
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.02, 0.02)
+theme = ExtResource("5_2d3if")
+theme_override_font_sizes/font_size = 42
+text = "Play a set of 10 levels
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Gauntlet" type="TextureButton" parent="StartMenu/ModeSelectPanel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("7_vr3gk")
+texture_pressed = ExtResource("12_13t58")
+texture_hover = ExtResource("13_mm1xl")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/ModeSelectPanel/GridContainer/Gauntlet"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.685635
+anchor_top = 0.568589
+anchor_right = 0.685636
+anchor_bottom = 0.56859
+offset_left = -6.5
+offset_top = -20.0
+offset_right = 404.5
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.02, 0.02)
+theme = ExtResource("5_2d3if")
+theme_override_font_sizes/font_size = 72
+text = "Gauntlet
+"
+horizontal_alignment = 1
+vertical_alignment = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="StartMenu/ModeSelectPanel/GridContainer/Gauntlet"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.664479
+anchor_top = 0.653511
+anchor_right = 9.74781
+anchor_bottom = 2.16633
+offset_left = -6.5
+offset_top = -20.0
+offset_right = 404.5
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.02, 0.02)
+theme = ExtResource("5_2d3if")
+theme_override_font_sizes/font_size = 42
+text = "Play the entire
+game in one run
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="backBtn" type="Button" parent="StartMenu/ModeSelectPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.15812
+offset_top = -7.30149
+offset_right = 581.842
+offset_bottom = 277.699
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.015, 0.015)
+theme = ExtResource("5_2d3if")
+text = "Back"
+
 [node name="Platform" parent="." instance=ExtResource("1_3grja")]
 
 [node name="Platform4" parent="." instance=ExtResource("1_3grja")]
@@ -1004,7 +1220,7 @@ transform = Transform3D(0.89141, 0, 0.453197, 0, 1, 0, -0.453197, 0, 0.89141, -1
 [connection signal="pressed" from="StartMenu/Settings/Panel/backBtn" to="StartMenu" method="_on_course_select_back_btn_pressed"]
 [connection signal="pressed" from="StartMenu/MenuButtons/settingsBtn" to="StartMenu" method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="StartMenu/MenuButtons/quitBtn" to="StartMenu" method="_on_quit_btn_pressed"]
-[connection signal="pressed" from="StartMenu/MenuButtons/Button" to="StartMenu" method="_on_button_pressed"]
+[connection signal="pressed" from="StartMenu/MenuButtons/Button" to="StartMenu" method="_on_play_pressed"]
 [connection signal="pressed" from="StartMenu/MenuButtons/LevelSelectBtn" to="StartMenu" method="_on_level_select_btn_pressed"]
 [connection signal="pressed" from="StartMenu/Section1/GridContainer/level1" to="StartMenu" method="_on_level_1_pressed"]
 [connection signal="pressed" from="StartMenu/Section1/GridContainer/level2" to="StartMenu" method="_on_level_2_pressed"]
@@ -1019,3 +1235,5 @@ transform = Transform3D(0.89141, 0, 0.453197, 0, 1, 0, -0.453197, 0, 0.89141, -1
 [connection signal="pressed" from="StartMenu/Section1/backBtn" to="StartMenu" method="_on_back_btn_pressed"]
 [connection signal="pressed" from="StartMenu/CourseSelect/GridContainer/Course1" to="StartMenu" method="_on_course_1_pressed"]
 [connection signal="pressed" from="StartMenu/CourseSelect/backBtn" to="StartMenu" method="_on_course_select_back_btn_pressed"]
+[connection signal="pressed" from="StartMenu/ModeSelectPanel/GridContainer/Level" to="StartMenu" method="_on_level_select_btn_pressed"]
+[connection signal="pressed" from="StartMenu/ModeSelectPanel/backBtn" to="StartMenu" method="_on_back_btn_pressed"]
