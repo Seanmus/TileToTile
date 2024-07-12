@@ -1,9 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://d4k1fxi2xbchg"]
 
-[ext_resource type="AudioStream" uid="uid://c0x0dibnpvysc" path="res://Audio/fastMusicLoop.wav" id="1_lvb82"]
+[ext_resource type="AudioStream" uid="uid://cf7vejrotxfo8" path="res://Audio/SEAN MODE.mp3" id="1_8r58j"]
 
 [node name="musicPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_lvb82")
-volume_db = -5.532
+stream = ExtResource("1_8r58j")
 autoplay = true
 mix_target = 1

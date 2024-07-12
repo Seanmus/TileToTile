@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://di3rgeves175v"]
+[gd_scene load_steps=55 format=3 uid="uid://di3rgeves175v"]
 
 [ext_resource type="FontFile" uid="uid://k32ihrnb84gk" path="res://Roboto-Bold.ttf" id="1_0rkor"]
 [ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="1_3grja"]
@@ -42,12 +42,24 @@
 [ext_resource type="Texture2D" uid="uid://cg5k3xy4e8c4m" path="res://UI/level9Hover.png" id="31_iovhn"]
 [ext_resource type="Texture2D" uid="uid://b6505w01k2cgr" path="res://UI/level10Dark.png" id="33_vvts0"]
 [ext_resource type="Texture2D" uid="uid://cco47ctvnty1f" path="res://UI/level10Hover.png" id="34_uuqsf"]
-[ext_resource type="Texture2D" uid="uid://bavroe5t27vcm" path="res://UI/Gradient.tres" id="37_c75yc"]
+[ext_resource type="Texture2D" uid="uid://diulw1qo7ifg3" path="res://UI/Icons/LevelSelectNormal.png" id="37_jduk2"]
+[ext_resource type="Texture2D" uid="uid://dsclsavhlo5uj" path="res://UI/Icons/LevelSelectPressed.png" id="39_hk8qk"]
+[ext_resource type="Texture2D" uid="uid://dhsk7xp3yq167" path="res://UI/Icons/SetNormal.png" id="40_n6nir"]
+[ext_resource type="Texture2D" uid="uid://b7c8buik4dc13" path="res://UI/Icons/LevelSelectHover.png" id="40_v038y"]
+[ext_resource type="Texture2D" uid="uid://c0tx1rr4cl74p" path="res://UI/Icons/SetPressed.png" id="41_4o52r"]
+[ext_resource type="Texture2D" uid="uid://de1exnvdxe7sy" path="res://UI/Icons/SetHover.png" id="42_q75b1"]
+[ext_resource type="Texture2D" uid="uid://dmgbtms27mw4j" path="res://UI/Icons/GauntletNormal.png" id="43_iytpd"]
+[ext_resource type="Texture2D" uid="uid://bwnh8fctl36aw" path="res://UI/Icons/GauntLetPressed.png" id="44_ior5a"]
+[ext_resource type="Texture2D" uid="uid://cj7ijswwc16ho" path="res://UI/Icons/GauntletHover.png" id="46_qk25k"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pwirj"]
-texture = ExtResource("37_c75yc")
-axis_stretch_horizontal = 2
-axis_stretch_vertical = 2
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deetu"]
+bg_color = Color(0.0859375, 0.0859375, 0.0859375, 0.847059)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kss6j"]
+bg_color = Color(0.0862745, 0.0862745, 0.0862745, 0.847059)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qmi8l"]
+bg_color = Color(0.0862745, 0.0862745, 0.0862745, 0.847059)
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_ddhkp")
@@ -224,6 +236,7 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_2liwn")
 
 [node name="Label" type="Label" parent="StartMenu/MenuButtons"]
+visible = false
 layout_mode = 0
 offset_left = 1041.0
 offset_top = 908.0
@@ -233,6 +246,7 @@ theme = ExtResource("5_2d3if")
 text = "Best Time: "
 
 [node name="bestTIme" type="Label" parent="StartMenu/MenuButtons"]
+visible = false
 layout_mode = 0
 offset_left = 1247.0
 offset_top = 908.0
@@ -244,17 +258,20 @@ text = "0"
 [node name="Section1" type="Panel" parent="StartMenu"]
 visible = false
 layout_mode = 0
-offset_right = 1216.0
-offset_bottom = 900.0
+offset_right = 1923.0
+offset_bottom = 1079.0
 pivot_offset = Vector2(450, 450)
+theme_override_styles/panel = SubResource("StyleBoxFlat_deetu")
 
 [node name="GridContainer" type="GridContainer" parent="StartMenu/Section1"]
 clip_contents = true
 custom_minimum_size = Vector2(400, 400)
 layout_direction = 2
 layout_mode = 0
-offset_right = 1212.01
-offset_bottom = 900.0
+offset_left = 57.0
+offset_top = 40.0
+offset_right = 1834.0
+offset_bottom = 1004.0
 pivot_offset = Vector2(450, 450)
 columns = 4
 
@@ -524,29 +541,246 @@ text = "The Finale"
 
 [node name="backBtn" type="Button" parent="StartMenu/Section1"]
 layout_mode = 0
-offset_left = 608.0
-offset_top = 608.0
-offset_right = 1194.0
-offset_bottom = 893.0
+offset_left = 1330.55
+offset_top = 780.0
+offset_right = 1916.55
+offset_bottom = 1065.0
+theme = ExtResource("5_2d3if")
+text = "Back"
+
+[node name="Section0" type="Panel" parent="StartMenu"]
+layout_mode = 0
+offset_right = 1923.0
+offset_bottom = 1079.0
+pivot_offset = Vector2(450, 450)
+theme_override_styles/panel = SubResource("StyleBoxFlat_deetu")
+
+[node name="GridContainer" type="GridContainer" parent="StartMenu/Section0"]
+clip_contents = true
+custom_minimum_size = Vector2(400, 400)
+layout_direction = 2
+layout_mode = 0
+offset_left = 57.0
+offset_top = 40.0
+offset_right = 1834.0
+offset_bottom = 1004.0
+pivot_offset = Vector2(450, 450)
+columns = 4
+
+[node name="level1" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("4_hnicg")
+texture_pressed = ExtResource("6_a6mqp")
+texture_hover = ExtResource("7_lsarh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/level1"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Intro
+"
+
+[node name="level2" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("6_5ieg8")
+texture_pressed = ExtResource("9_km44q")
+texture_hover = ExtResource("10_bqt7s")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/level2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Side To Side
+"
+
+[node name="level3" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("7_vr3gk")
+texture_pressed = ExtResource("12_13t58")
+texture_hover = ExtResource("13_mm1xl")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/level3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Speed Is Key
+"
+
+[node name="level4" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("8_4xp21")
+texture_pressed = ExtResource("15_bp4fk")
+texture_hover = ExtResource("16_uc6ya")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/level4"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Time To Rise"
+
+[node name="level5" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("9_0j47a")
+texture_pressed = ExtResource("18_ej7m4")
+texture_hover = ExtResource("19_jr68i")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/level5"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Lets Spin"
+
+[node name="level6" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("10_yl1ke")
+texture_pressed = ExtResource("21_wc6k8")
+texture_hover = ExtResource("22_o6cqk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/level6"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Hyper Drive"
+
+[node name="backBtn" type="Button" parent="StartMenu/Section0"]
+layout_mode = 0
+offset_left = 1330.55
+offset_top = 780.0
+offset_right = 1916.55
+offset_bottom = 1065.0
 theme = ExtResource("5_2d3if")
 text = "Back"
 
 [node name="CourseSelect" type="Panel" parent="StartMenu"]
 visible = false
 layout_mode = 0
-offset_right = 1216.0
-offset_bottom = 900.0
+offset_right = 1923.0
+offset_bottom = 1079.0
 pivot_offset = Vector2(450, 450)
+theme_override_styles/panel = SubResource("StyleBoxFlat_kss6j")
 
 [node name="GridContainer" type="GridContainer" parent="StartMenu/CourseSelect"]
 clip_contents = true
 custom_minimum_size = Vector2(400, 400)
 layout_direction = 2
 layout_mode = 0
-offset_right = 1212.01
-offset_bottom = 900.0
+offset_left = 57.0
+offset_top = 40.0
+offset_right = 1834.0
+offset_bottom = 1004.0
 pivot_offset = Vector2(450, 450)
 columns = 4
+
+[node name="Course0" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("6_5ieg8")
+texture_pressed = ExtResource("9_km44q")
+texture_hover = ExtResource("10_bqt7s")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course0"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Set 0
+"
 
 [node name="Course1" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
 clip_contents = true
@@ -572,35 +806,7 @@ offset_right = 30.5
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("5_2d3if")
-text = "Course 1
-"
-
-[node name="Course2" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
-visible = false
-clip_contents = true
-custom_minimum_size = Vector2(300, 300)
-layout_mode = 2
-size_flags_horizontal = 6
-texture_normal = ExtResource("6_5ieg8")
-texture_pressed = ExtResource("9_km44q")
-texture_hover = ExtResource("10_bqt7s")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course2"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -30.5
-offset_top = -26.0
-offset_right = 30.5
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("5_2d3if")
-text = "Course 2
+text = "Set 1
 "
 
 [node name="Course3" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
@@ -822,14 +1028,15 @@ text = "Course 10"
 
 [node name="backBtn" type="Button" parent="StartMenu/CourseSelect"]
 layout_mode = 0
-offset_left = 608.0
-offset_top = 608.0
-offset_right = 1194.0
-offset_bottom = 893.0
+offset_left = 666.0
+offset_top = 775.0
+offset_right = 1252.0
+offset_bottom = 1060.0
 theme = ExtResource("5_2d3if")
 text = "Back"
 
 [node name="ModeSelectPanel" type="Panel" parent="StartMenu"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 48.063
@@ -839,7 +1046,7 @@ offset_bottom = -1030.92
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(30.5165, 22.4778)
-theme_override_styles/panel = SubResource("StyleBoxTexture_pwirj")
+theme_override_styles/panel = SubResource("StyleBoxFlat_qmi8l")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_group_ = true
 
@@ -866,9 +1073,9 @@ columns = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("4_hnicg")
-texture_pressed = ExtResource("6_a6mqp")
-texture_hover = ExtResource("7_lsarh")
+texture_normal = ExtResource("37_jduk2")
+texture_pressed = ExtResource("39_hk8qk")
+texture_hover = ExtResource("40_v038y")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -918,16 +1125,16 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("10_yl1ke")
-texture_pressed = ExtResource("21_wc6k8")
-texture_hover = ExtResource("22_o6cqk")
+texture_normal = ExtResource("40_n6nir")
+texture_pressed = ExtResource("41_4o52r")
+texture_hover = ExtResource("42_q75b1")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="StartMenu/ModeSelectPanel/GridContainer/Set"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.700936
+anchor_left = 0.700935
 anchor_top = 0.568589
 anchor_right = 0.700935
 anchor_bottom = 0.56859
@@ -971,9 +1178,9 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("7_vr3gk")
-texture_pressed = ExtResource("12_13t58")
-texture_hover = ExtResource("13_mm1xl")
+texture_normal = ExtResource("43_iytpd")
+texture_pressed = ExtResource("44_ior5a")
+texture_hover = ExtResource("46_qk25k")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1028,10 +1235,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -4.15812
-offset_top = -7.30149
-offset_right = 581.842
-offset_bottom = 277.699
+offset_left = -3.71176
+offset_top = -7.60447
+offset_right = 582.288
+offset_bottom = 277.396
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.015, 0.015)
@@ -1232,8 +1439,16 @@ transform = Transform3D(0.89141, 0, 0.453197, 0, 1, 0, -0.453197, 0, 0.89141, -1
 [connection signal="pressed" from="StartMenu/Section1/GridContainer/level8" to="StartMenu" method="_on_level_8_pressed"]
 [connection signal="pressed" from="StartMenu/Section1/GridContainer/level9" to="StartMenu" method="_on_level_9_pressed"]
 [connection signal="pressed" from="StartMenu/Section1/GridContainer/level10" to="StartMenu" method="_on_level_10_pressed"]
-[connection signal="pressed" from="StartMenu/Section1/backBtn" to="StartMenu" method="_on_back_btn_pressed"]
+[connection signal="pressed" from="StartMenu/Section1/backBtn" to="StartMenu" method="_on_levelSelectBack_btn_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/level1" to="StartMenu" method="_on_level_1_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/level2" to="StartMenu" method="_on_level_2_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/level3" to="StartMenu" method="_on_level_3_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/level4" to="StartMenu" method="_on_level_4_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/level5" to="StartMenu" method="_on_level_5_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/level6" to="StartMenu" method="_on_level_6_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/backBtn" to="StartMenu" method="_on_levelSelectBack_btn_pressed"]
 [connection signal="pressed" from="StartMenu/CourseSelect/GridContainer/Course1" to="StartMenu" method="_on_course_1_pressed"]
-[connection signal="pressed" from="StartMenu/CourseSelect/backBtn" to="StartMenu" method="_on_course_select_back_btn_pressed"]
+[connection signal="pressed" from="StartMenu/CourseSelect/backBtn" to="StartMenu" method="_on_courseSelectBack_btn_pressed"]
 [connection signal="pressed" from="StartMenu/ModeSelectPanel/GridContainer/Level" to="StartMenu" method="_on_level_select_btn_pressed"]
+[connection signal="pressed" from="StartMenu/ModeSelectPanel/GridContainer/Set" to="StartMenu" method="_on_set_pressed"]
 [connection signal="pressed" from="StartMenu/ModeSelectPanel/backBtn" to="StartMenu" method="_on_back_btn_pressed"]

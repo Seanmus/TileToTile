@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=3 uid="uid://bcag5sogjg4co"]
+
+[ext_resource type="Script" path="res://Worlds/WorldProperties.gd" id="1_4i74x"]
+[ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="2_07kph"]
+[ext_resource type="PackedScene" uid="uid://dpaqrwtjbvv7l" path="res://Player/player.tscn" id="3_g0qew"]
+[ext_resource type="PackedScene" uid="uid://ddjglid8xjiwg" path="res://WorldBlocks/death.tscn" id="4_j0mjj"]
+[ext_resource type="PackedScene" uid="uid://c776e2jroe45l" path="res://gem.tscn" id="5_8ns7j"]
+[ext_resource type="PackedScene" uid="uid://bl8q08srqwu41" path="res://WorldEnvironmentDark.tscn" id="6_q7uib"]
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_4i74x")
+GoldTime = 6.2
+SilverTime = 8.0
+
+[node name="Platform" parent="." instance=ExtResource("2_07kph")]
+
+[node name="Platform3" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4, 0, 2)
+
+[node name="Platform4" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6, 0, 2)
+
+[node name="Platform5" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9, 0, -2)
+
+[node name="Platform6" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -11, 0, -2)
+
+[node name="Platform7" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -14, 0, 2)
+
+[node name="Platform8" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -16, 0, 2)
+
+[node name="Platform9" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -34, 0, -2)
+
+[node name="Platform10" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -36, 0, -2)
+
+[node name="Platform11" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -44, 0, 2)
+
+[node name="Platform12" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -46, 0, 2)
+
+[node name="Platform16" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 0)
+
+[node name="Platform17" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4, 0, 0)
+
+[node name="Platform18" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6, 0, 0)
+
+[node name="Platform21" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -20, 0, 0)
+
+[node name="Platform22" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -22, 0, 0)
+
+[node name="Platform23" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -24, 0, 0)
+
+[node name="Platform24" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -26, 0, 0)
+
+[node name="Platform25" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -55, 0, 0)
+
+[node name="Platform26" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -57, 0, 0)
+
+[node name="Platform27" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -59, 0, 0)
+
+[node name="Platform28" parent="." instance=ExtResource("2_07kph")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -61, 0, 0)
+
+[node name="Player" parent="." instance=ExtResource("3_g0qew")]
+transform = Transform3D(-1.63296e-08, 0, 0.373579, 0, 0.373579, 0, -0.373579, 0, -1.63296e-08, 6.61657, 0.354547, 0)
+
+[node name="death" parent="." instance=ExtResource("4_j0mjj")]
+transform = Transform3D(210.972, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432, 0)
+
+[node name="gem" parent="." instance=ExtResource("5_8ns7j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.3481, 0.734239, 0.0699699)
+nextLevel = "Set0/TimeToRise"
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("6_q7uib")]

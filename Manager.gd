@@ -29,6 +29,12 @@ var leaderboard_handle
 
 var paused = false
 
+var finalRoundTime = 0
+var finalSetTime = 0
+
+var isFinalOfSet
+var isFinalLevel
+
 func _init():
 	OS.set_environment("SteamAppID", AppID)
 	OS.set_environment("SteamGameID", AppID)
@@ -50,21 +56,31 @@ func _ready():
 	var id = Steam.getSteamID()
 	var name = Steam.getFriendPersonaName(id)
 	print(name)
+	Steam.findLeaderboard("Set1")
 
 func _process(delta):
 	Steam.run_callbacks()
 
-func _LoadLeaderboard():
-	Steam.findLeaderboard(sceneName)
+func _LoadLeaderboard(leaderboardName):
+	Steam.findLeaderboard(leaderboardName)
+
 
 func _physics_process(delta):
 	totalTime += delta
 	roundTime += delta
 
-func _MapFinished():
-
-	Steam.uploadLeaderboardScore(roundTime * 1000)
-	_GetLeaderboardResults()
+func _MapFinished(isFinalOfSet, isFinalMap, SetName):
+	finalRoundTime = roundTime
+	if not isFinalOfSet:
+		Steam.uploadLeaderboardScore(roundTime * 1000)
+	if gameMode == GAME_MODES.LEVEL:
+		_GetLeaderboardResults()
+	elif gameMode == GAME_MODES.SET && isFinalOfSet:
+		finalSetTime = totalTime
+		print(SetName)
+		Steam.uploadLeaderboardScore(finalSetTime * 1000)
+		print("Cool you finished a set")
+		_GetLeaderboardResults()
 	mapTimes[sceneName] = roundTime
 
 func _ResetPlatforms():

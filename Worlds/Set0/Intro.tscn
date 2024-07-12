@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://y2k6rg4jxcg1"]
+
+[ext_resource type="Script" path="res://Worlds/WorldProperties.gd" id="1_t7ubt"]
+[ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="2_d62bg"]
+[ext_resource type="PackedScene" uid="uid://dpaqrwtjbvv7l" path="res://Player/player.tscn" id="3_d0spv"]
+[ext_resource type="PackedScene" uid="uid://ddjglid8xjiwg" path="res://WorldBlocks/death.tscn" id="4_1qja8"]
+[ext_resource type="PackedScene" uid="uid://c776e2jroe45l" path="res://gem.tscn" id="5_0wbi6"]
+[ext_resource type="PackedScene" uid="uid://bl8q08srqwu41" path="res://WorldEnvironmentDark.tscn" id="6_va5v4"]
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_t7ubt")
+GoldTime = 6.2
+SilverTime = 8.0
+
+[node name="Platform" parent="." instance=ExtResource("2_d62bg")]
+
+[node name="Platform3" parent="." instance=ExtResource("2_d62bg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4, 0, 0)
+
+[node name="Platform4" parent="." instance=ExtResource("2_d62bg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6, 0, 0)
+
+[node name="Platform5" parent="." instance=ExtResource("2_d62bg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -10, 0, 0)
+
+[node name="Platform16" parent="." instance=ExtResource("2_d62bg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 0)
+
+[node name="Platform17" parent="." instance=ExtResource("2_d62bg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4, 0, 0)
+
+[node name="Platform18" parent="." instance=ExtResource("2_d62bg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6, 0, 0)
+
+[node name="Platform13" parent="." instance=ExtResource("2_d62bg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -14, 0, 0)
+
+[node name="Platform19" parent="." instance=ExtResource("2_d62bg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -16, 0, 0)
+
+[node name="Platform20" parent="." instance=ExtResource("2_d62bg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -18, 0, 0)
+
+[node name="Platform21" parent="." instance=ExtResource("2_d62bg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -20, 0, 0)
+
+[node name="Platform22" parent="." instance=ExtResource("2_d62bg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -22, 0, 0)
+
+[node name="Platform14" parent="." instance=ExtResource("2_d62bg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -14, 0, 2)
+
+[node name="Platform15" parent="." instance=ExtResource("2_d62bg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -14, 0, -2)
+
+[node name="Player" parent="." instance=ExtResource("3_d0spv")]
+transform = Transform3D(-1.63296e-08, 0, 0.373579, 0, 0.373579, 0, -0.373579, 0, -1.63296e-08, 6.61657, 0.354547, 0)
+
+[node name="death" parent="." instance=ExtResource("4_1qja8")]
+transform = Transform3D(210.972, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432, 0)
+
+[node name="gem" parent="." instance=ExtResource("5_0wbi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0073, 0.734239, 0.0699699)
+nextLevel = "Set0/SideToSide"
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("6_va5v4")]

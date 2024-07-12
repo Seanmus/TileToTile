@@ -131,7 +131,11 @@ func _addTime():
 	$levelTime/levelTimeAddTimeAnim.play("addTime")
 
 func _ShowHighscores(result):
-	$LeaderboardPanel/CurrentScore.text = "Your Time: " + str(Manager.roundTime)
+	if(Manager.gameMode == Manager.GAME_MODES.LEVEL):
+		$LeaderboardPanel/CurrentScore.text = "Your Time: " + "%02d.%02d" % [Manager.finalRoundTime, fmod(Manager.finalRoundTime,1) * 1000]
+	else:
+		$LeaderboardPanel/CurrentScore.text = "Your Time: " + "%02d.%02d" % [Manager.finalSetTime, fmod(Manager.finalSetTime,1) * 1000]
+		
 	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
 	$LeaderboardPanel.visible = true
 	for label in playerLabels:

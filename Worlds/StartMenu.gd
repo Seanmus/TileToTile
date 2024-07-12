@@ -133,10 +133,14 @@ func _on_mouse_sensitivity_slider_value_changed(value):
 
 
 func _on_course_1_pressed():
-	$Section1.visible = true
-	$CourseSelect.visible = false
-	$MenuButtons.visible = false
-	$Settings.visible = false
+	if(Manager.gameMode == Manager.GAME_MODES.SET):
+		Manager.totalTime = 0
+		get_tree().change_scene_to_file("res://Worlds/Set1/Tutorial.tscn")
+	else:
+		$Section1.visible = true
+		$CourseSelect.visible = false
+		$MenuButtons.visible = false
+		$Settings.visible = false
 
 
 func _on_course_select_back_btn_pressed():
@@ -149,3 +153,23 @@ func _on_course_select_back_btn_pressed():
 func _on_play_pressed():
 	$ModeSelectPanel.visible = true
 	$MenuButtons.visible = false
+
+
+func _on_set_pressed():
+	$ModeSelectPanel.visible = false
+	Manager.gameMode = Manager.GAME_MODES.SET
+	$CourseSelect.visible = true
+
+
+func _on_courseSelectBack_btn_pressed():
+	$ModeSelectPanel.visible = true
+	$Section1.visible = false
+	$CourseSelect.visible = false
+	$MenuButtons.visible = false
+	$Settings.visible = false
+
+
+func _on_levelSelectBack_btn_pressed():
+	$CourseSelect.visible = true
+	$ModeSelectPanel.visible = false
+	$Section1.visible = false

@@ -10,5 +10,5 @@ func _ready():
 	print(sceneFilePath)
 	print(sceneFilePath)
 	Ui._SetRoundTimes(GoldTime, SilverTime, BronzeTime)
-	Manager._LoadLeaderboard()
+	#Manager._LoadLeaderboard()
 	

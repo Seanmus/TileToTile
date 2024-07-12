@@ -1,0 +1,495 @@
+[gd_scene load_steps=9 format=3 uid="uid://cjlxlwr5oourt"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_wmrtp"]
+[ext_resource type="Theme" uid="uid://bd8i240k4dnxs" path="res://textTheme.tres" id="2_cea5x"]
+[ext_resource type="Texture2D" uid="uid://bldjfi6hphb5l" path="res://UI/UIElements/BronzeTrophy-Sheet.png" id="3_svsc4"]
+[ext_resource type="Texture2D" uid="uid://bp7shbkxd7i4y" path="res://UI/UIElements/SilverTrophy-Sheet.png" id="4_0iowq"]
+[ext_resource type="Texture2D" uid="uid://cx6u8hqeajb1w" path="res://UI/UIElements/GoldTrophy-Sheet.png" id="5_qgpys"]
+
+[sub_resource type="Animation" id="Animation_qa73y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(102, -3.00037)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.197222]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_pn6nl"]
+resource_name = "addTime"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(92.9999, 13.9996), Vector2(148, -33.0004), Vector2(266, 38.9996)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.197222, 0.34383, 0.736529]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_itd5i"]
+_data = {
+"RESET": SubResource("Animation_qa73y"),
+"addTime": SubResource("Animation_pn6nl")
+}
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_wmrtp")
+
+[node name="levelTime" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.420833
+anchor_top = 0.955556
+anchor_right = 0.474479
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -928.0
+offset_right = -72.0
+offset_bottom = -928.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_cea5x")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "10:00"
+horizontal_alignment = 1
+
+[node name="levelTimeAddTimeAnim" type="AnimationPlayer" parent="levelTime"]
+root_node = NodePath("../AddLevelTime")
+libraries = {
+"": SubResource("AnimationLibrary_itd5i")
+}
+
+[node name="AddLevelTime" type="Label" parent="levelTime"]
+visible = false
+layout_mode = 0
+offset_left = 102.0
+offset_top = -3.00037
+offset_right = 147.001
+offset_bottom = 44.9997
+rotation = -0.197222
+theme = ExtResource("2_cea5x")
+text = "+4"
+
+[node name="label" type="Label" parent="levelTime"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -176.0
+offset_top = -96.0
+offset_right = 175.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_cea5x")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Level Time"
+horizontal_alignment = 1
+
+[node name="gameTime" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.591667
+anchor_top = 0.955556
+anchor_right = 0.682813
+anchor_bottom = 1.00278
+offset_left = -96.0
+offset_top = -928.0
+offset_right = -96.0
+offset_bottom = -928.0
+theme = ExtResource("2_cea5x")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "hello"
+horizontal_alignment = 1
+
+[node name="label" type="Label" parent="gameTime"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01875
+anchor_top = 0.813889
+anchor_right = 0.05
+anchor_bottom = 0.813889
+offset_left = -27.2813
+offset_top = -89.509
+offset_right = 323.719
+offset_bottom = -17.5086
+theme = ExtResource("2_cea5x")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Game Time"
+
+[node name="miniMap" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -380.0
+offset_bottom = 500.0
+grow_horizontal = 0
+
+[node name="topDown" type="SubViewport" parent="miniMap"]
+transparent_bg = true
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+size = Vector2i(400, 500)
+size_2d_override_stretch = true
+render_target_update_mode = 4
+
+[node name="topDownCamera" type="Camera3D" parent="miniMap/topDown"]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -20, 20, 11)
+projection = 1
+current = true
+fov = 99.0
+size = 75.0
+
+[node name="BronzeTime" type="Label" parent="."]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 168.0
+offset_right = 381.0
+offset_bottom = 216.0
+theme = ExtResource("2_cea5x")
+text = "10:00"
+vertical_alignment = 3
+
+[node name="SilverTime" type="Label" parent="."]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 120.0
+offset_right = 381.0
+offset_bottom = 168.0
+theme = ExtResource("2_cea5x")
+text = "10:00"
+vertical_alignment = 3
+
+[node name="Speed" type="Label" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 904.0
+offset_right = 551.0
+offset_bottom = 1022.0
+theme = ExtResource("2_cea5x")
+theme_override_font_sizes/font_size = 100
+text = "100 KM/HR"
+vertical_alignment = 3
+
+[node name="GoldTime" type="Label" parent="."]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 72.0
+offset_right = 381.0
+offset_bottom = 120.0
+theme = ExtResource("2_cea5x")
+text = "10:00"
+vertical_alignment = 3
+
+[node name="BronzeTrophy" type="Sprite2D" parent="."]
+position = Vector2(115, 196)
+texture = ExtResource("3_svsc4")
+hframes = 4
+
+[node name="SilverTrophy" type="Sprite2D" parent="."]
+position = Vector2(114, 145)
+texture = ExtResource("4_0iowq")
+hframes = 4
+
+[node name="GoldTrophy" type="Sprite2D" parent="."]
+position = Vector2(113, 97)
+texture = ExtResource("5_qgpys")
+hframes = 4
+
+[node name="LeaderboardPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -348.0
+offset_top = -324.0
+offset_right = 348.0
+offset_bottom = 396.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CurrentScore" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -286.0
+offset_right = 195.0
+offset_bottom = -226.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+theme_override_colors/font_color = Color(1, 0.932404, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Your Time: 10.05"
+
+[node name="HighscoresLabel" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -336.0
+offset_right = 149.0
+offset_bottom = -288.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Highscores"
+horizontal_alignment = 1
+
+[node name="Player1" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -224.0
+offset_right = 149.0
+offset_bottom = -176.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player2" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -176.0
+offset_right = 149.0
+offset_bottom = -128.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player3" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -128.0
+offset_right = 149.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player4" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -80.0
+offset_right = 149.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player5" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -32.0
+offset_right = 149.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player6" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 16.0
+offset_right = 149.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player7" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 64.0
+offset_right = 149.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player8" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 112.0
+offset_right = 149.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player9" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 160.0
+offset_right = 149.0
+offset_bottom = 208.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="Player10" type="Label" parent="LeaderboardPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 208.0
+offset_right = 149.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cea5x")
+text = "Seanmus: 10.05"
+
+[node name="NextLevelBtn" type="Button" parent="LeaderboardPanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 640.0
+offset_right = 324.0
+offset_bottom = 680.0
+text = "Next"
+
+[node name="RetryLevelBtn" type="Button" parent="LeaderboardPanel"]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 640.0
+offset_right = 500.0
+offset_bottom = 680.0
+text = "Try Again?"
+
+[connection signal="button_down" from="LeaderboardPanel/NextLevelBtn" to="." method="_on_next_level_btn_button_down"]
+[connection signal="button_down" from="LeaderboardPanel/RetryLevelBtn" to="." method="_on_retry_level_btn_button_down"]
