@@ -81,6 +81,10 @@ func _MapFinished(isFinalOfSet, isFinalMap, SetName):
 		Steam.uploadLeaderboardScore(finalSetTime * 1000)
 		print("Cool you finished a set")
 		_GetLeaderboardResults()
+	elif gameMode == GAME_MODES.GAUNTLET && isFinalLevel:
+		finalSetTime = totalTime
+		Steam.uploadLeaderboardScore(finalSetTime * 1000)
+		_GetLeaderboardResults()
 	mapTimes[sceneName] = roundTime
 
 func _ResetPlatforms():

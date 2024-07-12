@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://di3rgeves175v"]
+[gd_scene load_steps=73 format=3 uid="uid://di3rgeves175v"]
 
 [ext_resource type="FontFile" uid="uid://k32ihrnb84gk" path="res://Roboto-Bold.ttf" id="1_0rkor"]
 [ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="1_3grja"]
@@ -43,14 +43,32 @@
 [ext_resource type="Texture2D" uid="uid://b6505w01k2cgr" path="res://UI/level10Dark.png" id="33_vvts0"]
 [ext_resource type="Texture2D" uid="uid://cco47ctvnty1f" path="res://UI/level10Hover.png" id="34_uuqsf"]
 [ext_resource type="Texture2D" uid="uid://diulw1qo7ifg3" path="res://UI/Icons/LevelSelectNormal.png" id="37_jduk2"]
+[ext_resource type="Texture2D" uid="uid://25bdn7b2sxwg" path="res://UI/LevelIcons/Set0/Intro.png" id="37_w3tlk"]
+[ext_resource type="Texture2D" uid="uid://cb3bi0mk1c4uh" path="res://UI/LevelIcons/Set0/IntroPresssed.png" id="38_rg2m7"]
 [ext_resource type="Texture2D" uid="uid://dsclsavhlo5uj" path="res://UI/Icons/LevelSelectPressed.png" id="39_hk8qk"]
+[ext_resource type="Texture2D" uid="uid://d1kejowg48pe1" path="res://UI/LevelIcons/Set0/IntroHover.png" id="39_ogdgp"]
 [ext_resource type="Texture2D" uid="uid://dhsk7xp3yq167" path="res://UI/Icons/SetNormal.png" id="40_n6nir"]
+[ext_resource type="Texture2D" uid="uid://bncmarq7linl4" path="res://UI/LevelIcons/Set0/SideToSide.png" id="40_odpxi"]
 [ext_resource type="Texture2D" uid="uid://b7c8buik4dc13" path="res://UI/Icons/LevelSelectHover.png" id="40_v038y"]
 [ext_resource type="Texture2D" uid="uid://c0tx1rr4cl74p" path="res://UI/Icons/SetPressed.png" id="41_4o52r"]
+[ext_resource type="Texture2D" uid="uid://ba6dd4cfunfo" path="res://UI/LevelIcons/Set0/SideToSidePressed.png" id="41_pe6u0"]
+[ext_resource type="Texture2D" uid="uid://c85wxqa2o1mmb" path="res://UI/LevelIcons/Set0/SideToSideHover.png" id="42_7cu6i"]
 [ext_resource type="Texture2D" uid="uid://de1exnvdxe7sy" path="res://UI/Icons/SetHover.png" id="42_q75b1"]
 [ext_resource type="Texture2D" uid="uid://dmgbtms27mw4j" path="res://UI/Icons/GauntletNormal.png" id="43_iytpd"]
+[ext_resource type="Texture2D" uid="uid://cnwpcr0djcgui" path="res://UI/LevelIcons/Set0/SpeedIsKey.png" id="43_m8afg"]
 [ext_resource type="Texture2D" uid="uid://bwnh8fctl36aw" path="res://UI/Icons/GauntLetPressed.png" id="44_ior5a"]
+[ext_resource type="Texture2D" uid="uid://b68ac22xd2r45" path="res://UI/LevelIcons/Set0/SpeedIsKeyPressed.png" id="44_mmxax"]
+[ext_resource type="Texture2D" uid="uid://dh2vdovpj46n7" path="res://UI/LevelIcons/Set0/SpeedIsKeyHover.png" id="45_4bno3"]
 [ext_resource type="Texture2D" uid="uid://cj7ijswwc16ho" path="res://UI/Icons/GauntletHover.png" id="46_qk25k"]
+[ext_resource type="Texture2D" uid="uid://c71hphv337oh3" path="res://UI/LevelIcons/Set0/TimeToRiseStandard.png" id="46_uaoln"]
+[ext_resource type="Texture2D" uid="uid://d1s50ogf3qkkf" path="res://UI/LevelIcons/Set0/TimeToRisePressed.png" id="47_tny80"]
+[ext_resource type="Texture2D" uid="uid://e3ul3nm7vwmm" path="res://UI/LevelIcons/Set0/TimeToRiseHover.png" id="48_lpx5h"]
+[ext_resource type="Texture2D" uid="uid://b4g5c0umygdvi" path="res://UI/LevelIcons/Set0/LetsSpin.png" id="49_3rft3"]
+[ext_resource type="Texture2D" uid="uid://dy005n3cxa8c8" path="res://UI/LevelIcons/Set0/LetsSpinPressed.png" id="50_luyhi"]
+[ext_resource type="Texture2D" uid="uid://cfunde5qq8i12" path="res://UI/LevelIcons/Set0/LetsSpinHover.png" id="51_aep6s"]
+[ext_resource type="Texture2D" uid="uid://daqd3vw6c7r8" path="res://UI/LevelIcons/Set0/HyperDrive.png" id="52_dj7sg"]
+[ext_resource type="Texture2D" uid="uid://dg5rk2uquipa8" path="res://UI/LevelIcons/Set0/HyperDrivePressed.png" id="53_jbuyl"]
+[ext_resource type="Texture2D" uid="uid://bwugscrlslge3" path="res://UI/LevelIcons/Set0/HyperDriveHover.png" id="54_c3xya"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deetu"]
 bg_color = Color(0.0859375, 0.0859375, 0.0859375, 0.847059)
@@ -549,6 +567,7 @@ theme = ExtResource("5_2d3if")
 text = "Back"
 
 [node name="Section0" type="Panel" parent="StartMenu"]
+visible = false
 layout_mode = 0
 offset_right = 1923.0
 offset_bottom = 1079.0
@@ -567,18 +586,18 @@ offset_bottom = 1004.0
 pivot_offset = Vector2(450, 450)
 columns = 4
 
-[node name="level1" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+[node name="Intro" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
-texture_normal = ExtResource("4_hnicg")
-texture_pressed = ExtResource("6_a6mqp")
-texture_hover = ExtResource("7_lsarh")
+texture_normal = ExtResource("37_w3tlk")
+texture_pressed = ExtResource("38_rg2m7")
+texture_hover = ExtResource("39_ogdgp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/level1"]
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/Intro"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -594,18 +613,18 @@ theme = ExtResource("5_2d3if")
 text = "Intro
 "
 
-[node name="level2" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+[node name="SideToSide" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
-texture_normal = ExtResource("6_5ieg8")
-texture_pressed = ExtResource("9_km44q")
-texture_hover = ExtResource("10_bqt7s")
+texture_normal = ExtResource("40_odpxi")
+texture_pressed = ExtResource("41_pe6u0")
+texture_hover = ExtResource("42_7cu6i")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/level2"]
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/SideToSide"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -621,18 +640,18 @@ theme = ExtResource("5_2d3if")
 text = "Side To Side
 "
 
-[node name="level3" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+[node name="SpeedIsKey" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
-texture_normal = ExtResource("7_vr3gk")
-texture_pressed = ExtResource("12_13t58")
-texture_hover = ExtResource("13_mm1xl")
+texture_normal = ExtResource("43_m8afg")
+texture_pressed = ExtResource("44_mmxax")
+texture_hover = ExtResource("45_4bno3")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/level3"]
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/SpeedIsKey"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -648,18 +667,18 @@ theme = ExtResource("5_2d3if")
 text = "Speed Is Key
 "
 
-[node name="level4" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+[node name="TimeToRise" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
-texture_normal = ExtResource("8_4xp21")
-texture_pressed = ExtResource("15_bp4fk")
-texture_hover = ExtResource("16_uc6ya")
+texture_normal = ExtResource("46_uaoln")
+texture_pressed = ExtResource("47_tny80")
+texture_hover = ExtResource("48_lpx5h")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/level4"]
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/TimeToRise"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -674,18 +693,18 @@ grow_vertical = 0
 theme = ExtResource("5_2d3if")
 text = "Time To Rise"
 
-[node name="level5" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+[node name="LetsSpin" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
-texture_normal = ExtResource("9_0j47a")
-texture_pressed = ExtResource("18_ej7m4")
-texture_hover = ExtResource("19_jr68i")
+texture_normal = ExtResource("49_3rft3")
+texture_pressed = ExtResource("50_luyhi")
+texture_hover = ExtResource("51_aep6s")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/level5"]
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/LetsSpin"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -700,18 +719,18 @@ grow_vertical = 0
 theme = ExtResource("5_2d3if")
 text = "Lets Spin"
 
-[node name="level6" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+[node name="HyperDrive" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
-texture_normal = ExtResource("10_yl1ke")
-texture_pressed = ExtResource("21_wc6k8")
-texture_hover = ExtResource("22_o6cqk")
+texture_normal = ExtResource("52_dj7sg")
+texture_pressed = ExtResource("53_jbuyl")
+texture_hover = ExtResource("54_c3xya")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/level6"]
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/HyperDrive"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -1440,15 +1459,17 @@ transform = Transform3D(0.89141, 0, 0.453197, 0, 1, 0, -0.453197, 0, 0.89141, -1
 [connection signal="pressed" from="StartMenu/Section1/GridContainer/level9" to="StartMenu" method="_on_level_9_pressed"]
 [connection signal="pressed" from="StartMenu/Section1/GridContainer/level10" to="StartMenu" method="_on_level_10_pressed"]
 [connection signal="pressed" from="StartMenu/Section1/backBtn" to="StartMenu" method="_on_levelSelectBack_btn_pressed"]
-[connection signal="pressed" from="StartMenu/Section0/GridContainer/level1" to="StartMenu" method="_on_level_1_pressed"]
-[connection signal="pressed" from="StartMenu/Section0/GridContainer/level2" to="StartMenu" method="_on_level_2_pressed"]
-[connection signal="pressed" from="StartMenu/Section0/GridContainer/level3" to="StartMenu" method="_on_level_3_pressed"]
-[connection signal="pressed" from="StartMenu/Section0/GridContainer/level4" to="StartMenu" method="_on_level_4_pressed"]
-[connection signal="pressed" from="StartMenu/Section0/GridContainer/level5" to="StartMenu" method="_on_level_5_pressed"]
-[connection signal="pressed" from="StartMenu/Section0/GridContainer/level6" to="StartMenu" method="_on_level_6_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/Intro" to="StartMenu" method="_on_intro_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/SideToSide" to="StartMenu" method="_on_side_to_side_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/SpeedIsKey" to="StartMenu" method="_on_speed_is_key_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/TimeToRise" to="StartMenu" method="_on_time_to_rise_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/LetsSpin" to="StartMenu" method="_on_lets_spin_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/HyperDrive" to="StartMenu" method="_on_hyper_drive_pressed"]
 [connection signal="pressed" from="StartMenu/Section0/backBtn" to="StartMenu" method="_on_levelSelectBack_btn_pressed"]
+[connection signal="pressed" from="StartMenu/CourseSelect/GridContainer/Course0" to="StartMenu" method="_on_course_0_pressed"]
 [connection signal="pressed" from="StartMenu/CourseSelect/GridContainer/Course1" to="StartMenu" method="_on_course_1_pressed"]
 [connection signal="pressed" from="StartMenu/CourseSelect/backBtn" to="StartMenu" method="_on_courseSelectBack_btn_pressed"]
 [connection signal="pressed" from="StartMenu/ModeSelectPanel/GridContainer/Level" to="StartMenu" method="_on_level_select_btn_pressed"]
 [connection signal="pressed" from="StartMenu/ModeSelectPanel/GridContainer/Set" to="StartMenu" method="_on_set_pressed"]
+[connection signal="pressed" from="StartMenu/ModeSelectPanel/GridContainer/Gauntlet" to="StartMenu" method="_on_gauntlet_pressed"]
 [connection signal="pressed" from="StartMenu/ModeSelectPanel/backBtn" to="StartMenu" method="_on_back_btn_pressed"]
