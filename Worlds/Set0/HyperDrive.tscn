@@ -98,6 +98,18 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -72, 0, 6)
 [node name="Platform32" parent="." instance=ExtResource("2_7valk")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -72, 0, 8)
 
+[node name="Platform75" parent="." instance=ExtResource("2_7valk")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -70, 0, 2)
+
+[node name="Platform76" parent="." instance=ExtResource("2_7valk")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -70, 0, 4)
+
+[node name="Platform77" parent="." instance=ExtResource("2_7valk")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -70, 0, 6)
+
+[node name="Platform78" parent="." instance=ExtResource("2_7valk")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -70, 0, 8)
+
 [node name="Platform39" parent="." instance=ExtResource("2_7valk")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -72, 3, 44)
 
@@ -157,6 +169,21 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -60, 3, 46)
 
 [node name="Platform51" parent="." instance=ExtResource("2_7valk")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -60, 3, 44)
+
+[node name="Platform70" parent="." instance=ExtResource("2_7valk")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -58, 3, 50)
+
+[node name="Platform71" parent="." instance=ExtResource("2_7valk")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -58, 3, 52)
+
+[node name="Platform72" parent="." instance=ExtResource("2_7valk")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -58, 3, 48)
+
+[node name="Platform73" parent="." instance=ExtResource("2_7valk")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -58, 3, 46)
+
+[node name="Platform74" parent="." instance=ExtResource("2_7valk")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -58, 3, 44)
 
 [node name="Platform58" parent="." instance=ExtResource("2_7valk")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -60, 3, -5.89735)

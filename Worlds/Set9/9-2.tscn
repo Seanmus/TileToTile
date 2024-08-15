@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://tdiou77orlwx"]
+
+[ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="1_mgxmj"]
+[ext_resource type="PackedScene" uid="uid://dpaqrwtjbvv7l" path="res://Player/player.tscn" id="2_d0fw5"]
+[ext_resource type="PackedScene" uid="uid://ddjglid8xjiwg" path="res://WorldBlocks/death.tscn" id="3_2w3xw"]
+[ext_resource type="PackedScene" uid="uid://c776e2jroe45l" path="res://gem.tscn" id="4_wvo56"]
+[ext_resource type="PackedScene" uid="uid://bl8q08srqwu41" path="res://WorldEnvironmentDark.tscn" id="5_ssdn3"]
+[ext_resource type="PackedScene" uid="uid://yxow118ygwwj" path="res://WorldBlocks/glassRotating.tscn" id="6_d41fa"]
+[ext_resource type="PackedScene" uid="uid://cgxwmwtpno0c0" path="res://WorldBlocks/disappearing_glassPlatform.tscn" id="7_j3voa"]
+[ext_resource type="PackedScene" uid="uid://dj3o42c3ybu2e" path="res://WorldBlocks/glass.tscn" id="8_wgxrj"]
+
+[node name="World" type="Node3D"]
+
+[node name="Platform" parent="." instance=ExtResource("1_mgxmj")]
+
+[node name="Platform4" parent="." instance=ExtResource("1_mgxmj")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -8, 0, 0)
+
+[node name="Platform3" parent="." instance=ExtResource("1_mgxmj")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 0)
+
+[node name="Platform2" parent="." instance=ExtResource("1_mgxmj")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -26, 0, 0)
+
+[node name="Platform6" parent="." instance=ExtResource("1_mgxmj")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -18, 0, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_d0fw5")]
+transform = Transform3D(-1.63296e-08, 0, 0.373579, 0, 0.373579, 0, -0.373579, 0, -1.63296e-08, 2.24117, 0.852064, 0)
+
+[node name="death" parent="." instance=ExtResource("3_2w3xw")]
+transform = Transform3D(210.972, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432, 0)
+
+[node name="gem" parent="." instance=ExtResource("4_wvo56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.0798, 0.377667, -0.0542038)
+nextLevel = "octopusGame2"
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("5_ssdn3")]
+
+[node name="Glass5" parent="." instance=ExtResource("6_d41fa")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -12, 0, 0)
+
+[node name="Glass6" parent="." instance=ExtResource("6_d41fa")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15, 0, 2)
+
+[node name="Glass8" parent="." instance=ExtResource("6_d41fa")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -22, 0, 0)
+
+[node name="Glass7" parent="." instance=ExtResource("6_d41fa")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15, 0, -2)
+
+[node name="DisappearingPlatform" parent="." instance=ExtResource("7_j3voa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="Glass" parent="." instance=ExtResource("8_wgxrj")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4, 0, -2)

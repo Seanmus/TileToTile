@@ -47,14 +47,14 @@ func _process(_delta):
 	$Speed.text = str(playerSpeed) + " MPH"
 	levelTime.text = "%02d.%02d" % [Manager.roundTime, fmod(Manager.roundTime,1) * 1000]
 	gameTime.text = "%02d.%02d" % [Manager.totalTime, fmod(Manager.totalTime,1) * 1000]
-	_HighlightTime()
+	#_HighlightTime()
 	if Input.is_action_just_pressed("escape"):
 		Manager.totalTime = 1000
 		get_tree().change_scene_to_file("res://Worlds/title.tscn")
 		
 
 func _HighlightTime():
-	
+	return
 	GoldTrophy.frame = 0
 	SilverTrophy.frame = 0
 	BronzeTrophy.frame = 0
@@ -106,9 +106,9 @@ func _show():
 	gameTime.visible = true
 	miniMap.visible = true
 	
-	GoldTimeLabel.visible = true
-	SilverTimeLabel.visible = true
-	BronzeTimeLabel.visible = true
+	#GoldTimeLabel.visible = true
+	#SilverTimeLabel.visible = true
+	#BronzeTimeLabel.visible = true
 	$Speed.visible = true
 	
 	

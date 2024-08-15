@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvmvh73ffunn6"]
+
+[ext_resource type="Script" path="res://Scripts/explodeCloud.gd" id="1_o4ftv"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticlesMaterial_qbyin"]
+emission_shape = 1
+emission_sphere_radius = 3.84
+direction = Vector3(0, 0, 0)
+spread = 86.34
+flatness = 0.27
+initial_velocity_min = 5.0
+initial_velocity_max = 5.0
+gravity = Vector3(0, -3, 0)
+hue_variation_min = 0.1
+hue_variation_max = 0.13
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cejdx"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="PlaneMesh" id="QuadMesh_bu1i1"]
+material = SubResource("StandardMaterial3D_cejdx")
+orientation = 2
+
+[node name="jumpCloud" type="GPUParticles3D"]
+transform = Transform3D(0.355692, 0, 0, 0, 0.15653, 0, 0, 0, 0.355692, 0.0311819, -0.941365, -0.399482)
+emitting = false
+amount = 100
+lifetime = 0.4
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+collision_base_size = 0.1
+process_material = SubResource("ParticlesMaterial_qbyin")
+draw_pass_1 = SubResource("QuadMesh_bu1i1")
+script = ExtResource("1_o4ftv")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

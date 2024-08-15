@@ -152,6 +152,7 @@ func _on_course_select_back_btn_pressed():
 
 func _on_play_pressed():
 	$ModeSelectPanel.visible = true
+	$ModeSelectPanel/GridContainer/Level.grab_focus()
 	$MenuButtons.visible = false
 
 
@@ -159,6 +160,7 @@ func _on_set_pressed():
 	$ModeSelectPanel.visible = false
 	Manager.gameMode = Manager.GAME_MODES.SET
 	$CourseSelect.visible = true
+	$CourseSelect/GridContainer/Course0.grab_focus()
 
 
 func _on_courseSelectBack_btn_pressed():
@@ -167,9 +169,11 @@ func _on_courseSelectBack_btn_pressed():
 	$CourseSelect.visible = false
 	$MenuButtons.visible = false
 	$Settings.visible = false
+	$CourseSelect/GridContainer/Course0.grab_focus()
 
 
 func _on_levelSelectBack_btn_pressed():
+	$CourseSelect/GridContainer/Course0.grab_focus()
 	$CourseSelect.visible = true
 	$ModeSelectPanel.visible = false
 	$Section1.visible = false
