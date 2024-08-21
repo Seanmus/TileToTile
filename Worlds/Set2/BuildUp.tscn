@@ -153,7 +153,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -61, 0, 0.00617194)
 transform = Transform3D(-1.63296e-08, 0, 0.373579, 0, 0.373579, 0, -0.373579, 0, -1.63296e-08, 4.61657, 0.354547, 0)
 
 [node name="death" parent="." instance=ExtResource("4_lcxh8")]
-transform = Transform3D(210.972, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432, 0)
+transform = Transform3D(311.669, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432, 0)
 
 [node name="gem" parent="." instance=ExtResource("5_r2xby")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.0093, 0.38925, 0.0760715)

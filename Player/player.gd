@@ -100,5 +100,8 @@ func _resetScene():
 	get_tree().change_scene_to_file(get_tree().current_scene.scene_file_path)	
 
 
+func Bounce():
+	velocity.y = JUMP_VELOCITY * 2
+
 func _on_coyote_timer_timeout():
 	coyoteTime = false
