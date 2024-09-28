@@ -33,6 +33,7 @@ func _on_level_select_btn_pressed():
 	$ModeSelectPanel.visible = false
 	$MenuButtons.visible = false
 	$Settings.visible = false
+	$CourseSelect/GridContainer/Course0.grab_focus()
 
 
 func _on_back_btn_pressed():
@@ -141,6 +142,7 @@ func _on_course_1_pressed():
 		$CourseSelect.visible = false
 		$MenuButtons.visible = false
 		$Settings.visible = false
+		$Section1/GridContainer/level1.grab_focus()
 
 
 func _on_course_select_back_btn_pressed():
@@ -223,6 +225,7 @@ func _on_course_0_pressed():
 	else:
 		$CourseSelect.visible = false
 		$Section0.visible = true
+		$Section1/GridContainer/level1.grab_focus()
 
 
 func _on_gauntlet_pressed():
