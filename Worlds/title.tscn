@@ -44,7 +44,7 @@
 [ext_resource type="Texture2D" uid="uid://cco47ctvnty1f" path="res://UI/level10Hover.png" id="34_uuqsf"]
 [ext_resource type="Texture2D" uid="uid://diulw1qo7ifg3" path="res://UI/Icons/LevelSelectNormal.png" id="37_jduk2"]
 [ext_resource type="Texture2D" uid="uid://25bdn7b2sxwg" path="res://UI/LevelIcons/Set0/Intro.png" id="37_w3tlk"]
-[ext_resource type="Texture2D" uid="uid://cb3bi0mk1c4uh" path="res://UI/LevelIcons/Set0/IntroPresssed.png" id="38_rg2m7"]
+[ext_resource type="Texture2D" uid="uid://bug0teuosmql3" path="res://UI/LevelIcons/Set0/IntroPressed.png" id="38_b4rmu"]
 [ext_resource type="Texture2D" uid="uid://dsclsavhlo5uj" path="res://UI/Icons/LevelSelectPressed.png" id="39_hk8qk"]
 [ext_resource type="Texture2D" uid="uid://dhsk7xp3yq167" path="res://UI/Icons/SetNormal.png" id="40_n6nir"]
 [ext_resource type="Texture2D" uid="uid://bncmarq7linl4" path="res://UI/LevelIcons/Set0/SideToSide.png" id="40_odpxi"]
@@ -656,9 +656,9 @@ focus_neighbor_top = NodePath("../LetsSpin")
 focus_neighbor_right = NodePath("../SideToSide")
 focus_neighbor_bottom = NodePath("../LetsSpin")
 texture_normal = ExtResource("37_w3tlk")
-texture_pressed = ExtResource("38_rg2m7")
-texture_hover = ExtResource("38_rg2m7")
-texture_focused = ExtResource("38_rg2m7")
+texture_pressed = ExtResource("38_b4rmu")
+texture_hover = ExtResource("38_b4rmu")
+texture_focused = ExtResource("38_b4rmu")
 ignore_texture_size = true
 stretch_mode = 0
 
