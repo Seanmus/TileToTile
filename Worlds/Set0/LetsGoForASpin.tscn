@@ -108,5 +108,7 @@ transform = Transform3D(210.972, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, -5, -9.6943
 [node name="gem" parent="." instance=ExtResource("5_ndel7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0073, 10.4361, -12.0163)
 nextLevel = "Set0/HyperDrive"
+nextLevelIfGauntlet = "Set0/HyperDrive"
+setname = "Set0"
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("6_mjalg")]

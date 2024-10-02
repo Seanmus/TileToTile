@@ -184,7 +184,8 @@ transform = Transform3D(311.669, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432
 
 [node name="gem" parent="." instance=ExtResource("5_citfa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -127.009, 0.38925, 0.0760715)
-nextLevel = "title"
+nextLevel = "Set0/SpeedIsKey"
+nextLevelIfGauntlet = "Set0/SpeedIsKey"
 setname = "Set0"
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("6_g73lt")]

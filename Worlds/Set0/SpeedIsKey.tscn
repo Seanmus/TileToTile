@@ -85,6 +85,8 @@ transform = Transform3D(210.972, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432
 
 [node name="gem" parent="." instance=ExtResource("5_8ns7j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.3481, 0.734239, 0.0699699)
-nextLevel = "Set0/TimeToRise"
+nextLevel = "Set0/TheLongRun"
+nextLevelIfGauntlet = "Set0/TheLongRun"
+setname = "Set0"
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("6_q7uib")]

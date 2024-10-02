@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://di3rgeves175v"]
+[gd_scene load_steps=76 format=3 uid="uid://di3rgeves175v"]
 
 [ext_resource type="FontFile" uid="uid://k32ihrnb84gk" path="res://Roboto-Bold.ttf" id="1_0rkor"]
 [ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="1_3grja"]
@@ -43,25 +43,34 @@
 [ext_resource type="Texture2D" uid="uid://b6505w01k2cgr" path="res://UI/level10Dark.png" id="33_vvts0"]
 [ext_resource type="Texture2D" uid="uid://cco47ctvnty1f" path="res://UI/level10Hover.png" id="34_uuqsf"]
 [ext_resource type="Texture2D" uid="uid://diulw1qo7ifg3" path="res://UI/Icons/LevelSelectNormal.png" id="37_jduk2"]
+[ext_resource type="Script" path="res://Worlds/Section0.gd" id="37_vxrjn"]
 [ext_resource type="Texture2D" uid="uid://25bdn7b2sxwg" path="res://UI/LevelIcons/Set0/Intro.png" id="37_w3tlk"]
 [ext_resource type="Texture2D" uid="uid://bug0teuosmql3" path="res://UI/LevelIcons/Set0/IntroPressed.png" id="38_b4rmu"]
 [ext_resource type="Texture2D" uid="uid://dsclsavhlo5uj" path="res://UI/Icons/LevelSelectPressed.png" id="39_hk8qk"]
+[ext_resource type="Texture2D" uid="uid://bw5vfqqp2wpne" path="res://UI/LevelIcons/Set0/BuildUp.png" id="40_n2mnq"]
 [ext_resource type="Texture2D" uid="uid://dhsk7xp3yq167" path="res://UI/Icons/SetNormal.png" id="40_n6nir"]
 [ext_resource type="Texture2D" uid="uid://bncmarq7linl4" path="res://UI/LevelIcons/Set0/SideToSide.png" id="40_odpxi"]
 [ext_resource type="Texture2D" uid="uid://b7c8buik4dc13" path="res://UI/Icons/LevelSelectHover.png" id="40_v038y"]
 [ext_resource type="Texture2D" uid="uid://c0tx1rr4cl74p" path="res://UI/Icons/SetPressed.png" id="41_4o52r"]
+[ext_resource type="Texture2D" uid="uid://chx5oicbatnns" path="res://UI/LevelIcons/Set0/BuildUpPressed.png" id="41_nmv3j"]
 [ext_resource type="Texture2D" uid="uid://ba6dd4cfunfo" path="res://UI/LevelIcons/Set0/SideToSidePressed.png" id="41_pe6u0"]
 [ext_resource type="Texture2D" uid="uid://de1exnvdxe7sy" path="res://UI/Icons/SetHover.png" id="42_q75b1"]
 [ext_resource type="Texture2D" uid="uid://dmgbtms27mw4j" path="res://UI/Icons/GauntletNormal.png" id="43_iytpd"]
 [ext_resource type="Texture2D" uid="uid://cnwpcr0djcgui" path="res://UI/LevelIcons/Set0/SpeedIsKey.png" id="43_m8afg"]
 [ext_resource type="Texture2D" uid="uid://bwnh8fctl36aw" path="res://UI/Icons/GauntLetPressed.png" id="44_ior5a"]
 [ext_resource type="Texture2D" uid="uid://b68ac22xd2r45" path="res://UI/LevelIcons/Set0/SpeedIsKeyPressed.png" id="44_mmxax"]
+[ext_resource type="Texture2D" uid="uid://crai7re4cpuex" path="res://UI/LevelIcons/Set0/HighSpeed.png" id="44_re3e1"]
+[ext_resource type="Texture2D" uid="uid://bynauvwugp7g3" path="res://UI/LevelIcons/Set0/HighSpeedPressed.png" id="45_kbg11"]
 [ext_resource type="Texture2D" uid="uid://cj7ijswwc16ho" path="res://UI/Icons/GauntletHover.png" id="46_qk25k"]
 [ext_resource type="Texture2D" uid="uid://c71hphv337oh3" path="res://UI/LevelIcons/Set0/TimeToRiseStandard.png" id="46_uaoln"]
 [ext_resource type="Texture2D" uid="uid://d1s50ogf3qkkf" path="res://UI/LevelIcons/Set0/TimeToRisePressed.png" id="47_tny80"]
+[ext_resource type="Texture2D" uid="uid://cet12ugyrbw3h" path="res://UI/LevelIcons/Set0/TheLongRun.png" id="48_c3ie0"]
 [ext_resource type="Texture2D" uid="uid://b4g5c0umygdvi" path="res://UI/LevelIcons/Set0/LetsSpin.png" id="49_3rft3"]
+[ext_resource type="Texture2D" uid="uid://c4mptwf26gmdw" path="res://UI/LevelIcons/Set0/TheLongRunPressed.png" id="49_5tovm"]
 [ext_resource type="Texture2D" uid="uid://dy005n3cxa8c8" path="res://UI/LevelIcons/Set0/LetsSpinPressed.png" id="50_luyhi"]
 [ext_resource type="Texture2D" uid="uid://daqd3vw6c7r8" path="res://UI/LevelIcons/Set0/HyperDrive.png" id="52_dj7sg"]
+[ext_resource type="Texture2D" uid="uid://rqir1vnr44a1" path="res://UI/LevelIcons/Set0/TheLongerRun.png" id="52_uxysg"]
+[ext_resource type="Texture2D" uid="uid://cqfhdn7gwopcj" path="res://UI/LevelIcons/Set0/TheLongerRunPressed.png" id="53_h7bpw"]
 [ext_resource type="Texture2D" uid="uid://dg5rk2uquipa8" path="res://UI/LevelIcons/Set0/HyperDrivePressed.png" id="53_jbuyl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deetu"]
@@ -633,6 +642,7 @@ offset_right = 1923.0
 offset_bottom = 1079.0
 pivot_offset = Vector2(450, 450)
 theme_override_styles/panel = SubResource("StyleBoxFlat_deetu")
+script = ExtResource("37_vxrjn")
 
 [node name="GridContainer" type="GridContainer" parent="StartMenu/Section0"]
 clip_contents = true
@@ -653,8 +663,10 @@ layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../../backBtn")
 focus_neighbor_top = NodePath("../LetsSpin")
-focus_neighbor_right = NodePath("../SideToSide")
-focus_neighbor_bottom = NodePath("../LetsSpin")
+focus_neighbor_right = NodePath("../BuildUp")
+focus_neighbor_bottom = NodePath("../SpeedIsKey")
+focus_next = NodePath("../BuildUp")
+focus_previous = NodePath("../../backBtn")
 texture_normal = ExtResource("37_w3tlk")
 texture_pressed = ExtResource("38_b4rmu")
 texture_hover = ExtResource("38_b4rmu")
@@ -678,17 +690,51 @@ theme = ExtResource("5_2d3if")
 text = "Intro
 "
 
-[node name="SideToSide" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+[node name="BuildUp" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../Intro")
 focus_neighbor_top = NodePath("../HyperDrive")
-focus_neighbor_right = NodePath("../SpeedIsKey")
-focus_neighbor_bottom = NodePath("../HyperDrive")
-focus_next = NodePath("../SpeedIsKey")
+focus_neighbor_right = NodePath("../SideToSide")
+focus_neighbor_bottom = NodePath("../TheLongRun")
+focus_next = NodePath("../SideToSide")
 focus_previous = NodePath("../Intro")
+texture_normal = ExtResource("40_n2mnq")
+texture_pressed = ExtResource("41_nmv3j")
+texture_hover = ExtResource("41_nmv3j")
+texture_focused = ExtResource("41_nmv3j")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/BuildUp"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "BuildUp
+"
+
+[node name="SideToSide" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../BuildUp")
+focus_neighbor_top = NodePath("../TimeToRise")
+focus_neighbor_right = NodePath("../HighSpeed")
+focus_neighbor_bottom = NodePath("../TimeToRise")
+focus_next = NodePath("../HighSpeed")
+focus_previous = NodePath("../BuildUp")
 texture_normal = ExtResource("40_odpxi")
 texture_pressed = ExtResource("41_pe6u0")
 texture_hover = ExtResource("41_pe6u0")
@@ -712,15 +758,51 @@ theme = ExtResource("5_2d3if")
 text = "Side To Side
 "
 
-[node name="SpeedIsKey" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+[node name="HighSpeed" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../SideToSide")
-focus_neighbor_right = NodePath("../TimeToRise")
-focus_next = NodePath("../TimeToRise")
+focus_neighbor_top = NodePath("../TheLongerRun")
+focus_neighbor_right = NodePath("../SpeedIsKey")
+focus_neighbor_bottom = NodePath("../TheLongerRun")
+focus_next = NodePath("../SpeedIsKey")
 focus_previous = NodePath("../SideToSide")
+texture_normal = ExtResource("44_re3e1")
+texture_pressed = ExtResource("45_kbg11")
+texture_hover = ExtResource("45_kbg11")
+texture_focused = ExtResource("45_kbg11")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/HighSpeed"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "HighSpeed
+"
+
+[node name="SpeedIsKey" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../HighSpeed")
+focus_neighbor_top = NodePath("../Intro")
+focus_neighbor_right = NodePath("../TheLongRun")
+focus_neighbor_bottom = NodePath("../LetsSpin")
+focus_next = NodePath("../TheLongRun")
+focus_previous = NodePath("../HighSpeed")
 texture_normal = ExtResource("43_m8afg")
 texture_pressed = ExtResource("44_mmxax")
 texture_hover = ExtResource("44_mmxax")
@@ -744,17 +826,51 @@ theme = ExtResource("5_2d3if")
 text = "Speed Is Key
 "
 
-[node name="TimeToRise" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+[node name="TheLongRun" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../SpeedIsKey")
-focus_neighbor_top = NodePath("../../backBtn")
-focus_neighbor_right = NodePath("../LetsSpin")
-focus_neighbor_bottom = NodePath("../../backBtn")
-focus_next = NodePath("../LetsSpin")
+focus_neighbor_top = NodePath("../BuildUp")
+focus_neighbor_right = NodePath("../TimeToRise")
+focus_neighbor_bottom = NodePath("../HyperDrive")
+focus_next = NodePath("../TimeToRise")
 focus_previous = NodePath("../SpeedIsKey")
+texture_normal = ExtResource("48_c3ie0")
+texture_pressed = ExtResource("49_5tovm")
+texture_hover = ExtResource("49_5tovm")
+texture_focused = ExtResource("49_5tovm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/TheLongRun"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "TheLongRun
+"
+
+[node name="TimeToRise" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../TheLongRun")
+focus_neighbor_top = NodePath("../SideToSide")
+focus_neighbor_right = NodePath("../TheLongerRun")
+focus_neighbor_bottom = NodePath("../../backBtn")
+focus_next = NodePath("../TheLongerRun")
+focus_previous = NodePath("../TheLongRun")
 texture_normal = ExtResource("46_uaoln")
 texture_pressed = ExtResource("47_tny80")
 texture_hover = ExtResource("47_tny80")
@@ -777,17 +893,51 @@ grow_vertical = 0
 theme = ExtResource("5_2d3if")
 text = "Time To Rise"
 
-[node name="LetsSpin" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+[node name="TheLongerRun" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../TimeToRise")
-focus_neighbor_top = NodePath("../Intro")
+focus_neighbor_top = NodePath("../HighSpeed")
+focus_neighbor_right = NodePath("../LetsSpin")
+focus_neighbor_bottom = NodePath("../../backBtn")
+focus_next = NodePath("../LetsSpin")
+focus_previous = NodePath("../TimeToRise")
+texture_normal = ExtResource("52_uxysg")
+texture_pressed = ExtResource("53_h7bpw")
+texture_hover = ExtResource("53_h7bpw")
+texture_focused = ExtResource("53_h7bpw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section0/GridContainer/TheLongerRun"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "TheLongerRun
+"
+
+[node name="LetsSpin" type="TextureButton" parent="StartMenu/Section0/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../TheLongerRun")
+focus_neighbor_top = NodePath("../SpeedIsKey")
 focus_neighbor_right = NodePath("../HyperDrive")
 focus_neighbor_bottom = NodePath("../Intro")
 focus_next = NodePath("../HyperDrive")
-focus_previous = NodePath("../TimeToRise")
+focus_previous = NodePath("../TheLongerRun")
 texture_normal = ExtResource("49_3rft3")
 texture_pressed = ExtResource("50_luyhi")
 texture_hover = ExtResource("50_luyhi")
@@ -816,7 +966,7 @@ custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../LetsSpin")
-focus_neighbor_top = NodePath("../SideToSide")
+focus_neighbor_top = NodePath("../TheLongRun")
 focus_neighbor_right = NodePath("../../backBtn")
 focus_neighbor_bottom = NodePath("../../backBtn")
 focus_next = NodePath("../../backBtn")
@@ -878,10 +1028,10 @@ custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_right = NodePath("../Course1")
-texture_normal = ExtResource("43_m8afg")
-texture_pressed = ExtResource("44_mmxax")
-texture_hover = ExtResource("44_mmxax")
-texture_focused = ExtResource("44_mmxax")
+texture_normal = ExtResource("49_3rft3")
+texture_pressed = ExtResource("50_luyhi")
+texture_hover = ExtResource("50_luyhi")
+texture_focused = ExtResource("50_luyhi")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1292,7 +1442,8 @@ grow_vertical = 2
 scale = Vector2(0.02, 0.02)
 theme = ExtResource("5_2d3if")
 theme_override_font_sizes/font_size = 42
-text = "Play a set of 10 levels
+text = "Play a themed 
+set of levels
 "
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -1564,12 +1715,16 @@ transform = Transform3D(0.89141, 0, 0.453197, 0, 1, 0, -0.453197, 0, 0.89141, -1
 [connection signal="pressed" from="StartMenu/Section1/GridContainer/level9" to="StartMenu" method="_on_level_9_pressed"]
 [connection signal="pressed" from="StartMenu/Section1/GridContainer/level10" to="StartMenu" method="_on_level_10_pressed"]
 [connection signal="pressed" from="StartMenu/Section1/backBtn" to="StartMenu" method="_on_levelSelectBack_btn_pressed"]
-[connection signal="pressed" from="StartMenu/Section0/GridContainer/Intro" to="StartMenu" method="_on_intro_pressed"]
-[connection signal="pressed" from="StartMenu/Section0/GridContainer/SideToSide" to="StartMenu" method="_on_side_to_side_pressed"]
-[connection signal="pressed" from="StartMenu/Section0/GridContainer/SpeedIsKey" to="StartMenu" method="_on_speed_is_key_pressed"]
-[connection signal="pressed" from="StartMenu/Section0/GridContainer/TimeToRise" to="StartMenu" method="_on_time_to_rise_pressed"]
-[connection signal="pressed" from="StartMenu/Section0/GridContainer/LetsSpin" to="StartMenu" method="_on_lets_spin_pressed"]
-[connection signal="pressed" from="StartMenu/Section0/GridContainer/HyperDrive" to="StartMenu" method="_on_hyper_drive_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/Intro" to="StartMenu/Section0" method="_on_intro_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/BuildUp" to="StartMenu/Section0" method="_on_build_up_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/SideToSide" to="StartMenu/Section0" method="_on_side_to_side_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/HighSpeed" to="StartMenu/Section0" method="_on_high_speed_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/SpeedIsKey" to="StartMenu/Section0" method="_on_speed_is_key_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/TheLongRun" to="StartMenu/Section0" method="_on_the_long_run_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/TimeToRise" to="StartMenu/Section0" method="_on_time_to_rise_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/TheLongerRun" to="StartMenu/Section0" method="_on_the_longer_run_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/LetsSpin" to="StartMenu/Section0" method="_on_lets_spin_pressed"]
+[connection signal="pressed" from="StartMenu/Section0/GridContainer/HyperDrive" to="StartMenu/Section0" method="_on_hyper_drive_pressed"]
 [connection signal="pressed" from="StartMenu/Section0/backBtn" to="StartMenu" method="_on_levelSelectBack_btn_pressed"]
 [connection signal="pressed" from="StartMenu/CourseSelect/GridContainer/Course0" to="StartMenu" method="_on_course_0_pressed"]
 [connection signal="pressed" from="StartMenu/CourseSelect/GridContainer/Course1" to="StartMenu" method="_on_course_1_pressed"]

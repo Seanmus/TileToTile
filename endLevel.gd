@@ -40,7 +40,8 @@ func _on_gem_body_entered(body):
 			call_deferred("_nextScene")
 		if Manager.gameMode == Manager.GAME_MODES.GAUNTLET:
 			if(isFinalLevel && Manager.leaderboard_handle):
-				get_tree().change_scene_to_file("res://Worlds/title.tscn")
+				pass
+				#get_tree().change_scene_to_file("res://Worlds/title.tscn")
 			else:
 				call_deferred("_nextScene")
 		

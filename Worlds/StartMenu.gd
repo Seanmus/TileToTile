@@ -116,7 +116,7 @@ func _on_settings_btn_pressed():
 	$MenuButtons.visible = false
 	$Section1.visible = false
 	$Settings.visible = true
-	$Settings/Panel/MouseSensitivitySlider.grab_focus()
+	$Settings/Panel/audioSlider.grab_focus()
 
 
 func _on_audio_slider_value_changed(value):
@@ -186,42 +186,6 @@ func _on_levelSelectBack_btn_pressed():
 	$ModeSelectPanel.visible = false
 	$Section1.visible = false
 	$Section0.visible = false
-
-
-func _on_intro_pressed():
-	Manager.totalTime = 1000
-	Manager.sceneName = "Intro"
-	get_tree().change_scene_to_file("res://Worlds/Set0/Intro.tscn")
-
-
-func _on_side_to_side_pressed():
-	Manager.totalTime = 1000
-	Manager.sceneName = "SideToSide"
-	get_tree().change_scene_to_file("res://Worlds/Set0/SideToSide.tscn")
-
-
-func _on_speed_is_key_pressed():
-	Manager.totalTime = 1000
-	Manager.sceneName = "SpeedIsKey"
-	get_tree().change_scene_to_file("res://Worlds/Set0/SpeedIsKey.tscn")
-
-
-func _on_time_to_rise_pressed():
-	Manager.totalTime = 1000
-	Manager.sceneName = "TimeToRise"
-	get_tree().change_scene_to_file("res://Worlds/Set0/TimeToRise.tscn")
-
-
-func _on_lets_spin_pressed():
-	Manager.totalTime = 1000
-	Manager.sceneName = "LetsGoForASpin"
-	get_tree().change_scene_to_file("res://Worlds/Set0/LetsGoForASpin.tscn")
-
-
-func _on_hyper_drive_pressed():
-	Manager.totalTime = 1000
-	Manager.sceneName = "HyperDrive"
-	get_tree().change_scene_to_file("res://Worlds/Set0/HyperDrive.tscn")
 
 
 func _on_course_0_pressed():

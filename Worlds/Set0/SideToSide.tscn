@@ -61,6 +61,8 @@ transform = Transform3D(210.972, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432
 
 [node name="gem" parent="." instance=ExtResource("5_1npap")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.3481, 0.734239, 0.0699699)
-nextLevel = "Set0/SpeedIsKey"
+nextLevel = "Set0/HighSpeed"
+nextLevelIfGauntlet = "Set0/HighSpeed"
+setname = "Set0"
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("6_osd5d")]
