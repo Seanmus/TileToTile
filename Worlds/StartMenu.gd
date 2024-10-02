@@ -42,6 +42,7 @@ func _on_back_btn_pressed():
 	$CourseSelect.visible = false
 	$Settings.visible = false
 	$MenuButtons.visible = true
+	$MenuButtons/Button.grab_focus()
 
 
 func _on_level_1_pressed():
@@ -115,6 +116,7 @@ func _on_settings_btn_pressed():
 	$MenuButtons.visible = false
 	$Section1.visible = false
 	$Settings.visible = true
+	$Settings/Panel/MouseSensitivitySlider.grab_focus()
 
 
 func _on_audio_slider_value_changed(value):
@@ -153,10 +155,19 @@ func _on_course_select_back_btn_pressed():
 
 
 func _on_play_pressed():
-	$ModeSelectPanel.visible = true
-	$ModeSelectPanel/GridContainer/Level.grab_focus()
-	$MenuButtons.visible = false
+	_open_modeSelect()
 
+
+func _open_modeSelect():
+	$ModeSelectPanel.visible = true
+	$MenuButtons.visible = false
+	$ModeSelectPanel.visible = true
+	$Section1.visible = false
+	$CourseSelect.visible = false
+	$MenuButtons.visible = false
+	$Settings.visible = false
+	$ModeSelectPanel/GridContainer/Level.grab_focus()
+	
 
 func _on_set_pressed():
 	$ModeSelectPanel.visible = false
@@ -166,12 +177,7 @@ func _on_set_pressed():
 
 
 func _on_courseSelectBack_btn_pressed():
-	$ModeSelectPanel.visible = true
-	$Section1.visible = false
-	$CourseSelect.visible = false
-	$MenuButtons.visible = false
-	$Settings.visible = false
-	$CourseSelect/GridContainer/Course0.grab_focus()
+	_open_modeSelect()
 
 
 func _on_levelSelectBack_btn_pressed():
@@ -225,7 +231,7 @@ func _on_course_0_pressed():
 	else:
 		$CourseSelect.visible = false
 		$Section0.visible = true
-		$Section1/GridContainer/level1.grab_focus()
+		$Section0/GridContainer/Intro.grab_focus()
 
 
 func _on_gauntlet_pressed():

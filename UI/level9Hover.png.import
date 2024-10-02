@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/level9Hover.png-5cf9976087c0076b1175b712f8bcb
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

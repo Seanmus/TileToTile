@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cco47ctvnty1f"
-path="res://.godot/imported/level10Hover.png-5c2c37d9294987d7ef78aaff10a151d5.ctex"
+uid="uid://bug0teuosmql3"
+path="res://.godot/imported/IntroPressed.png-28e19a928dad2bfae809ada62991e59a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/level10Hover.png"
-dest_files=["res://.godot/imported/level10Hover.png-5c2c37d9294987d7ef78aaff10a151d5.ctex"]
+source_file="res://UI/LevelIcons/Set0/IntroPressed.png"
+dest_files=["res://.godot/imported/IntroPressed.png-28e19a928dad2bfae809ada62991e59a.ctex"]
 
 [params]
 

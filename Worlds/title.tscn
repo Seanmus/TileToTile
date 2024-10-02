@@ -166,7 +166,6 @@ theme = ExtResource("5_2d3if")
 text = "Back"
 
 [node name="MenuButtons" type="Control" parent="StartMenu"]
-visible = false
 layout_mode = 1
 anchors_preset = 0
 offset_right = 40.0
@@ -659,6 +658,7 @@ focus_neighbor_bottom = NodePath("../LetsSpin")
 texture_normal = ExtResource("37_w3tlk")
 texture_pressed = ExtResource("38_rg2m7")
 texture_hover = ExtResource("38_rg2m7")
+texture_focused = ExtResource("38_rg2m7")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -692,6 +692,7 @@ focus_previous = NodePath("../Intro")
 texture_normal = ExtResource("40_odpxi")
 texture_pressed = ExtResource("41_pe6u0")
 texture_hover = ExtResource("41_pe6u0")
+texture_focused = ExtResource("41_pe6u0")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -723,6 +724,7 @@ focus_previous = NodePath("../SideToSide")
 texture_normal = ExtResource("43_m8afg")
 texture_pressed = ExtResource("44_mmxax")
 texture_hover = ExtResource("44_mmxax")
+texture_focused = ExtResource("44_mmxax")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -756,6 +758,7 @@ focus_previous = NodePath("../SpeedIsKey")
 texture_normal = ExtResource("46_uaoln")
 texture_pressed = ExtResource("47_tny80")
 texture_hover = ExtResource("47_tny80")
+texture_focused = ExtResource("47_tny80")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -788,6 +791,7 @@ focus_previous = NodePath("../TimeToRise")
 texture_normal = ExtResource("49_3rft3")
 texture_pressed = ExtResource("50_luyhi")
 texture_hover = ExtResource("50_luyhi")
+texture_focused = ExtResource("50_luyhi")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -820,6 +824,7 @@ focus_previous = NodePath("../LetsSpin")
 texture_normal = ExtResource("52_dj7sg")
 texture_pressed = ExtResource("53_jbuyl")
 texture_hover = ExtResource("53_jbuyl")
+texture_focused = ExtResource("53_jbuyl")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -873,10 +878,10 @@ custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_right = NodePath("../Course1")
-texture_normal = ExtResource("6_5ieg8")
-texture_pressed = ExtResource("9_km44q")
-texture_hover = ExtResource("10_bqt7s")
-texture_focused = ExtResource("10_bqt7s")
+texture_normal = ExtResource("43_m8afg")
+texture_pressed = ExtResource("44_mmxax")
+texture_hover = ExtResource("44_mmxax")
+texture_focused = ExtResource("44_mmxax")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -904,8 +909,8 @@ size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../Course0")
 texture_normal = ExtResource("4_hnicg")
 texture_pressed = ExtResource("6_a6mqp")
-texture_hover = ExtResource("7_lsarh")
-texture_focused = ExtResource("7_lsarh")
+texture_hover = ExtResource("6_a6mqp")
+texture_focused = ExtResource("6_a6mqp")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1543,7 +1548,7 @@ transform = Transform3D(0.89141, 0, 0.453197, 0, 1, 0, -0.453197, 0, 0.89141, -1
 [connection signal="value_changed" from="StartMenu/Settings/Panel/MouseSensitivitySlider" to="StartMenu" method="_on_mouse_sensitivity_slider_value_changed"]
 [connection signal="toggled" from="StartMenu/Settings/Panel/LockVerticalCheckBox" to="StartMenu" method="_on_lock_vertical_check_box_toggled"]
 [connection signal="value_changed" from="StartMenu/Settings/Panel/audioSlider" to="StartMenu" method="_on_audio_slider_value_changed"]
-[connection signal="pressed" from="StartMenu/Settings/Panel/backBtn" to="StartMenu" method="_on_course_select_back_btn_pressed"]
+[connection signal="pressed" from="StartMenu/Settings/Panel/backBtn" to="StartMenu" method="_on_back_btn_pressed"]
 [connection signal="pressed" from="StartMenu/MenuButtons/settingsBtn" to="StartMenu" method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="StartMenu/MenuButtons/quitBtn" to="StartMenu" method="_on_quit_btn_pressed"]
 [connection signal="pressed" from="StartMenu/MenuButtons/Button" to="StartMenu" method="_on_play_pressed"]
