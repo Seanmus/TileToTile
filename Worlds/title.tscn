@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://di3rgeves175v"]
+[gd_scene load_steps=67 format=3 uid="uid://di3rgeves175v"]
 
 [ext_resource type="FontFile" uid="uid://k32ihrnb84gk" path="res://Roboto-Bold.ttf" id="1_0rkor"]
 [ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="1_3grja"]
@@ -46,29 +46,23 @@
 [ext_resource type="Texture2D" uid="uid://25bdn7b2sxwg" path="res://UI/LevelIcons/Set0/Intro.png" id="37_w3tlk"]
 [ext_resource type="Texture2D" uid="uid://cb3bi0mk1c4uh" path="res://UI/LevelIcons/Set0/IntroPresssed.png" id="38_rg2m7"]
 [ext_resource type="Texture2D" uid="uid://dsclsavhlo5uj" path="res://UI/Icons/LevelSelectPressed.png" id="39_hk8qk"]
-[ext_resource type="Texture2D" uid="uid://d1kejowg48pe1" path="res://UI/LevelIcons/Set0/IntroHover.png" id="39_ogdgp"]
 [ext_resource type="Texture2D" uid="uid://dhsk7xp3yq167" path="res://UI/Icons/SetNormal.png" id="40_n6nir"]
 [ext_resource type="Texture2D" uid="uid://bncmarq7linl4" path="res://UI/LevelIcons/Set0/SideToSide.png" id="40_odpxi"]
 [ext_resource type="Texture2D" uid="uid://b7c8buik4dc13" path="res://UI/Icons/LevelSelectHover.png" id="40_v038y"]
 [ext_resource type="Texture2D" uid="uid://c0tx1rr4cl74p" path="res://UI/Icons/SetPressed.png" id="41_4o52r"]
 [ext_resource type="Texture2D" uid="uid://ba6dd4cfunfo" path="res://UI/LevelIcons/Set0/SideToSidePressed.png" id="41_pe6u0"]
-[ext_resource type="Texture2D" uid="uid://c85wxqa2o1mmb" path="res://UI/LevelIcons/Set0/SideToSideHover.png" id="42_7cu6i"]
 [ext_resource type="Texture2D" uid="uid://de1exnvdxe7sy" path="res://UI/Icons/SetHover.png" id="42_q75b1"]
 [ext_resource type="Texture2D" uid="uid://dmgbtms27mw4j" path="res://UI/Icons/GauntletNormal.png" id="43_iytpd"]
 [ext_resource type="Texture2D" uid="uid://cnwpcr0djcgui" path="res://UI/LevelIcons/Set0/SpeedIsKey.png" id="43_m8afg"]
 [ext_resource type="Texture2D" uid="uid://bwnh8fctl36aw" path="res://UI/Icons/GauntLetPressed.png" id="44_ior5a"]
 [ext_resource type="Texture2D" uid="uid://b68ac22xd2r45" path="res://UI/LevelIcons/Set0/SpeedIsKeyPressed.png" id="44_mmxax"]
-[ext_resource type="Texture2D" uid="uid://dh2vdovpj46n7" path="res://UI/LevelIcons/Set0/SpeedIsKeyHover.png" id="45_4bno3"]
 [ext_resource type="Texture2D" uid="uid://cj7ijswwc16ho" path="res://UI/Icons/GauntletHover.png" id="46_qk25k"]
 [ext_resource type="Texture2D" uid="uid://c71hphv337oh3" path="res://UI/LevelIcons/Set0/TimeToRiseStandard.png" id="46_uaoln"]
 [ext_resource type="Texture2D" uid="uid://d1s50ogf3qkkf" path="res://UI/LevelIcons/Set0/TimeToRisePressed.png" id="47_tny80"]
-[ext_resource type="Texture2D" uid="uid://e3ul3nm7vwmm" path="res://UI/LevelIcons/Set0/TimeToRiseHover.png" id="48_lpx5h"]
 [ext_resource type="Texture2D" uid="uid://b4g5c0umygdvi" path="res://UI/LevelIcons/Set0/LetsSpin.png" id="49_3rft3"]
 [ext_resource type="Texture2D" uid="uid://dy005n3cxa8c8" path="res://UI/LevelIcons/Set0/LetsSpinPressed.png" id="50_luyhi"]
-[ext_resource type="Texture2D" uid="uid://cfunde5qq8i12" path="res://UI/LevelIcons/Set0/LetsSpinHover.png" id="51_aep6s"]
 [ext_resource type="Texture2D" uid="uid://daqd3vw6c7r8" path="res://UI/LevelIcons/Set0/HyperDrive.png" id="52_dj7sg"]
 [ext_resource type="Texture2D" uid="uid://dg5rk2uquipa8" path="res://UI/LevelIcons/Set0/HyperDrivePressed.png" id="53_jbuyl"]
-[ext_resource type="Texture2D" uid="uid://bwugscrlslge3" path="res://UI/LevelIcons/Set0/HyperDriveHover.png" id="54_c3xya"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deetu"]
 bg_color = Color(0.0859375, 0.0859375, 0.0859375, 0.847059)
@@ -303,9 +297,9 @@ focus_neighbor_left = NodePath("../level4")
 focus_neighbor_top = NodePath("../level9")
 focus_neighbor_right = NodePath("../level2")
 texture_normal = ExtResource("4_hnicg")
-texture_pressed = ExtResource("6_a6mqp")
-texture_hover = ExtResource("7_lsarh")
-texture_focused = ExtResource("7_lsarh")
+texture_pressed = ExtResource("7_lsarh")
+texture_hover = ExtResource("33_vvts0")
+texture_focused = ExtResource("6_a6mqp")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -336,9 +330,9 @@ focus_neighbor_right = NodePath("../level3")
 focus_neighbor_bottom = NodePath("../level6")
 focus_next = NodePath(".")
 texture_normal = ExtResource("6_5ieg8")
-texture_pressed = ExtResource("9_km44q")
-texture_hover = ExtResource("10_bqt7s")
-texture_focused = ExtResource("10_bqt7s")
+texture_pressed = ExtResource("10_bqt7s")
+texture_hover = ExtResource("9_km44q")
+texture_focused = ExtResource("9_km44q")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -370,9 +364,9 @@ focus_neighbor_bottom = NodePath("../level7")
 focus_next = NodePath("../level4")
 focus_previous = NodePath("../level2")
 texture_normal = ExtResource("7_vr3gk")
-texture_pressed = ExtResource("12_13t58")
-texture_hover = ExtResource("13_mm1xl")
-texture_focused = ExtResource("13_mm1xl")
+texture_pressed = ExtResource("13_mm1xl")
+texture_hover = ExtResource("12_13t58")
+texture_focused = ExtResource("12_13t58")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -404,9 +398,9 @@ focus_neighbor_bottom = NodePath("../level8")
 focus_next = NodePath("../level6")
 focus_previous = NodePath("../level3")
 texture_normal = ExtResource("8_4xp21")
-texture_pressed = ExtResource("15_bp4fk")
-texture_hover = ExtResource("16_uc6ya")
-texture_focused = ExtResource("16_uc6ya")
+texture_pressed = ExtResource("16_uc6ya")
+texture_hover = ExtResource("15_bp4fk")
+texture_focused = ExtResource("15_bp4fk")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -437,9 +431,9 @@ focus_neighbor_bottom = NodePath("../level9")
 focus_next = NodePath("../level6")
 focus_previous = NodePath("../level4")
 texture_normal = ExtResource("9_0j47a")
-texture_pressed = ExtResource("18_ej7m4")
-texture_hover = ExtResource("19_jr68i")
-texture_focused = ExtResource("19_jr68i")
+texture_pressed = ExtResource("19_jr68i")
+texture_hover = ExtResource("18_ej7m4")
+texture_focused = ExtResource("18_ej7m4")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -470,9 +464,9 @@ focus_neighbor_bottom = NodePath("../level10")
 focus_next = NodePath("../level7")
 focus_previous = NodePath("../level5")
 texture_normal = ExtResource("10_yl1ke")
-texture_pressed = ExtResource("21_wc6k8")
-texture_hover = ExtResource("22_o6cqk")
-texture_focused = ExtResource("22_o6cqk")
+texture_pressed = ExtResource("22_o6cqk")
+texture_hover = ExtResource("21_wc6k8")
+texture_focused = ExtResource("21_wc6k8")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -503,9 +497,9 @@ focus_neighbor_bottom = NodePath("../../backBtn")
 focus_next = NodePath("../level8")
 focus_previous = NodePath("../level6")
 texture_normal = ExtResource("11_n4vs2")
-texture_pressed = ExtResource("24_ehwo2")
-texture_hover = ExtResource("25_dn0ts")
-texture_focused = ExtResource("25_dn0ts")
+texture_pressed = ExtResource("25_dn0ts")
+texture_hover = ExtResource("24_ehwo2")
+texture_focused = ExtResource("24_ehwo2")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -536,9 +530,9 @@ focus_neighbor_bottom = NodePath("../../backBtn")
 focus_next = NodePath("../level9")
 focus_previous = NodePath("../level7")
 texture_normal = ExtResource("12_ahhgl")
-texture_pressed = ExtResource("27_7v1x6")
-texture_hover = ExtResource("28_u7v0q")
-texture_focused = ExtResource("28_u7v0q")
+texture_pressed = ExtResource("28_u7v0q")
+texture_hover = ExtResource("27_7v1x6")
+texture_focused = ExtResource("27_7v1x6")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -570,9 +564,9 @@ focus_neighbor_bottom = NodePath("../level1")
 focus_next = NodePath("../level10")
 focus_previous = NodePath("../level8")
 texture_normal = ExtResource("13_m6gwp")
-texture_pressed = ExtResource("30_mswyx")
-texture_hover = ExtResource("31_iovhn")
-texture_focused = ExtResource("31_iovhn")
+texture_pressed = ExtResource("31_iovhn")
+texture_hover = ExtResource("30_mswyx")
+texture_focused = ExtResource("30_mswyx")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -603,9 +597,9 @@ focus_neighbor_bottom = NodePath("../level2")
 focus_next = NodePath("../../backBtn")
 focus_previous = NodePath("../level9")
 texture_normal = ExtResource("14_c5oy4")
-texture_pressed = ExtResource("33_vvts0")
-texture_hover = ExtResource("34_uuqsf")
-texture_focused = ExtResource("34_uuqsf")
+texture_pressed = ExtResource("34_uuqsf")
+texture_hover = ExtResource("33_vvts0")
+texture_focused = ExtResource("33_vvts0")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -664,7 +658,7 @@ focus_neighbor_right = NodePath("../SideToSide")
 focus_neighbor_bottom = NodePath("../LetsSpin")
 texture_normal = ExtResource("37_w3tlk")
 texture_pressed = ExtResource("38_rg2m7")
-texture_hover = ExtResource("39_ogdgp")
+texture_hover = ExtResource("38_rg2m7")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -697,7 +691,7 @@ focus_next = NodePath("../SpeedIsKey")
 focus_previous = NodePath("../Intro")
 texture_normal = ExtResource("40_odpxi")
 texture_pressed = ExtResource("41_pe6u0")
-texture_hover = ExtResource("42_7cu6i")
+texture_hover = ExtResource("41_pe6u0")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -728,7 +722,7 @@ focus_next = NodePath("../TimeToRise")
 focus_previous = NodePath("../SideToSide")
 texture_normal = ExtResource("43_m8afg")
 texture_pressed = ExtResource("44_mmxax")
-texture_hover = ExtResource("45_4bno3")
+texture_hover = ExtResource("44_mmxax")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -761,7 +755,7 @@ focus_next = NodePath("../LetsSpin")
 focus_previous = NodePath("../SpeedIsKey")
 texture_normal = ExtResource("46_uaoln")
 texture_pressed = ExtResource("47_tny80")
-texture_hover = ExtResource("48_lpx5h")
+texture_hover = ExtResource("47_tny80")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -793,7 +787,7 @@ focus_next = NodePath("../HyperDrive")
 focus_previous = NodePath("../TimeToRise")
 texture_normal = ExtResource("49_3rft3")
 texture_pressed = ExtResource("50_luyhi")
-texture_hover = ExtResource("51_aep6s")
+texture_hover = ExtResource("50_luyhi")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -825,7 +819,7 @@ focus_next = NodePath("../../backBtn")
 focus_previous = NodePath("../LetsSpin")
 texture_normal = ExtResource("52_dj7sg")
 texture_pressed = ExtResource("53_jbuyl")
-texture_hover = ExtResource("54_c3xya")
+texture_hover = ExtResource("53_jbuyl")
 ignore_texture_size = true
 stretch_mode = 0
 
