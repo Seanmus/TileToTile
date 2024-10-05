@@ -88,9 +88,8 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED/2)
 		velocity.z = move_toward(velocity.z, 0, SPEED/2)
 		startedMoving = false
-
 	move_and_slide()
-
+	Ui._UpdateMiniMapCamera(position.x, position.z)
 func _respawn():
 	Manager.roundTime = 0
 	call_deferred("_resetScene")

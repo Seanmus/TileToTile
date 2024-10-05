@@ -151,7 +151,9 @@ func _ShowHighscores(result):
 
 		
 	
-
+func _UpdateMiniMapCamera(posX, posZ):
+	$miniMap/topDown/topDownCamera.position.x = posX
+	$miniMap/topDown/topDownCamera.position.z = posZ
 
 func _on_next_level_btn_button_down():
 	$LeaderboardPanel.visible = false

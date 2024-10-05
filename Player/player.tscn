@@ -100,7 +100,7 @@ albedo_color = Color(0.309804, 1, 0.0117647, 1)
 [sub_resource type="CylinderMesh" id="CylinderMesh_d2fx1"]
 top_radius = 0.01
 bottom_radius = 0.01
-height = 0.1
+height = 1.565
 
 [node name="Player" type="CharacterBody3D" groups=["player"]]
 transform = Transform3D(0.373579, 0, 0, 0, 0.373579, 0, 0, 0, 0.373579, 0, 0, 0)
