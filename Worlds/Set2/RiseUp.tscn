@@ -226,10 +226,10 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18, 0, -2)
 transform = Transform3D(-1.63296e-08, 0, 0.373579, 0, 0.373579, 0, -0.373579, 0, -1.63296e-08, 18.6166, 0.354547, 0)
 
 [node name="death" parent="." instance=ExtResource("4_nbecn")]
-transform = Transform3D(342.033, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432, 0)
+transform = Transform3D(410.304, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432, 0)
 
 [node name="gem" parent="." instance=ExtResource("5_5q1pj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -154.009, 6.3892, 0.07201)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -158.009, 6.3892, 0.07201)
 nextLevel = "Set2/ABounce"
 nextLevelIfGauntlet = "Set2/ABounce"
 setname = "Set2"
@@ -315,25 +315,25 @@ transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -120, 6, 4)
 transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -122, 6, 4)
 
 [node name="Platform92" parent="." instance=ExtResource("2_qwwqk")]
-transform = Transform3D(2, 0, 0, 0, 1.73205, -1, 0, 1, 1.73205, -128, 6, -2)
+transform = Transform3D(2, 0, 0, 0, 1.73205, -1, 0, 1, 1.73205, -131, 6, -2)
 
 [node name="Platform93" parent="." instance=ExtResource("2_qwwqk")]
-transform = Transform3D(2, 0, 0, 0, 1.73205, -1, 0, 1, 1.73205, -130, 6, -2)
+transform = Transform3D(2, 0, 0, 0, 1.73205, -1, 0, 1, 1.73205, -133, 6, -2)
 
 [node name="Platform94" parent="." instance=ExtResource("2_qwwqk")]
-transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -138, 6, 3)
+transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -143, 6, 3)
 
 [node name="Platform95" parent="." instance=ExtResource("2_qwwqk")]
-transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -140, 6, 3)
+transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -145, 6, 3)
 
 [node name="Platform91" parent="." instance=ExtResource("2_qwwqk")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -154, 6, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -158, 6, 0)
 
 [node name="Platform96" parent="." instance=ExtResource("2_qwwqk")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -152, 6, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -156, 6, 0)
 
 [node name="Platform97" parent="." instance=ExtResource("2_qwwqk")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -150, 6, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -154, 6, 0)
 
 [node name="Platform81" parent="." instance=ExtResource("2_qwwqk")]
 transform = Transform3D(1.41421, 1.41421, 0, -1.41421, 1.41421, 0, 0, 0, 2, -90.2929, 6.63636, 0)
