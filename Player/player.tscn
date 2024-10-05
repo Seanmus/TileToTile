@@ -100,7 +100,8 @@ albedo_color = Color(0.309804, 1, 0.0117647, 1)
 [sub_resource type="CylinderMesh" id="CylinderMesh_d2fx1"]
 top_radius = 0.01
 bottom_radius = 0.01
-height = 1.565
+height = 3.0
+radial_segments = 4
 
 [node name="Player" type="CharacterBody3D" groups=["player"]]
 transform = Transform3D(0.373579, 0, 0, 0, 0.373579, 0, 0, 0, 0.373579, 0, 0, 0)
@@ -148,11 +149,15 @@ fov = 99.0
 
 [node name="SpeedEffect" type="CPUParticles3D" parent="Pivot"]
 transform = Transform3D(-4.37113e-08, 0, -0.999999, 0, 0.999999, 0, 0.999999, 0, -4.37113e-08, 0, 0, -13.7631)
-amount = 100
+layers = 262144
+amount = 180
 randomness = 1.0
 mesh = SubResource("CylinderMesh_d2fx1")
-emission_shape = 1
-emission_sphere_radius = 18.1
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 40.0
+emission_ring_radius = 40.0
+emission_ring_inner_radius = 35.0
 particle_flag_align_y = true
 spread = 10.0
 gravity = Vector3(0, 0, 0)
