@@ -205,13 +205,13 @@ render_target_update_mode = 4
 
 [node name="topDownCamera" type="Camera3D" parent="miniMap/topDown"]
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -20, 20, 11)
+cull_mask = 786431
 projection = 1
 current = true
 fov = 99.0
 size = 75.0
 
 [node name="BronzeTime" type="Label" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 131.0
 offset_top = 168.0
@@ -222,7 +222,6 @@ text = "10:00"
 vertical_alignment = 3
 
 [node name="SilverTime" type="Label" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 131.0
 offset_top = 120.0
@@ -233,7 +232,6 @@ text = "10:00"
 vertical_alignment = 3
 
 [node name="Speed" type="Label" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 32.0
 offset_top = 904.0
@@ -245,7 +243,6 @@ text = "100 KM/HR"
 vertical_alignment = 3
 
 [node name="GoldTime" type="Label" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 131.0
 offset_top = 72.0
@@ -256,19 +253,16 @@ text = "10:00"
 vertical_alignment = 3
 
 [node name="BronzeTrophy" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(115, 196)
 texture = ExtResource("3_svsc4")
 hframes = 4
 
 [node name="SilverTrophy" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(114, 145)
 texture = ExtResource("4_0iowq")
 hframes = 4
 
 [node name="GoldTrophy" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(113, 97)
 texture = ExtResource("5_qgpys")
 hframes = 4
