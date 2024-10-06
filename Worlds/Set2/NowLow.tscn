@@ -19,10 +19,10 @@ SilverTime = 8.0
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -8, -2.04816, 0)
 
 [node name="Platform7" parent="." instance=ExtResource("2_d67bf")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -16, 1.60823, -4)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.7721, 1.60823, -3.79607)
 
 [node name="Platform8" parent="." instance=ExtResource("2_d67bf")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -18, 1.60823, -4)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -17.7721, 1.60823, -3.79607)
 
 [node name="Platform4" parent="." instance=ExtResource("2_d67bf")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -10, -2.04816, 0)
@@ -57,7 +57,7 @@ transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, 0.146801
 transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -10.2718, -1.94587, -0.00649303)
 
 [node name="tire3" parent="." instance=ExtResource("7_rl7hq")]
-transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -18.015, 1.71052, -4.00649)
+transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -17.7871, 1.71052, -3.80256)
 
 [node name="Platform12" parent="." instance=ExtResource("2_d67bf")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -24, 4.01456, 3)
@@ -69,13 +69,13 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -26, 4.01456, 3)
 transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -26.015, 4.11685, 2.99351)
 
 [node name="Platform14" parent="." instance=ExtResource("2_d67bf")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35, 6.53004, -4)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35, 6.53004, -3.05438)
 
 [node name="Platform15" parent="." instance=ExtResource("2_d67bf")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -37, 6.53004, -4)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -37, 6.53004, -3.05438)
 
 [node name="tire10" parent="." instance=ExtResource("7_rl7hq")]
-transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -37.015, 6.63233, -4.00649)
+transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -37.015, 6.63233, -3.06087)
 
 [node name="Platform19" parent="." instance=ExtResource("2_d67bf")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -51, 3.2571, -2)
@@ -87,13 +87,13 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -53, 3.2571, -2)
 transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -53.2807, 3.3594, -2.00649)
 
 [node name="Platform32" parent="." instance=ExtResource("2_d67bf")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -64, 5.87288, 5)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -64, 5.87288, 4.72872)
 
 [node name="Platform33" parent="." instance=ExtResource("2_d67bf")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -66, 5.87288, 5)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -66, 5.87288, 4.72872)
 
 [node name="tire12" parent="." instance=ExtResource("7_rl7hq")]
-transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -66.015, 5.97518, 4.99351)
+transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -66.015, 5.97518, 4.72223)
 
 [node name="Platform47" parent="." instance=ExtResource("2_d67bf")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -82, 3.3414, -2)
@@ -123,13 +123,13 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -118, 3.24766, -4)
 transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -118.015, 3.34996, -4.00649)
 
 [node name="Platform59" parent="." instance=ExtResource("2_d67bf")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -130, 6.07262, 3)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -131.084, 6.07262, 3)
 
 [node name="Platform60" parent="." instance=ExtResource("2_d67bf")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -132, 6.07262, 3)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -133.084, 6.07262, 3)
 
 [node name="tire16" parent="." instance=ExtResource("7_rl7hq")]
-transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -132.015, 6.17492, 2.99351)
+transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -133.099, 6.17492, 2.99351)
 
 [node name="Platform21" parent="." instance=ExtResource("2_d67bf")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -149, 6.06759, -2)

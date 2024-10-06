@@ -182,8 +182,8 @@ transform = Transform3D(1.73205, 1, 0, -1, 1.73205, 0, 0, 0, 2, -5.53587, 1.3801
 [node name="gem" parent="." instance=ExtResource("7_7l0kr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.9824, 4.43766, -0.0541992)
 nextLevel = "title"
+nextLevelIfGauntlet = "Set2/RiseUp"
 isFinalOfSet = true
-isFinalLevel = true
 setname = "Set1"
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("8_p7puq")]
