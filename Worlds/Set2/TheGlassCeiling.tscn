@@ -412,8 +412,8 @@ transform = Transform3D(9011.4, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432,
 
 [node name="gem" parent="." instance=ExtResource("5_ay1gx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -189.187, 10.3892, 0.07201)
-nextLevel = "Set2/ABounce"
-nextLevelIfGauntlet = "Set2/ABounce"
+nextLevel = "Set2/UpAndAround"
+nextLevelIfGauntlet = "Set2/UpAndAround"
 setname = "Set2"
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("6_ur32i")]

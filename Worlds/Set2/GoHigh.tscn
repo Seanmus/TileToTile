@@ -46,7 +46,7 @@ transform = Transform3D(453.456, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -143.009, 18.3892, 2.07201)
 nextLevel = "Set2/NowLow"
 nextLevelIfGauntlet = "Set2/NowLow"
-setname = "Set0"
+setname = "Set2"
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("6_dys3y")]
 

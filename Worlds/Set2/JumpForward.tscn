@@ -53,8 +53,8 @@ transform = Transform3D(837.401, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432
 
 [node name="gem" parent="." instance=ExtResource("5_28onx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -167.009, 15.3892, -5.92799)
-nextLevel = "Set2/ABounce"
-nextLevelIfGauntlet = "Set2/ABounce"
+nextLevel = "Set2/LeapOfFaith"
+nextLevelIfGauntlet = "Set2/LeapOfFaith"
 setname = "Set2"
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("6_k7tw7")]

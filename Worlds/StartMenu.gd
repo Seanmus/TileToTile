@@ -163,6 +163,8 @@ func _open_modeSelect():
 	$MenuButtons.visible = false
 	$ModeSelectPanel.visible = true
 	$Section1.visible = false
+	$Section2.visible = false
+	$Section0.visible = false
 	$CourseSelect.visible = false
 	$MenuButtons.visible = false
 	$Settings.visible = false
@@ -186,6 +188,7 @@ func _on_levelSelectBack_btn_pressed():
 	$ModeSelectPanel.visible = false
 	$Section1.visible = false
 	$Section0.visible = false
+	$Section2.visible = false
 
 
 func _on_course_0_pressed():
@@ -204,3 +207,13 @@ func _on_gauntlet_pressed():
 	Manager.totalTime = 0
 	Manager.roundTime = 0
 	get_tree().change_scene_to_file("res://Worlds/Set0/Intro.tscn")
+
+
+func _on_course_2_pressed():
+	if(Manager.gameMode == Manager.GAME_MODES.SET):
+		Manager.totalTime = 0
+		get_tree().change_scene_to_file("res://Worlds/Set2/RiseUp.tscn")
+	else:
+		$CourseSelect.visible = false
+		$Section2.visible = true
+		$Section2/GridContainer/RiseUp.grab_focus()

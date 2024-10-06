@@ -44,9 +44,9 @@ transform = Transform3D(472.191, 0, 0, 0, 7.66789, 0, 0, 0, 175.355, 0, -9.69432
 
 [node name="gem" parent="." instance=ExtResource("5_dwu11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -155.009, 6.45679, 2.07201)
-nextLevel = "title"
-isFinalOfSet = true
-setname = "Set0"
+nextLevel = "Set2/LongJumping"
+nextLevelIfGauntlet = "Set2/LongJumping"
+setname = "Set2"
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("6_f1vhb")]
 

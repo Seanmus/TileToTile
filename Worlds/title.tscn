@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://di3rgeves175v"]
+[gd_scene load_steps=97 format=3 uid="uid://di3rgeves175v"]
 
 [ext_resource type="FontFile" uid="uid://k32ihrnb84gk" path="res://Roboto-Bold.ttf" id="1_0rkor"]
 [ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="1_3grja"]
@@ -42,18 +42,29 @@
 [ext_resource type="Texture2D" uid="uid://cg5k3xy4e8c4m" path="res://UI/level9Hover.png" id="31_iovhn"]
 [ext_resource type="Texture2D" uid="uid://b6505w01k2cgr" path="res://UI/level10Dark.png" id="33_vvts0"]
 [ext_resource type="Texture2D" uid="uid://cco47ctvnty1f" path="res://UI/level10Hover.png" id="34_uuqsf"]
+[ext_resource type="Texture2D" uid="uid://bje13kl0xkp4l" path="res://UI/LevelIcons/Set2/ABounce.png" id="37_dro0k"]
+[ext_resource type="Texture2D" uid="uid://bkruu8rc41in" path="res://UI/LevelIcons/Set2/RiseUp.png" id="37_imyc0"]
 [ext_resource type="Texture2D" uid="uid://diulw1qo7ifg3" path="res://UI/Icons/LevelSelectNormal.png" id="37_jduk2"]
+[ext_resource type="Script" path="res://Worlds/Section2.gd" id="37_vrap1"]
 [ext_resource type="Script" path="res://Worlds/Section0.gd" id="37_vxrjn"]
 [ext_resource type="Texture2D" uid="uid://25bdn7b2sxwg" path="res://UI/LevelIcons/Set0/Intro.png" id="37_w3tlk"]
 [ext_resource type="Texture2D" uid="uid://bug0teuosmql3" path="res://UI/LevelIcons/Set0/IntroPressed.png" id="38_b4rmu"]
+[ext_resource type="Texture2D" uid="uid://doiqmj272bmym" path="res://UI/LevelIcons/Set2/ABouncePressed.png" id="38_ctytd"]
+[ext_resource type="Texture2D" uid="uid://bnp3x1kykqlgv" path="res://UI/LevelIcons/Set2/RiseUpPressed.png" id="38_ibiyt"]
+[ext_resource type="Texture2D" uid="uid://dvi10ef84jcfd" path="res://UI/LevelIcons/Set2/GoHigh.png" id="39_4w57y"]
+[ext_resource type="Texture2D" uid="uid://v8bd6ftxljsp" path="res://UI/LevelIcons/Set2/SpringTime.png" id="39_cni88"]
 [ext_resource type="Texture2D" uid="uid://dsclsavhlo5uj" path="res://UI/Icons/LevelSelectPressed.png" id="39_hk8qk"]
+[ext_resource type="Texture2D" uid="uid://d30xkkodatnqw" path="res://UI/LevelIcons/Set2/SpringTimePressed.png" id="40_0s01y"]
+[ext_resource type="Texture2D" uid="uid://cvidw7s7gkoe2" path="res://UI/LevelIcons/Set2/GoHighPressed.png" id="40_l5m8a"]
 [ext_resource type="Texture2D" uid="uid://bw5vfqqp2wpne" path="res://UI/LevelIcons/Set0/BuildUp.png" id="40_n2mnq"]
 [ext_resource type="Texture2D" uid="uid://dhsk7xp3yq167" path="res://UI/Icons/SetNormal.png" id="40_n6nir"]
 [ext_resource type="Texture2D" uid="uid://bncmarq7linl4" path="res://UI/LevelIcons/Set0/SideToSide.png" id="40_odpxi"]
 [ext_resource type="Texture2D" uid="uid://b7c8buik4dc13" path="res://UI/Icons/LevelSelectHover.png" id="40_v038y"]
 [ext_resource type="Texture2D" uid="uid://c0tx1rr4cl74p" path="res://UI/Icons/SetPressed.png" id="41_4o52r"]
+[ext_resource type="Texture2D" uid="uid://bqr8p5ootl1ab" path="res://UI/LevelIcons/Set2/NowLow.png" id="41_f8rsm"]
 [ext_resource type="Texture2D" uid="uid://chx5oicbatnns" path="res://UI/LevelIcons/Set0/BuildUpPressed.png" id="41_nmv3j"]
 [ext_resource type="Texture2D" uid="uid://ba6dd4cfunfo" path="res://UI/LevelIcons/Set0/SideToSidePressed.png" id="41_pe6u0"]
+[ext_resource type="Texture2D" uid="uid://d1552dr4vfyqs" path="res://UI/LevelIcons/Set2/NowLowPressed.png" id="42_2tqet"]
 [ext_resource type="Texture2D" uid="uid://de1exnvdxe7sy" path="res://UI/Icons/SetHover.png" id="42_q75b1"]
 [ext_resource type="Texture2D" uid="uid://dmgbtms27mw4j" path="res://UI/Icons/GauntletNormal.png" id="43_iytpd"]
 [ext_resource type="Texture2D" uid="uid://cnwpcr0djcgui" path="res://UI/LevelIcons/Set0/SpeedIsKey.png" id="43_m8afg"]
@@ -63,15 +74,25 @@
 [ext_resource type="Texture2D" uid="uid://bynauvwugp7g3" path="res://UI/LevelIcons/Set0/HighSpeedPressed.png" id="45_kbg11"]
 [ext_resource type="Texture2D" uid="uid://cj7ijswwc16ho" path="res://UI/Icons/GauntletHover.png" id="46_qk25k"]
 [ext_resource type="Texture2D" uid="uid://c71hphv337oh3" path="res://UI/LevelIcons/Set0/TimeToRiseStandard.png" id="46_uaoln"]
+[ext_resource type="Texture2D" uid="uid://utjxjwcc5p26" path="res://UI/LevelIcons/Set2/LongJumping.png" id="47_t62sh"]
 [ext_resource type="Texture2D" uid="uid://d1s50ogf3qkkf" path="res://UI/LevelIcons/Set0/TimeToRisePressed.png" id="47_tny80"]
 [ext_resource type="Texture2D" uid="uid://cet12ugyrbw3h" path="res://UI/LevelIcons/Set0/TheLongRun.png" id="48_c3ie0"]
+[ext_resource type="Texture2D" uid="uid://clkp3egof8pvi" path="res://UI/LevelIcons/Set2/LongJumpingPressed.png" id="48_n80o3"]
 [ext_resource type="Texture2D" uid="uid://b4g5c0umygdvi" path="res://UI/LevelIcons/Set0/LetsSpin.png" id="49_3rft3"]
 [ext_resource type="Texture2D" uid="uid://c4mptwf26gmdw" path="res://UI/LevelIcons/Set0/TheLongRunPressed.png" id="49_5tovm"]
+[ext_resource type="Texture2D" uid="uid://crxn14eyr31lq" path="res://UI/LevelIcons/Set2/TheGlassCeiling.png" id="49_n706h"]
 [ext_resource type="Texture2D" uid="uid://dy005n3cxa8c8" path="res://UI/LevelIcons/Set0/LetsSpinPressed.png" id="50_luyhi"]
+[ext_resource type="Texture2D" uid="uid://bva7ekn0oic0p" path="res://UI/LevelIcons/Set2/TheGlassCeilingPressed.png" id="50_ppkyo"]
+[ext_resource type="Texture2D" uid="uid://dhmb757pex260" path="res://UI/LevelIcons/Set2/UpAndAround.png" id="51_0004s"]
 [ext_resource type="Texture2D" uid="uid://daqd3vw6c7r8" path="res://UI/LevelIcons/Set0/HyperDrive.png" id="52_dj7sg"]
+[ext_resource type="Texture2D" uid="uid://dshjtwv5ftakk" path="res://UI/LevelIcons/Set2/UpAndAroundPressed.png" id="52_gs7y1"]
 [ext_resource type="Texture2D" uid="uid://rqir1vnr44a1" path="res://UI/LevelIcons/Set0/TheLongerRun.png" id="52_uxysg"]
 [ext_resource type="Texture2D" uid="uid://cqfhdn7gwopcj" path="res://UI/LevelIcons/Set0/TheLongerRunPressed.png" id="53_h7bpw"]
 [ext_resource type="Texture2D" uid="uid://dg5rk2uquipa8" path="res://UI/LevelIcons/Set0/HyperDrivePressed.png" id="53_jbuyl"]
+[ext_resource type="Texture2D" uid="uid://dn7fawoh265ua" path="res://UI/LevelIcons/Set2/JumpForward.png" id="53_ye0ma"]
+[ext_resource type="Texture2D" uid="uid://l5flgahgpb6k" path="res://UI/LevelIcons/Set2/JumpForwardPressed.png" id="54_h7eg8"]
+[ext_resource type="Texture2D" uid="uid://d1nncc7uqit47" path="res://UI/LevelIcons/Set2/LeapOfFaith.png" id="55_isxuv"]
+[ext_resource type="Texture2D" uid="uid://g4hybvtkyj0p" path="res://UI/LevelIcons/Set2/LeapOfFaithPressed.png" id="56_7cx08"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deetu"]
 bg_color = Color(0.0859375, 0.0859375, 0.0859375, 0.847059)
@@ -635,6 +656,372 @@ offset_bottom = 1065.0
 theme = ExtResource("5_2d3if")
 text = "Back"
 
+[node name="Section2" type="Panel" parent="StartMenu"]
+visible = false
+layout_mode = 0
+offset_right = 1923.0
+offset_bottom = 1079.0
+pivot_offset = Vector2(450, 450)
+theme_override_styles/panel = SubResource("StyleBoxFlat_deetu")
+script = ExtResource("37_vrap1")
+
+[node name="GridContainer" type="GridContainer" parent="StartMenu/Section2"]
+clip_contents = true
+custom_minimum_size = Vector2(400, 400)
+layout_direction = 2
+layout_mode = 0
+offset_left = 57.0
+offset_top = 40.0
+offset_right = 1834.0
+offset_bottom = 1004.0
+pivot_offset = Vector2(450, 450)
+columns = 4
+
+[node name="RiseUp" type="TextureButton" parent="StartMenu/Section2/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../GoHigh")
+focus_neighbor_top = NodePath("../JumpForward")
+focus_neighbor_right = NodePath("../SpringTime")
+focus_neighbor_bottom = NodePath("../NowLow")
+focus_next = NodePath("../SpringTime")
+focus_previous = NodePath("../../backBtn")
+texture_normal = ExtResource("37_imyc0")
+texture_pressed = ExtResource("38_ibiyt")
+texture_hover = ExtResource("38_ibiyt")
+texture_focused = ExtResource("38_ibiyt")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section2/GridContainer/RiseUp"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Rise Up
+"
+
+[node name="SpringTime" type="TextureButton" parent="StartMenu/Section2/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../RiseUp")
+focus_neighbor_top = NodePath("../LeapOfFaith")
+focus_neighbor_right = NodePath("../ABounce")
+focus_neighbor_bottom = NodePath("../LongJumping")
+focus_next = NodePath("../ABounce")
+focus_previous = NodePath("../RiseUp")
+texture_normal = ExtResource("39_cni88")
+texture_pressed = ExtResource("40_0s01y")
+texture_hover = ExtResource("40_0s01y")
+texture_focused = ExtResource("40_0s01y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section2/GridContainer/SpringTime"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Spring Time"
+
+[node name="ABounce" type="TextureButton" parent="StartMenu/Section2/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../SpringTime")
+focus_neighbor_top = NodePath("../GlassCeiling")
+focus_neighbor_right = NodePath("../GoHigh")
+focus_neighbor_bottom = NodePath("../GlassCeiling")
+focus_next = NodePath("../GoHigh")
+focus_previous = NodePath("../SpringTime")
+texture_normal = ExtResource("37_dro0k")
+texture_pressed = ExtResource("38_ctytd")
+texture_hover = ExtResource("38_ctytd")
+texture_focused = ExtResource("38_ctytd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section2/GridContainer/ABounce"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "A Bounce
+"
+
+[node name="GoHigh" type="TextureButton" parent="StartMenu/Section2/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../ABounce")
+focus_neighbor_top = NodePath("../UpAndAround")
+focus_neighbor_right = NodePath("../NowLow")
+focus_neighbor_bottom = NodePath("../UpAndAround")
+focus_next = NodePath("../NowLow")
+focus_previous = NodePath("../ABounce")
+texture_normal = ExtResource("39_4w57y")
+texture_pressed = ExtResource("40_l5m8a")
+texture_hover = ExtResource("40_l5m8a")
+texture_focused = ExtResource("40_l5m8a")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section2/GridContainer/GoHigh"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Go High
+"
+
+[node name="NowLow" type="TextureButton" parent="StartMenu/Section2/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../GoHigh")
+focus_neighbor_top = NodePath("../RiseUp")
+focus_neighbor_right = NodePath("../LongJumping")
+focus_neighbor_bottom = NodePath("../JumpForward")
+focus_next = NodePath("../LongJumping")
+focus_previous = NodePath("../GoHigh")
+texture_normal = ExtResource("41_f8rsm")
+texture_pressed = ExtResource("42_2tqet")
+texture_hover = ExtResource("42_2tqet")
+texture_focused = ExtResource("42_2tqet")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section2/GridContainer/NowLow"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Now Low
+"
+
+[node name="LongJumping" type="TextureButton" parent="StartMenu/Section2/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../NowLow")
+focus_neighbor_top = NodePath("../SpringTime")
+focus_neighbor_right = NodePath("../GlassCeiling")
+focus_neighbor_bottom = NodePath("../LeapOfFaith")
+focus_next = NodePath("../GlassCeiling")
+focus_previous = NodePath("../NowLow")
+texture_normal = ExtResource("47_t62sh")
+texture_pressed = ExtResource("48_n80o3")
+texture_hover = ExtResource("48_n80o3")
+texture_focused = ExtResource("48_n80o3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section2/GridContainer/LongJumping"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Long Jumping"
+
+[node name="GlassCeiling" type="TextureButton" parent="StartMenu/Section2/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../LongJumping")
+focus_neighbor_top = NodePath("../ABounce")
+focus_neighbor_right = NodePath("../UpAndAround")
+focus_neighbor_bottom = NodePath("../../backBtn")
+focus_next = NodePath("../UpAndAround")
+focus_previous = NodePath("../LongJumping")
+texture_normal = ExtResource("49_n706h")
+texture_pressed = ExtResource("50_ppkyo")
+texture_hover = ExtResource("50_ppkyo")
+texture_focused = ExtResource("50_ppkyo")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section2/GridContainer/GlassCeiling"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Glass Ceiling"
+
+[node name="UpAndAround" type="TextureButton" parent="StartMenu/Section2/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../GlassCeiling")
+focus_neighbor_top = NodePath("../GoHigh")
+focus_neighbor_right = NodePath("../JumpForward")
+focus_neighbor_bottom = NodePath("../../backBtn")
+focus_next = NodePath("../JumpForward")
+focus_previous = NodePath("../GlassCeiling")
+texture_normal = ExtResource("51_0004s")
+texture_pressed = ExtResource("52_gs7y1")
+texture_hover = ExtResource("52_gs7y1")
+texture_focused = ExtResource("52_gs7y1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section2/GridContainer/UpAndAround"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Up And Around
+"
+
+[node name="JumpForward" type="TextureButton" parent="StartMenu/Section2/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../UpAndAround")
+focus_neighbor_top = NodePath("../NowLow")
+focus_neighbor_right = NodePath("../LeapOfFaith")
+focus_neighbor_bottom = NodePath("../RiseUp")
+focus_next = NodePath("../LeapOfFaith")
+focus_previous = NodePath("../UpAndAround")
+texture_normal = ExtResource("53_ye0ma")
+texture_pressed = ExtResource("54_h7eg8")
+texture_hover = ExtResource("54_h7eg8")
+texture_focused = ExtResource("54_h7eg8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section2/GridContainer/JumpForward"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Jump Forward
+"
+
+[node name="LeapOfFaith" type="TextureButton" parent="StartMenu/Section2/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../JumpForward")
+focus_neighbor_top = NodePath("../LongJumping")
+focus_neighbor_right = NodePath("../../backBtn")
+focus_neighbor_bottom = NodePath("../SpringTime")
+focus_next = NodePath("../../backBtn")
+focus_previous = NodePath("../JumpForward")
+texture_normal = ExtResource("55_isxuv")
+texture_pressed = ExtResource("56_7cx08")
+texture_hover = ExtResource("56_7cx08")
+texture_focused = ExtResource("56_7cx08")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartMenu/Section2/GridContainer/LeapOfFaith"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -26.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_2d3if")
+text = "Leap of Faith"
+
+[node name="backBtn" type="Button" parent="StartMenu/Section2"]
+layout_mode = 0
+offset_left = 1330.55
+offset_top = 780.0
+offset_right = 1916.55
+offset_bottom = 1065.0
+theme = ExtResource("5_2d3if")
+text = "Back"
+
 [node name="Section0" type="Panel" parent="StartMenu"]
 visible = false
 layout_mode = 0
@@ -1057,6 +1444,7 @@ custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../Course0")
+focus_neighbor_right = NodePath("../Course2")
 texture_normal = ExtResource("4_hnicg")
 texture_pressed = ExtResource("6_a6mqp")
 texture_hover = ExtResource("6_a6mqp")
@@ -1080,19 +1468,20 @@ theme = ExtResource("5_2d3if")
 text = "Set 1
 "
 
-[node name="Course3" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
-visible = false
+[node name="Course2" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
-texture_normal = ExtResource("7_vr3gk")
-texture_pressed = ExtResource("12_13t58")
-texture_hover = ExtResource("13_mm1xl")
+focus_neighbor_left = NodePath("../Course0")
+texture_normal = ExtResource("51_0004s")
+texture_pressed = ExtResource("52_gs7y1")
+texture_hover = ExtResource("52_gs7y1")
+texture_focused = ExtResource("52_gs7y1")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course3"]
+[node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course2"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -1105,7 +1494,7 @@ offset_right = 30.5
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("5_2d3if")
-text = "Course 3
+text = "Set 2
 "
 
 [node name="Course4" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
@@ -1715,6 +2104,17 @@ transform = Transform3D(0.89141, 0, 0.453197, 0, 1, 0, -0.453197, 0, 0.89141, -1
 [connection signal="pressed" from="StartMenu/Section1/GridContainer/level9" to="StartMenu" method="_on_level_9_pressed"]
 [connection signal="pressed" from="StartMenu/Section1/GridContainer/level10" to="StartMenu" method="_on_level_10_pressed"]
 [connection signal="pressed" from="StartMenu/Section1/backBtn" to="StartMenu" method="_on_levelSelectBack_btn_pressed"]
+[connection signal="pressed" from="StartMenu/Section2/GridContainer/RiseUp" to="StartMenu/Section2" method="_on_rise_up_pressed"]
+[connection signal="pressed" from="StartMenu/Section2/GridContainer/SpringTime" to="StartMenu/Section2" method="_on_spring_time_pressed"]
+[connection signal="pressed" from="StartMenu/Section2/GridContainer/ABounce" to="StartMenu/Section2" method="_on_a_bounce_pressed"]
+[connection signal="pressed" from="StartMenu/Section2/GridContainer/GoHigh" to="StartMenu/Section2" method="_on_go_high_pressed"]
+[connection signal="pressed" from="StartMenu/Section2/GridContainer/NowLow" to="StartMenu/Section2" method="_on_now_low_pressed"]
+[connection signal="pressed" from="StartMenu/Section2/GridContainer/LongJumping" to="StartMenu/Section2" method="_on_long_jumping_pressed"]
+[connection signal="pressed" from="StartMenu/Section2/GridContainer/GlassCeiling" to="StartMenu/Section2" method="_on_glass_ceiling_pressed"]
+[connection signal="pressed" from="StartMenu/Section2/GridContainer/UpAndAround" to="StartMenu/Section2" method="_on_up_and_around_pressed"]
+[connection signal="pressed" from="StartMenu/Section2/GridContainer/JumpForward" to="StartMenu/Section2" method="_on_jump_forward_pressed"]
+[connection signal="pressed" from="StartMenu/Section2/GridContainer/LeapOfFaith" to="StartMenu/Section2" method="_on_leap_of_faith_pressed"]
+[connection signal="pressed" from="StartMenu/Section2/backBtn" to="StartMenu" method="_on_levelSelectBack_btn_pressed"]
 [connection signal="pressed" from="StartMenu/Section0/GridContainer/Intro" to="StartMenu/Section0" method="_on_intro_pressed"]
 [connection signal="pressed" from="StartMenu/Section0/GridContainer/BuildUp" to="StartMenu/Section0" method="_on_build_up_pressed"]
 [connection signal="pressed" from="StartMenu/Section0/GridContainer/SideToSide" to="StartMenu/Section0" method="_on_side_to_side_pressed"]
@@ -1728,6 +2128,7 @@ transform = Transform3D(0.89141, 0, 0.453197, 0, 1, 0, -0.453197, 0, 0.89141, -1
 [connection signal="pressed" from="StartMenu/Section0/backBtn" to="StartMenu" method="_on_levelSelectBack_btn_pressed"]
 [connection signal="pressed" from="StartMenu/CourseSelect/GridContainer/Course0" to="StartMenu" method="_on_course_0_pressed"]
 [connection signal="pressed" from="StartMenu/CourseSelect/GridContainer/Course1" to="StartMenu" method="_on_course_1_pressed"]
+[connection signal="pressed" from="StartMenu/CourseSelect/GridContainer/Course2" to="StartMenu" method="_on_course_2_pressed"]
 [connection signal="pressed" from="StartMenu/CourseSelect/backBtn" to="StartMenu" method="_on_courseSelectBack_btn_pressed"]
 [connection signal="pressed" from="StartMenu/ModeSelectPanel/GridContainer/Level" to="StartMenu" method="_on_level_select_btn_pressed"]
 [connection signal="pressed" from="StartMenu/ModeSelectPanel/GridContainer/Set" to="StartMenu" method="_on_set_pressed"]
