@@ -716,6 +716,9 @@ transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -21, 0, 27)
 [node name="Platform119" parent="." instance=ExtResource("2_fxlxu")]
 transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -25, 0, 27)
 
+[node name="Platform238" parent="." instance=ExtResource("2_fxlxu")]
+transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -27, 0, 27)
+
 [node name="Platform37" parent="." instance=ExtResource("2_fxlxu")]
 transform = Transform3D(2, 0, 0, 0, 1.93185, 0.517638, 0, -0.517638, 1.93185, -86, 0, 2)
 

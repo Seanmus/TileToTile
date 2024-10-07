@@ -33,17 +33,29 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -47, 0, 0)
 [node name="Platform41" parent="." instance=ExtResource("2_wxbjg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -45, 0, 0)
 
+[node name="Platform46" parent="." instance=ExtResource("2_wxbjg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -43, 0, 0)
+
 [node name="Platform42" parent="." instance=ExtResource("2_wxbjg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -79.8505, 0, 0)
 
 [node name="Platform43" parent="." instance=ExtResource("2_wxbjg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -77.8505, 0, 0)
 
+[node name="Platform47" parent="." instance=ExtResource("2_wxbjg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -75.8505, 0, 0)
+
+[node name="Platform48" parent="." instance=ExtResource("2_wxbjg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -81.8505, 0, 0)
+
 [node name="Platform44" parent="." instance=ExtResource("2_wxbjg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -92.4203, 0, 0)
 
 [node name="Platform45" parent="." instance=ExtResource("2_wxbjg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -90.4203, 0, 0)
+
+[node name="Platform49" parent="." instance=ExtResource("2_wxbjg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -94.4203, 0, 0)
 
 [node name="Platform39" parent="." instance=ExtResource("2_wxbjg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -29, 0, 0)
@@ -160,6 +172,9 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -60.386, 0, 0.00617194)
 
 [node name="Platform65" parent="." instance=ExtResource("2_wxbjg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -58.386, 0, 0.00617194)
+
+[node name="Platform71" parent="." instance=ExtResource("2_wxbjg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -56.386, 0, 0.00617194)
 
 [node name="Platform66" parent="." instance=ExtResource("2_wxbjg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -111.576, 0, 0.00617194)
