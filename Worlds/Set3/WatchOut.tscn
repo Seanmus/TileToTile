@@ -120,6 +120,7 @@ transform = Transform3D(210.972, 0, 0, 0, 7.66789, 0, 0, 0, 125.944, 0, -9.69432
 [node name="gem" parent="." instance=ExtResource("5_wa5gd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0093, 0.38925, 0.0529281)
 nextLevel = "Set3/ForwardThinking"
+nextLevelIfGauntlet = "Set3/ForwardThinking"
 setname = "Set3"
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("6_j7t1s")]
