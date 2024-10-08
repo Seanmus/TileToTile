@@ -45,6 +45,9 @@ func _process(_delta):
 	if Manager.paused:
 		return
 	$Speed.text = str(playerSpeed) + " MPH"
+	if playerSpeed == 400:
+		var ACH = "ACH_HyperDrive"
+		Manager._SetAchievement(ACH)
 	levelTime.text = "%02d.%02d" % [Manager.roundTime, fmod(Manager.roundTime,1) * 1000]
 	gameTime.text = "%02d.%02d" % [Manager.totalTime, fmod(Manager.totalTime,1) * 1000]
 	#_HighlightTime()
@@ -157,7 +160,10 @@ func _UpdateMiniMapCamera(posX, posZ):
 
 func _on_next_level_btn_button_down():
 	$LeaderboardPanel.visible = false
-	endLevel._nextScene()
+	if Manager.gameMode == Manager.GAME_MODES.GAUNTLET:
+		get_tree().change_scene_to_file("res://Worlds/title.tscn")	
+	else:
+		endLevel._nextScene()
 
 
 func _on_retry_level_btn_button_down():

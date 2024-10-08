@@ -440,7 +440,7 @@ transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -123.853
 transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -123.853, 8.06299, 2.00587)
 
 [node name="tire9" parent="." instance=ExtResource("7_seefr")]
-transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -152.853, 10.063, 0.00587416)
+transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -148.853, 10.063, 0.00587416)
 
 [node name="tire8" parent="." instance=ExtResource("7_seefr")]
 transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -123.853, 8.06299, -1.99413)
@@ -456,12 +456,6 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -147, 10, 0)
 
 [node name="Platform135" parent="." instance=ExtResource("2_stx7t")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -149, 10, 0)
-
-[node name="Platform136" parent="." instance=ExtResource("2_stx7t")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -151, 10, 0)
-
-[node name="Platform137" parent="." instance=ExtResource("2_stx7t")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -153, 10, 0)
 
 [node name="Platform138" parent="." instance=ExtResource("2_stx7t")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -183, 10, 0)
