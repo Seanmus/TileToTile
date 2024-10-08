@@ -446,29 +446,11 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 22, 2.72568, -36.7688)
 [node name="Platform246" parent="." instance=ExtResource("2_pae1b")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 24, 2.72568, -36.7688)
 
-[node name="Platform247" parent="." instance=ExtResource("2_pae1b")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 14, 2.72567, -34.7688)
-
-[node name="Platform248" parent="." instance=ExtResource("2_pae1b")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16, 2.72567, -34.7688)
-
 [node name="Platform249" parent="." instance=ExtResource("2_pae1b")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18, 2.72567, -34.7688)
 
-[node name="Platform250" parent="." instance=ExtResource("2_pae1b")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 14, 2.72567, -32.7688)
-
-[node name="Platform251" parent="." instance=ExtResource("2_pae1b")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16, 2.72567, -32.7688)
-
 [node name="Platform252" parent="." instance=ExtResource("2_pae1b")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18, 2.72567, -32.7688)
-
-[node name="Platform253" parent="." instance=ExtResource("2_pae1b")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 14, 2.72568, -36.7688)
-
-[node name="Platform254" parent="." instance=ExtResource("2_pae1b")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16, 2.72568, -36.7688)
 
 [node name="Platform255" parent="." instance=ExtResource("2_pae1b")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18, 2.72568, -36.7688)
@@ -850,6 +832,9 @@ transform = Transform3D(2, 0, 0, 0, 1.93185, 0.517638, 0, -0.517638, 1.93185, -6
 
 [node name="Platform35" parent="." instance=ExtResource("2_pae1b")]
 transform = Transform3D(2, 0, 0, 0, 1.93185, -0.517638, 0, 0.517638, 1.93185, -76, 0, -3)
+
+[node name="Platform297" parent="." instance=ExtResource("2_pae1b")]
+transform = Transform3D(2, 0, 0, 0, 1.93185, -0.517638, 0, 0.517638, 1.93185, -74, 0, -3)
 
 [node name="Platform36" parent="." instance=ExtResource("2_pae1b")]
 transform = Transform3D(2, 0, 0, 0, 1.93185, -0.517638, 0, 0.517638, 1.93185, -78, 0, -3)

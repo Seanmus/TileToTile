@@ -447,29 +447,11 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 22, 2.72568, -36.7688)
 [node name="Platform246" parent="." instance=ExtResource("2_giepk")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 24, 2.72568, -36.7688)
 
-[node name="Platform247" parent="." instance=ExtResource("2_giepk")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 14, 2.72567, -34.7688)
-
-[node name="Platform248" parent="." instance=ExtResource("2_giepk")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16, 2.72567, -34.7688)
-
 [node name="Platform249" parent="." instance=ExtResource("2_giepk")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18, 2.72567, -34.7688)
 
-[node name="Platform250" parent="." instance=ExtResource("2_giepk")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 14, 2.72567, -32.7688)
-
-[node name="Platform251" parent="." instance=ExtResource("2_giepk")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16, 2.72567, -32.7688)
-
 [node name="Platform252" parent="." instance=ExtResource("2_giepk")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18, 2.72567, -32.7688)
-
-[node name="Platform253" parent="." instance=ExtResource("2_giepk")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 14, 2.72568, -36.7688)
-
-[node name="Platform254" parent="." instance=ExtResource("2_giepk")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16, 2.72568, -36.7688)
 
 [node name="Platform255" parent="." instance=ExtResource("2_giepk")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18, 2.72568, -36.7688)
@@ -1057,7 +1039,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -100, 0, 26)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -102, 0, 26)
 
 [node name="Platform96" parent="." instance=ExtResource("2_giepk")]
-transform = Transform3D(1.93185, -0.517638, 0, 0.517638, 1.93185, 0, 0, 0, 2, -92.2951, 1.30149, 20)
+transform = Transform3D(2, -4.47035e-07, 0, 4.47035e-07, 2, 0, 0, 0, 2, -92.2951, 1.03706, 20)
 
 [node name="Platform97" parent="." instance=ExtResource("2_giepk")]
 transform = Transform3D(1.93185, -0.517638, 0, 0.517638, 1.93185, 0, 0, 0, 2, -94.2269, 0.783852, 20)
@@ -1066,7 +1048,7 @@ transform = Transform3D(1.93185, -0.517638, 0, 0.517638, 1.93185, 0, 0, 0, 2, -9
 transform = Transform3D(1.93185, -0.517638, 0, 0.517638, 1.93185, 0, 0, 0, 2, -96.1588, 0.266214, 20)
 
 [node name="Platform99" parent="." instance=ExtResource("2_giepk")]
-transform = Transform3D(1.93185, -0.517638, 0, 0.517638, 1.93185, 0, 0, 0, 2, -92.2951, 1.30149, 22)
+transform = Transform3D(2, -4.47035e-07, 0, 4.47035e-07, 2, 0, 0, 0, 2, -92.2951, 1.03706, 22)
 
 [node name="Platform100" parent="." instance=ExtResource("2_giepk")]
 transform = Transform3D(1.93185, -0.517638, 0, 0.517638, 1.93185, 0, 0, 0, 2, -94.2269, 0.783852, 22)
@@ -1075,7 +1057,7 @@ transform = Transform3D(1.93185, -0.517638, 0, 0.517638, 1.93185, 0, 0, 0, 2, -9
 transform = Transform3D(1.93185, -0.517638, 0, 0.517638, 1.93185, 0, 0, 0, 2, -96.1588, 0.266214, 22)
 
 [node name="Platform102" parent="." instance=ExtResource("2_giepk")]
-transform = Transform3D(1.93185, -0.517638, 0, 0.517638, 1.93185, 0, 0, 0, 2, -92.2951, 1.30149, 24)
+transform = Transform3D(2, -4.47035e-07, 0, 4.47035e-07, 2, 0, 0, 0, 2, -92.2951, 1.03706, 24)
 
 [node name="Platform103" parent="." instance=ExtResource("2_giepk")]
 transform = Transform3D(1.93185, -0.517638, 0, 0.517638, 1.93185, 0, 0, 0, 2, -94.2269, 0.783852, 24)
@@ -1084,7 +1066,19 @@ transform = Transform3D(1.93185, -0.517638, 0, 0.517638, 1.93185, 0, 0, 0, 2, -9
 transform = Transform3D(1.93185, -0.517638, 0, 0.517638, 1.93185, 0, 0, 0, 2, -96.1588, 0.266214, 24)
 
 [node name="Platform105" parent="." instance=ExtResource("2_giepk")]
-transform = Transform3D(1.93185, -0.517638, 0, 0.517638, 1.93185, 0, 0, 0, 2, -92.2951, 1.30149, 26)
+transform = Transform3D(2, -4.47035e-07, 0, 4.47035e-07, 2, 0, 0, 0, 2, -92.2951, 1.03706, 26)
+
+[node name="Platform247" parent="." instance=ExtResource("2_giepk")]
+transform = Transform3D(2, -4.47035e-07, 0, 4.47035e-07, 2, 0, 0, 0, 2, -90.2951, 1.03706, 20)
+
+[node name="Platform248" parent="." instance=ExtResource("2_giepk")]
+transform = Transform3D(2, -4.47035e-07, 0, 4.47035e-07, 2, 0, 0, 0, 2, -90.2951, 1.03706, 22)
+
+[node name="Platform250" parent="." instance=ExtResource("2_giepk")]
+transform = Transform3D(2, -4.47035e-07, 0, 4.47035e-07, 2, 0, 0, 0, 2, -90.2951, 1.03706, 24)
+
+[node name="Platform251" parent="." instance=ExtResource("2_giepk")]
+transform = Transform3D(2, -4.47035e-07, 0, 4.47035e-07, 2, 0, 0, 0, 2, -90.2951, 1.03706, 26)
 
 [node name="Platform106" parent="." instance=ExtResource("2_giepk")]
 transform = Transform3D(1.93185, -0.517638, 0, 0.517638, 1.93185, 0, 0, 0, 2, -94.2269, 0.783852, 26)
