@@ -10,7 +10,7 @@ func _ready():
 	$Settings/Panel/LockVerticalCheckBox.button_pressed = Manager.verticalMouseLocked
 	
 	$MenuButtons/Button.grab_focus()
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
 	if Manager.totalTime > 10:
 		if Manager.totalTime < Manager.bestTime:
 			Manager.bestTime = Manager.totalTime
@@ -23,7 +23,7 @@ func _ready():
 func _on_button_pressed():
 	Manager.totalTime = 0
 	Manager.roundTime = 0
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)	
+	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)	
 	get_tree().change_scene_to_file("res://Worlds/Set1/Tutorial.tscn")
 	
 func _on_level_select_btn_pressed():

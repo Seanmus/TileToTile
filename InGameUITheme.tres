@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ybfj7x7wfyif"]
+
+[ext_resource type="FontFile" uid="uid://k32ihrnb84gk" path="res://Roboto-Bold.ttf" id="1_giacx"]
+
+[resource]
+default_font = ExtResource("1_giacx")
+default_font_size = 60

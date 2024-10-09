@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=3 uid="uid://di3rgeves175v"]
+[gd_scene load_steps=126 format=3 uid="uid://di3rgeves175v"]
 
 [ext_resource type="FontFile" uid="uid://k32ihrnb84gk" path="res://Roboto-Bold.ttf" id="1_0rkor"]
 [ext_resource type="PackedScene" uid="uid://dkcvjwut8lemu" path="res://WorldBlocks/platform.tscn" id="1_3grja"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://be6wrph8qvrxf" path="res://UI/level1Dark.png" id="6_a6mqp"]
 [ext_resource type="PackedScene" uid="uid://c776e2jroe45l" path="res://gem.tscn" id="6_c8urb"]
 [ext_resource type="PackedScene" uid="uid://bl8q08srqwu41" path="res://WorldEnvironmentDark.tscn" id="7_hoykp"]
-[ext_resource type="Texture2D" uid="uid://cfl3csv2w20tl" path="res://UI/level1Hover.png" id="7_lsarh"]
 [ext_resource type="Texture2D" uid="uid://cd7qc6ji6mngv" path="res://UI/level3.png" id="7_vr3gk"]
 [ext_resource type="Texture2D" uid="uid://blrfrdjmkrg6p" path="res://UI/level4.png" id="8_4xp21"]
 [ext_resource type="Texture2D" uid="uid://cnckl8q4db44j" path="res://UI/level5.png" id="9_0j47a"]
@@ -114,6 +113,15 @@
 [ext_resource type="Texture2D" uid="uid://b4tiengk27n1k" path="res://UI/LevelIcons/Set3/TheGauntletPressed.png" id="75_q2gb8"]
 [ext_resource type="Texture2D" uid="uid://dtiqpifbpf2jm" path="res://UI/LevelIcons/Set3/RunForIt.png" id="76_bqflq"]
 [ext_resource type="Texture2D" uid="uid://dayf8uuysnh1g" path="res://UI/LevelIcons/Set3/RunForItPressed.png" id="77_rwmh3"]
+[ext_resource type="Theme" uid="uid://cy13etcigkl1x" path="res://SetSelectTheme.tres" id="99_i64b8"]
+[ext_resource type="Texture2D" uid="uid://6r7lku6f4e3i" path="res://UI/Icons/CourseIcons/Set1.png" id="99_rrhfy"]
+[ext_resource type="Texture2D" uid="uid://ci2l3x0a0it11" path="res://UI/Icons/CourseIcons/Set1Pressed.png" id="100_yeffb"]
+[ext_resource type="Texture2D" uid="uid://clccdothfqr6p" path="res://UI/Icons/CourseIcons/Set2.png" id="102_n826j"]
+[ext_resource type="Texture2D" uid="uid://b1y87o6xtumv1" path="res://UI/Icons/CourseIcons/Set2Pressed.png" id="103_pjof4"]
+[ext_resource type="Texture2D" uid="uid://7rj3yh1o87rl" path="res://UI/Icons/CourseIcons/Set3.png" id="104_jef2p"]
+[ext_resource type="Texture2D" uid="uid://cxkgx2ndanoiy" path="res://UI/Icons/CourseIcons/Set3Pressed.png" id="105_dhgs4"]
+[ext_resource type="Texture2D" uid="uid://5ocquwhqmfqi" path="res://UI/Icons/CourseIcons/Set4.png" id="106_w1ckp"]
+[ext_resource type="Texture2D" uid="uid://diw48i0mlu4ss" path="res://UI/Icons/CourseIcons/Set4Pressed.png" id="107_g4ywg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deetu"]
 bg_color = Color(0.0859375, 0.0859375, 0.0859375, 0.847059)
@@ -141,9 +149,14 @@ script = ExtResource("1_v55x8")
 [node name="Settings" type="Control" parent="StartMenu"]
 visible = false
 layout_mode = 1
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_right = 30.814
+anchor_bottom = 18.637
+offset_right = -364.56
+offset_bottom = -220.48
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.42, 1.42)
+metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="StartMenu/Settings"]
 layout_mode = 0
@@ -225,10 +238,10 @@ offset_bottom = 40.0
 [node name="settingsBtn" type="Button" parent="StartMenu/MenuButtons"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 5.5
-anchor_top = 16.625
-anchor_right = 16.65
-anchor_bottom = 19.5
+anchor_left = 5.77433
+anchor_top = 24.5303
+anchor_right = 16.9243
+anchor_bottom = 27.4053
 theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
@@ -244,10 +257,10 @@ metadata/_edit_use_anchors_ = true
 [node name="quitBtn" type="Button" parent="StartMenu/MenuButtons"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 5.5
-anchor_top = 20.175
-anchor_right = 16.65
-anchor_bottom = 23.05
+anchor_left = 5.77433
+anchor_top = 28.0803
+anchor_right = 16.9243
+anchor_bottom = 30.9553
 theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
@@ -262,6 +275,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Button" parent="StartMenu/MenuButtons" instance=ExtResource("4_o5g3k")]
 layout_mode = 1
+anchor_left = 5.77433
+anchor_top = 21.0303
+anchor_right = 16.9243
+anchor_bottom = 23.9053
 focus_neighbor_bottom = NodePath("../LevelSelectBtn")
 focus_next = NodePath("../LevelSelectBtn")
 
@@ -291,10 +308,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="StartMenu/MenuButtons"]
 layout_mode = 0
-offset_left = 848.0
-offset_top = 60.0
-offset_right = 3114.0
-offset_bottom = 1548.0
+offset_left = 997.378
+offset_top = 40.0
+offset_right = 4596.38
+offset_bottom = 2287.0
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_2liwn")
 
@@ -321,34 +338,37 @@ text = "0"
 [node name="Section1" type="Panel" parent="StartMenu"]
 visible = false
 layout_mode = 0
-offset_right = 1923.0
-offset_bottom = 1079.0
+offset_right = 2560.0
+offset_bottom = 1440.0
 pivot_offset = Vector2(450, 450)
 theme_override_styles/panel = SubResource("StyleBoxFlat_deetu")
 
 [node name="GridContainer" type="GridContainer" parent="StartMenu/Section1"]
 clip_contents = true
-custom_minimum_size = Vector2(400, 400)
+custom_minimum_size = Vector2(800, 800)
 layout_direction = 2
 layout_mode = 0
-offset_left = 57.0
-offset_top = 40.0
-offset_right = 1834.0
-offset_bottom = 1004.0
+offset_left = 180.0
+offset_top = 130.0
+offset_right = 2380.0
+offset_bottom = 1350.0
 pivot_offset = Vector2(450, 450)
-columns = 4
+theme_override_constants/v_separation = 80
+columns = 5
 
 [node name="level1" type="TextureButton" parent="StartMenu/Section1/GridContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
-focus_neighbor_left = NodePath("../level4")
-focus_neighbor_top = NodePath("../level9")
+focus_neighbor_left = NodePath("../level5")
+focus_neighbor_top = NodePath("../level6")
 focus_neighbor_right = NodePath("../level2")
+focus_neighbor_bottom = NodePath("../level6")
+focus_next = NodePath("../level2")
 texture_normal = ExtResource("4_hnicg")
-texture_pressed = ExtResource("7_lsarh")
-texture_hover = ExtResource("33_vvts0")
+texture_pressed = ExtResource("6_a6mqp")
+texture_hover = ExtResource("6_a6mqp")
 texture_focused = ExtResource("6_a6mqp")
 ignore_texture_size = true
 stretch_mode = 0
@@ -375,9 +395,9 @@ custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../level1")
-focus_neighbor_top = NodePath("../level10")
+focus_neighbor_top = NodePath("../level7")
 focus_neighbor_right = NodePath("../level3")
-focus_neighbor_bottom = NodePath("../level6")
+focus_neighbor_bottom = NodePath("../level7")
 focus_next = NodePath(".")
 texture_normal = ExtResource("6_5ieg8")
 texture_pressed = ExtResource("10_bqt7s")
@@ -408,9 +428,9 @@ custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../level2")
-focus_neighbor_top = NodePath("../level7")
+focus_neighbor_top = NodePath("../../../Section0/backBtn")
 focus_neighbor_right = NodePath("../level4")
-focus_neighbor_bottom = NodePath("../level7")
+focus_neighbor_bottom = NodePath("../level8")
 focus_next = NodePath("../level4")
 focus_previous = NodePath("../level2")
 texture_normal = ExtResource("7_vr3gk")
@@ -443,9 +463,9 @@ layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../level3")
 focus_neighbor_top = NodePath("../../backBtn")
-focus_neighbor_right = NodePath("../level1")
-focus_neighbor_bottom = NodePath("../level8")
-focus_next = NodePath("../level6")
+focus_neighbor_right = NodePath("../level5")
+focus_neighbor_bottom = NodePath("../level9")
+focus_next = NodePath("../level5")
 focus_previous = NodePath("../level3")
 texture_normal = ExtResource("8_4xp21")
 texture_pressed = ExtResource("16_uc6ya")
@@ -474,10 +494,10 @@ clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
-focus_neighbor_left = NodePath("../level8")
-focus_neighbor_top = NodePath("../level1")
+focus_neighbor_left = NodePath("../level4")
+focus_neighbor_top = NodePath("../../../Section0/backBtn")
 focus_neighbor_right = NodePath("../level6")
-focus_neighbor_bottom = NodePath("../level9")
+focus_neighbor_bottom = NodePath("../level10")
 focus_next = NodePath("../level6")
 focus_previous = NodePath("../level4")
 texture_normal = ExtResource("9_0j47a")
@@ -508,9 +528,9 @@ custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../level5")
-focus_neighbor_top = NodePath("../level2")
+focus_neighbor_top = NodePath("../level1")
 focus_neighbor_right = NodePath("../level7")
-focus_neighbor_bottom = NodePath("../level10")
+focus_neighbor_bottom = NodePath("../../backBtn")
 focus_next = NodePath("../level7")
 focus_previous = NodePath("../level5")
 texture_normal = ExtResource("10_yl1ke")
@@ -541,7 +561,7 @@ custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../level6")
-focus_neighbor_top = NodePath("../level3")
+focus_neighbor_top = NodePath("../level2")
 focus_neighbor_right = NodePath("../level8")
 focus_neighbor_bottom = NodePath("../../backBtn")
 focus_next = NodePath("../level8")
@@ -574,8 +594,8 @@ custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../level7")
-focus_neighbor_top = NodePath("../level4")
-focus_neighbor_right = NodePath("../level5")
+focus_neighbor_top = NodePath("../level3")
+focus_neighbor_right = NodePath("../level9")
 focus_neighbor_bottom = NodePath("../../backBtn")
 focus_next = NodePath("../level9")
 focus_previous = NodePath("../level7")
@@ -607,10 +627,10 @@ clip_contents = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
-focus_neighbor_left = NodePath("../../backBtn")
-focus_neighbor_top = NodePath("../level5")
+focus_neighbor_left = NodePath("../level8")
+focus_neighbor_top = NodePath("../level4")
 focus_neighbor_right = NodePath("../level10")
-focus_neighbor_bottom = NodePath("../level1")
+focus_neighbor_bottom = NodePath("../../backBtn")
 focus_next = NodePath("../level10")
 focus_previous = NodePath("../level8")
 texture_normal = ExtResource("13_m6gwp")
@@ -641,9 +661,9 @@ custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../level9")
-focus_neighbor_top = NodePath("../level6")
+focus_neighbor_top = NodePath("../level5")
 focus_neighbor_right = NodePath("../../backBtn")
-focus_neighbor_bottom = NodePath("../level2")
+focus_neighbor_bottom = NodePath("../../backBtn")
 focus_next = NodePath("../../backBtn")
 focus_previous = NodePath("../level9")
 texture_normal = ExtResource("14_c5oy4")
@@ -669,19 +689,27 @@ theme = ExtResource("5_2d3if")
 text = "The Finale"
 
 [node name="backBtn" type="Button" parent="StartMenu/Section1"]
-layout_mode = 0
-offset_left = 1330.55
-offset_top = 780.0
-offset_right = 1916.55
-offset_bottom = 1065.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -530.0
+offset_top = -420.0
+offset_right = 530.0
+offset_bottom = -135.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_neighbor_top = NodePath("../GridContainer/level8")
 theme = ExtResource("5_2d3if")
 text = "Back"
 
 [node name="Section2" type="Panel" parent="StartMenu"]
 visible = false
 layout_mode = 0
-offset_right = 1923.0
-offset_bottom = 1079.0
+offset_right = 2560.0
+offset_bottom = 1440.0
 pivot_offset = Vector2(450, 450)
 theme_override_styles/panel = SubResource("StyleBoxFlat_deetu")
 script = ExtResource("37_vrap1")
@@ -691,10 +719,10 @@ clip_contents = true
 custom_minimum_size = Vector2(400, 400)
 layout_direction = 2
 layout_mode = 0
-offset_left = 57.0
-offset_top = 40.0
-offset_right = 1834.0
-offset_bottom = 1004.0
+offset_left = 250.0
+offset_top = 130.0
+offset_right = 2380.0
+offset_bottom = 1280.0
 pivot_offset = Vector2(450, 450)
 columns = 4
 
@@ -1046,8 +1074,8 @@ text = "Back"
 [node name="Section3" type="Panel" parent="StartMenu"]
 visible = false
 layout_mode = 0
-offset_right = 1923.0
-offset_bottom = 1079.0
+offset_right = 2560.0
+offset_bottom = 1440.0
 pivot_offset = Vector2(450, 450)
 theme_override_styles/panel = SubResource("StyleBoxFlat_deetu")
 script = ExtResource("58_vvreq")
@@ -1057,10 +1085,10 @@ clip_contents = true
 custom_minimum_size = Vector2(400, 400)
 layout_direction = 2
 layout_mode = 0
-offset_left = 57.0
-offset_top = 40.0
-offset_right = 1834.0
-offset_bottom = 1004.0
+offset_left = 250.0
+offset_top = 130.0
+offset_right = 2380.0
+offset_bottom = 1280.0
 pivot_offset = Vector2(450, 450)
 columns = 4
 
@@ -1401,19 +1429,24 @@ theme = ExtResource("5_2d3if")
 text = "Run For It"
 
 [node name="backBtn" type="Button" parent="StartMenu/Section3"]
-layout_mode = 0
-offset_left = 1330.55
-offset_top = 780.0
-offset_right = 1916.55
-offset_bottom = 1065.0
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -774.0
+offset_top = -316.0
+grow_horizontal = 0
+grow_vertical = 0
 theme = ExtResource("5_2d3if")
 text = "Back"
 
 [node name="Section0" type="Panel" parent="StartMenu"]
 visible = false
 layout_mode = 0
-offset_right = 1923.0
-offset_bottom = 1079.0
+offset_right = 2560.0
+offset_bottom = 1440.0
 pivot_offset = Vector2(450, 450)
 theme_override_styles/panel = SubResource("StyleBoxFlat_deetu")
 script = ExtResource("37_vxrjn")
@@ -1423,10 +1456,10 @@ clip_contents = true
 custom_minimum_size = Vector2(400, 400)
 layout_direction = 2
 layout_mode = 0
-offset_left = 57.0
-offset_top = 40.0
-offset_right = 1834.0
-offset_bottom = 1004.0
+offset_left = 250.0
+offset_top = 130.0
+offset_right = 2380.0
+offset_bottom = 1280.0
 pivot_offset = Vector2(450, 450)
 columns = 4
 
@@ -1777,10 +1810,9 @@ theme = ExtResource("5_2d3if")
 text = "Back"
 
 [node name="CourseSelect" type="Panel" parent="StartMenu"]
-visible = false
 layout_mode = 0
-offset_right = 1923.0
-offset_bottom = 1079.0
+offset_right = 2563.0
+offset_bottom = 1440.0
 pivot_offset = Vector2(450, 450)
 theme_override_styles/panel = SubResource("StyleBoxFlat_kss6j")
 
@@ -1789,23 +1821,24 @@ clip_contents = true
 custom_minimum_size = Vector2(400, 400)
 layout_direction = 2
 layout_mode = 0
-offset_left = 57.0
-offset_top = 40.0
-offset_right = 1834.0
-offset_bottom = 1004.0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 2482.0
+offset_bottom = 1359.0
 pivot_offset = Vector2(450, 450)
 columns = 4
 
 [node name="Course0" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
 clip_contents = true
-custom_minimum_size = Vector2(300, 300)
+custom_minimum_size = Vector2(550, 1000)
 layout_mode = 2
 size_flags_horizontal = 6
+focus_neighbor_left = NodePath("../Course3")
 focus_neighbor_right = NodePath("../Course1")
-texture_normal = ExtResource("49_3rft3")
-texture_pressed = ExtResource("50_luyhi")
-texture_hover = ExtResource("50_luyhi")
-texture_focused = ExtResource("50_luyhi")
+texture_normal = ExtResource("99_rrhfy")
+texture_pressed = ExtResource("100_yeffb")
+texture_hover = ExtResource("100_yeffb")
+texture_focused = ExtResource("100_yeffb")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1821,23 +1854,23 @@ offset_top = -26.0
 offset_right = 30.5
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("5_2d3if")
-text = "Set 0
+theme = ExtResource("99_i64b8")
+text = "Set 1
 "
 
 [node name="Course1" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
 clip_contents = true
-custom_minimum_size = Vector2(300, 300)
+custom_minimum_size = Vector2(550, 550)
 layout_mode = 2
 size_flags_horizontal = 6
 focus_neighbor_left = NodePath("../Course0")
 focus_neighbor_right = NodePath("../Course2")
-texture_normal = ExtResource("4_hnicg")
-texture_pressed = ExtResource("6_a6mqp")
-texture_hover = ExtResource("6_a6mqp")
-texture_focused = ExtResource("6_a6mqp")
+texture_normal = ExtResource("102_n826j")
+texture_pressed = ExtResource("103_pjof4")
+texture_hover = ExtResource("103_pjof4")
+texture_focused = ExtResource("103_pjof4")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 1
 
 [node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course1"]
 layout_mode = 1
@@ -1851,22 +1884,23 @@ offset_top = -26.0
 offset_right = 30.5
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("5_2d3if")
-text = "Set 1
+theme = ExtResource("99_i64b8")
+text = "Set 2
 "
 
 [node name="Course2" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
 clip_contents = true
-custom_minimum_size = Vector2(300, 300)
+custom_minimum_size = Vector2(550, 550)
 layout_mode = 2
 size_flags_horizontal = 6
-focus_neighbor_left = NodePath("../Course0")
-texture_normal = ExtResource("51_0004s")
-texture_pressed = ExtResource("52_gs7y1")
-texture_hover = ExtResource("52_gs7y1")
-texture_focused = ExtResource("52_gs7y1")
+focus_neighbor_left = NodePath("../Course1")
+focus_neighbor_right = NodePath("../Course3")
+texture_normal = ExtResource("104_jef2p")
+texture_pressed = ExtResource("105_dhgs4")
+texture_hover = ExtResource("105_dhgs4")
+texture_focused = ExtResource("105_dhgs4")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 1
 
 [node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course2"]
 layout_mode = 1
@@ -1880,21 +1914,23 @@ offset_top = -26.0
 offset_right = 30.5
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("5_2d3if")
-text = "Set 2
+theme = ExtResource("99_i64b8")
+text = "Set 3
 "
 
 [node name="Course3" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
 clip_contents = true
-custom_minimum_size = Vector2(300, 300)
+custom_minimum_size = Vector2(550, 550)
 layout_mode = 2
 size_flags_horizontal = 6
-texture_normal = ExtResource("72_gjct2")
-texture_pressed = ExtResource("73_r0oxe")
-texture_hover = ExtResource("73_r0oxe")
-texture_focused = ExtResource("73_r0oxe")
+focus_neighbor_left = NodePath("../Course2")
+focus_neighbor_right = NodePath("../Course0")
+texture_normal = ExtResource("106_w1ckp")
+texture_pressed = ExtResource("107_g4ywg")
+texture_hover = ExtResource("107_g4ywg")
+texture_focused = ExtResource("107_g4ywg")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 1
 
 [node name="Label" type="Label" parent="StartMenu/CourseSelect/GridContainer/Course3"]
 layout_mode = 1
@@ -1908,8 +1944,8 @@ offset_top = -26.0
 offset_right = 30.5
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("5_2d3if")
-text = "Set 3"
+theme = ExtResource("99_i64b8")
+text = "Set 4"
 
 [node name="Course5" type="TextureButton" parent="StartMenu/CourseSelect/GridContainer"]
 visible = false
@@ -2075,10 +2111,10 @@ text = "Course 10"
 
 [node name="backBtn" type="Button" parent="StartMenu/CourseSelect"]
 layout_mode = 0
-offset_left = 666.0
-offset_top = 775.0
-offset_right = 1252.0
-offset_bottom = 1060.0
+offset_left = 815.0
+offset_top = 1096.21
+offset_right = 1789.0
+offset_bottom = 1381.21
 theme = ExtResource("5_2d3if")
 text = "Back"
 
@@ -2086,16 +2122,13 @@ text = "Back"
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 48.063
-anchor_bottom = 26.973
-offset_right = -1859.52
-offset_bottom = -1030.92
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(30.5165, 22.4778)
+anchor_right = 48.0635
+anchor_bottom = 26.9733
+offset_right = -1859.54
+offset_bottom = -1030.93
+scale = Vector2(40.675, 29.9695)
 theme_override_styles/panel = SubResource("StyleBoxFlat_qmi8l")
 metadata/_edit_use_anchors_ = true
-metadata/_edit_group_ = true
 
 [node name="GridContainer" type="GridContainer" parent="StartMenu/ModeSelectPanel"]
 layout_mode = 1
