@@ -13,8 +13,7 @@ func _ready():
 	Manager.isFinalLevel = isFinalLevel
 	if(isFinalOfSet and Manager.gameMode == Manager.GAME_MODES.SET):
 		Manager._LoadLeaderboard(setname)
-	elif (Manager.gameMode == Manager.GAME_MODES.GAUNTLET && isFinalOfSet):
-		if(isFinalLevel):
+	elif (Manager.gameMode == Manager.GAME_MODES.GAUNTLET && isFinalLevel):
 			Manager._LoadLeaderboard("Gauntlet")
 	else:
 		Manager._LoadLeaderboard(Manager.sceneName)
@@ -28,8 +27,11 @@ func _on_gem_body_entered(body):
 	if body.is_in_group("player"):
 		WinSound.play()
 		var map = get_parent()
-		print(map.name)
+		print("Map name = " + Manager.sceneName)
 		
+		if(Manager.sceneName == "UpAndAround" and Manager.roundTime <= 18):
+			var ACH = "ACH_WhatJustHappened?"
+			Manager._SetAchievement(ACH)
 		#if Ui.GoldTime > Manager.roundTime:
 			#var ACH = "ACH_FirstGold"
 			#Manager._SetAchievement(ACH)
@@ -48,8 +50,10 @@ func _on_gem_body_entered(body):
 func _nextScene():
 	if (Manager.gameMode == Manager.GAME_MODES.GAUNTLET && isFinalOfSet):
 		if(isFinalLevel):
-			var ACH = "ACH_HyperDrive"
-			Manager._SetAchievement(ACH)
+			Manager._SetAchievement("ACH_TheChallenge")
+			
+			if(Manager.totalTime <= 900):
+				Manager._SetAchievement("ACH_HyperDrive")
 			#get_tree().change_scene_to_file("res://Worlds/title.tscn")
 			#Manager._LoadLeaderboard("Gauntlet")
 		else:

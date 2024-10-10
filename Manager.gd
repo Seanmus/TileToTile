@@ -35,6 +35,8 @@ var finalSetTime = 0
 var isFinalOfSet
 var isFinalLevel
 
+var isCrossHairEnabled = true
+
 func _init():
 	OS.set_environment("SteamAppID", AppID)
 	OS.set_environment("SteamGameID", AppID)
@@ -71,8 +73,12 @@ func _physics_process(delta):
 
 func _MapFinished(isFinalOfSet, isFinalMap, SetName):
 	finalRoundTime = roundTime
-	if not isFinalOfSet:
-		Steam.uploadLeaderboardScore(roundTime * 1000)
+	if gameMode != GAME_MODES.GAUNTLET and gameMode != GAME_MODES.SET: 
+		Steam.uploadLeaderboardScore(finalRoundTime * 1000)
+	elif gameMode == GAME_MODES.GAUNTLET and not isFinalLevel:
+		Steam.uploadLeaderboardScore(finalRoundTime * 1000)
+	elif not isFinalOfSet:
+		Steam.uploadLeaderboardScore(finalRoundTime * 1000)
 	if gameMode == GAME_MODES.LEVEL:
 		_GetLeaderboardResults()
 	elif gameMode == GAME_MODES.SET && isFinalOfSet:
@@ -121,6 +127,10 @@ func _GetLeaderboardResults():
 		
 func _on_leaderboard_downloaded(message, handle, result):
 	Ui._ShowHighscores(result)
+	if isFinalOfSet && gameMode == GAME_MODES.SET || isFinalLevel && gameMode == GAME_MODES.GAUNTLET:
+		Steam.findLeaderboard(sceneName)
+		await get_tree().create_timer(2).timeout
+		Steam.uploadLeaderboardScore(finalRoundTime * 1000)
 	#for r in result:
 	#	var name = Steam.getFriendPersonaName(r["steam_id"])
 	#	var score = r["score"]

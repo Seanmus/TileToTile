@@ -228,3 +228,6 @@ func _on_course_3_pressed():
 		$CourseSelect.visible = false
 		$Section3.visible = true
 		$Section3/GridContainer/WatchOut.grab_focus()
+
+func _on_enable_cross_hair_toggled(toggled_on):
+	Manager.isCrossHairEnabled = toggled_on

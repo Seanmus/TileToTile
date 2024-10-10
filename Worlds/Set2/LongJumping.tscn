@@ -499,16 +499,16 @@ transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -29, 6, 3)
 transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -31, 6, 3)
 
 [node name="Platform13" parent="." instance=ExtResource("2_apt7j")]
-transform = Transform3D(2, 0, 0, 0, 1.93185, -0.517638, 0, 0.517638, 1.93185, -37, 6, -3)
+transform = Transform3D(2, 0, 0, 0, 1.93185, -0.517638, 0, 0.517638, 1.93185, -36, 6, -3)
 
 [node name="Platform14" parent="." instance=ExtResource("2_apt7j")]
-transform = Transform3D(2, 0, 0, 0, 1.93185, -0.517638, 0, 0.517638, 1.93185, -39, 6, -3)
+transform = Transform3D(2, 0, 0, 0, 1.93185, -0.517638, 0, 0.517638, 1.93185, -38, 6, -3)
 
 [node name="Platform15" parent="." instance=ExtResource("2_apt7j")]
-transform = Transform3D(2, 0, 0, 0, 1.93185, -0.517638, 0, 0.517638, 1.93185, -41, 6, -3)
+transform = Transform3D(2, 0, 0, 0, 1.93185, -0.517638, 0, 0.517638, 1.93185, -40, 6, -3)
 
 [node name="Platform19" parent="." instance=ExtResource("2_apt7j")]
-transform = Transform3D(2, 0, 0, 0, 1.93185, -0.517638, 0, 0.517638, 1.93185, -43, 6, -3)
+transform = Transform3D(2, 0, 0, 0, 1.93185, -0.517638, 0, 0.517638, 1.93185, -42, 6, -3)
 
 [node name="Platform4" parent="." instance=ExtResource("2_apt7j")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9, 3, 0)
@@ -544,6 +544,9 @@ transform = Transform3D(0.609337, 0, 0, 0, 0.609337, 0, 0, 0, 0.609337, -9.27179
 
 [node name="Platform20" parent="." instance=ExtResource("2_apt7j")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -51, 6, 0)
+
+[node name="Platform176" parent="." instance=ExtResource("2_apt7j")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -49, 6, 0)
 
 [node name="Platform21" parent="." instance=ExtResource("2_apt7j")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -53, 6, 0)

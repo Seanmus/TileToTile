@@ -46,7 +46,8 @@ func _process(_delta):
 		return
 	$Speed.text = str(playerSpeed) + " MPH"
 	if playerSpeed == 400:
-		var ACH = "ACH_HyperDrive"
+		print("max speed reached achievement")
+		var ACH = "ACH_MaxSpeed"
 		Manager._SetAchievement(ACH)
 	levelTime.text = "%02d.%02d" % [Manager.roundTime, fmod(Manager.roundTime,1) * 1000]
 	gameTime.text = "%02d.%02d" % [Manager.totalTime, fmod(Manager.totalTime,1) * 1000]
@@ -113,7 +114,8 @@ func _show():
 	#SilverTimeLabel.visible = true
 	#BronzeTimeLabel.visible = true
 	$Speed.visible = true
-	
+	if Manager.isCrossHairEnabled:
+		$Cursor.visible = true
 	
 func _hide():
 	$LeaderboardPanel.visible = false
@@ -129,6 +131,7 @@ func _hide():
 	levelTime.visible = false
 	gameTime.visible = false
 	$Speed.visible = false
+	$Cursor.visible = false
 
 func _addTime():
 	$levelTime/levelTimeAddTimeAnim.play("addTime")
